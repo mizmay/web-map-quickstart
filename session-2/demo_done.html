@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Amazing Map!!!</title>
+  <style>
+    body {
+        background: #60fcb1;
+    }
+    h1 {
+        font-family:"Trebuchet MS";
+        text-align: center;
+    }
+    img {
+        display: block;
+        margin-left:auto;
+        margin-right:auto;
+    }
+  </style>
+  <script type="text/javascript">
+    var clean= "1124Balboa.png";
+    var dirty= "1124BalboaEnhanced.png";
+  </script>
+</head>
+<body>
+  <h1>Troy's House</h1>
+  <img src="1124Balboa.png" onclick="this.src = this.src == dirty ? clean : dirty;"/>
+</body>
+</html>

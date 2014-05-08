@@ -1,0 +1,289 @@
+<!DOCTYPE html><html><head><title>Web-Mapping Quickstart: Session 1</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><style type='text/css'>
+body {
+  font-family: 'Helvetica';
+  letter-spacing:-3px;
+  background:#60fcb1;
+  background-size:100%;
+  color:#161e30;
+  margin:0;
+  padding:0;
+  font-weight:bold;
+}
+
+h1, h2, h3, p {
+  margin:0;
+}
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+li:before {
+  content: "→";
+  padding-right: 5px;
+}
+em, a {
+  font-style:normal;
+  color:#e5c007;
+}
+
+a {
+  background: #34d0e7;
+  color:#000;
+  text-decoration:none;
+}
+
+img {
+  height:100%;
+}
+
+div {
+  cursor:pointer;
+  cursor:hand;
+  position:absolute;
+  top:0px;
+  left:0px;
+  padding:75px;
+  line-height:130%;
+}
+
+div.center {
+  text-align:center;
+}
+
+div.imageText {
+  text-shadow:0px 0px 5px rgba(0,0,0,0.2);
+}
+</style><script type='text/javascript'>
+window.onload = function() {
+    var s = document.getElementsByTagName('div'), cur = 0, ti;
+    if (!s) return;
+    function go(n) {
+        cur = n;
+        var i = 1e3, e = s[n], t;
+        for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
+        e.style.display = 'inline';
+        e.style.fontSize = i + 'px';
+        if (e.firstChild.nodeName === 'IMG') {
+            document.body.style.backgroundImage = 'url(' + e.firstChild.src + ')';
+            e.firstChild.style.display = 'none';
+            if ('classList' in e) e.classList.add('imageText');
+        } else {
+            document.body.style.backgroundImage = '';
+            document.body.style.backgroundColor = e.style.backgroundColor;
+        }
+        if (ti !== undefined) window.clearInterval(ti);
+        t = parseInt(e.getAttribute('time-to-next') || 0, 10);
+        if (t > 0) ti = window.setTimeout(fwd, (t * 1000));
+        while (
+            e.offsetWidth > window.innerWidth ||
+            e.offsetHeight > window.innerHeight) {
+            e.style.fontSize = (i -= 2) + 'px';
+            if (i < 0) break;
+        }
+        e.style.marginTop = ((window.innerHeight - e.offsetHeight) / 2) + 'px';
+        if (window.location.hash !== n) window.location.hash = n;
+        document.title = e.textContent || e.innerText;
+    }
+    document.onclick = function() { go(++cur % (s.length)); };
+    function fwd() { go(Math.min(s.length - 1, ++cur)); }
+    function rev() { go(Math.max(0, --cur)); }
+    document.onkeydown = function(e) {
+        if (e.which === 39) fwd();
+        if (e.which === 37) rev();
+    };
+    document.ontouchstart = function(e) {
+        var x0 = e.changedTouches[0].pageX;
+        document.ontouchend = function(e) {
+            var x1 = e.changedTouches[0].pageX;
+            if (x1 - x0 < 0) fwd();
+            if (x1 - x0 > 0) rev();
+        };
+    };
+    function parse_hash() {
+        return Math.max(Math.min(
+            s.length - 1,
+            parseInt(window.location.hash.substring(1), 10)), 0);
+    }
+    if (window.location.hash) cur = parse_hash() || cur;
+    window.onhashchange = function() {
+        var c = parse_hash();
+        if (c !== cur) go(c);
+    };
+
+    go(cur);
+};
+</script></head><body>
+<div>Web Mapping <em>Quickstart</em></div>
+<div>Welcome Back</div>
+<div>Last week: <em>Session 1</em></div>
+<div>Web mapping <em>platforms</em> and <em>projects</em></div>
+<div>This week: <em>Session 2</em></div>
+<div>Web mapping from <em>scratch</em></div>
+<div>Why is it important to learn about web mapping from the browser up?</div>
+<div style="font-family: serif;letter-spacing:2px">"Cartographers limit themselves – because of a lack of software skills or a client’s desired final product – to using <em>pre-fabricated tools</em> for Web map design (e.g., Google Maps, Esri’s ArcGIS Online). By the time data-organization and design decisions are considered, the potential efficacy of the map’s communication is already <em>grossly constrained</em> by the <em>limitations of the tool chosen</em>." - <a href="https://twitter.com/iMuehlenhaus">Ian Muehlenhaus</a> in <a href="http://utpjournals.metapress.com/content/q765k1l7423732l6/?p=81fc8c6f7eb8460f9ec9aba4318ddb07">Going Viral: The Look of Online Persuasive Maps</a></div>
+<div>Before we start making web maps from scratch, some <em>ontology</em>:</div>
+<div>There are <em>print</em> maps...</div>
+<div><img src="paper_maps.jpg">(maps on paper)</div>
+<div>And there are <em>digital</em> maps... </div>
+<div><img src="anatomy/1-arcGIS.jpg">(maps on computers)</div>
+<div>And then there are <em>web</em> maps... </div>
+<div><img src="internetmaps.png"><br>(maps on the internet)</div>
+<div>Simple, right?</div>
+<div>The <em>simplest</em> web map:</div>
+<div><table><tr><td><img src="simplest.png"></td></tr></table></div>
+<div>We're gonna <em>make it</em>.</div>
+<div><table><tr><td>Open a text editor:</td></tr><tr><td><img src="texteditor.png"></td></tr></table></div>
+<div><table><tr><td>Save as demo.html</td></tr><tr><td><img src="demo.png"></td></tr></table></div>
+<div><table><tr><td><img src="demo_css.png"></td><td>Add Styling (CSS)</td></tr></table></div>
+<div>CSS: Cascading style sheets</div>
+<div><table><tr><td>Rules can be defined<ul><li>Interactively in the browser</li><li>In a specific tag</li><li>In a &#60;style&#62; tag in the &#60;head&#62;</li><li>In a separate file</li></ul></td><td><img src="demo_css.png"></td></tr></table></div>
+<div><table><tr><td><img src="demo_sep.png"></td><td><img src="css_sep.png"></td></tr></table></div>
+<div>Presto! You made a <em>web map</em>!</div>
+<div>But we associate a little more <em>functionality</em> with web maps...</div>
+<div>Starting with <em>interactivity</em> and <em>animation</em>.</div>
+<div>Making an <em>interactive</em> web map can also be <em>simple</em>: just <em>a little Javascript</em>.</div>
+<div>Example: the <em>onclick</em> function</div>
+<div><table><tr><td><img src="demo_js.png"></td><td>Add Javascript</td></tr></table></div>
+<div><em>Cool</em>! We made a <a href="demo_done.html">simple interactive map</a>!</div>
+<div>An <em>animated</em> web map can also be <em>simple</em>: embed an <a href="https://www.google.com/search?q=how+to+make+an+animated+gif">animated GIF</em></a>.</div>
+<div><table><tr><td>Popular Girl Names</td></tr><tr><td><img src="girlnames.gif"></td></tr></table></div>
+<div><table><tr><td>You've got this:</td></tr><tr><td><img src="demo_gif.png"></td></tr></table></div>
+<div>We'll talk next time about <em>cartographic principles</em> and <em>web map design</em>, but the takeaway from what we've done so far should be that <em>web mapping</em> doesn't have to be <em>ugly</em> or <em>complicated</em>.</div>
+<div>"But wait," you're saying. "I thought the definition of a web map is a map that can <em>pan</em> and <em>zoom</em>!"</div>
+<div>Well then, you've <em>missed my point</em> so far, but <em>fine</em>.</div> 
+<div>Remember the <em>CartoDB</em> and <em>Mapbox</em> Maps we made last week?</div>
+<div>Here's how to <em>embed</em> them in a web page:</div>
+<div><table><tr><td><img src="mapbox.png"></td><td><img src="cartodb.png"></td></tr></table></div>
+<div>When read by a browser, those pages look like this:<ul><li><a href="mapbox.html" target="_blank">Mapbox Example</a></li><li><a href="cartodb.html" target="_blank">CartoDB Example</a></li></ul></div>
+<div>Let's do it right now...</div>
+<div>'K and what are we <em>doing</em> exactly?</div>
+<div><table><tr><td><img src="mapbox.png"></td><td><img src="cartodb.png"></td></tr></table>(these URLs have a bunch of commands in them that are executed and your map is returned)</div>
+<div>This is accomplished through an <em>API</em>: Application Programming Interface.</div>
+<div style="font-family: serif;letter-spacing:2px">"An API specifies a set of <em>functions or routines</em> that accomplish a specific task or are allowed to interact with a specific software component."<br> - <a href="http://en.wikipedia.org/wiki/Application_programming_interface">en.wikipedia.org / wiki / Application_programming_interface</a></div>
+<div>Most commonly, you send API <em>specifications</em> and it sends you back <em>resources</em>.</div>
+<div>In the MapBox and CartoDB examples, the <em>resource</em> was a <em>map</em>.</div>
+<div>That's a <em>complicated resource</em> actually (and there is a lot going on under the hood) and our theme today is <em>web mapping from scratch</em>.</div>
+<div>...which is important because we don't want our <em>cartography</em> to be <em>limited</em> by the tool we choose.</div>
+<div><table><tr><td><img src="CartoDB_Map.png"></td></tr><tr><td>(In particular I hate how the point symbols overrun the place labels)</td></tr></table></div>
+<div>So let's back up...</div>
+<div>Forget about <em>APIs</em> for a few minutes, let's just talk about <em>maps</em>.</div>
+<div><img src="anatomy/slippy-map.gif">In particular, <em>slippy maps</em>.</div>
+<div>That's an industry term for <em>maps that pan and zoom </em> and run on <em>tiles</em>.</div>
+<div>A bit of <em>history</em> and <em>explanation</em>...</div>
+<div>Note: borrowing heavily from a fantastic presentation by <a href="http://stamen.com/studio/alan">Alan McConchie</a> and <a href="http://stamen.com/studio/beth">Beth Schechter</a>, <a href="http://maptime.github.io/anatomy-of-a-web-map/">Anatomy of a Web Map</a></div>
+<div>( <a href="http://stamen.com/studio/beth">Beth</a> and <a href="http://stamen.com/studio/alan">Alan</a>
+are the masterminds of <a href="http://www.meetup.com/Maptime-SF/">Maptime</a>, a weekly study group for people interested in web mapping... </div>
+<div>... which means <em>you</em> so yes, you should check it out)</div>
+<div><img src="anatomy/2-Ridgefield-CT-Mapquest-out.jpg"><a href="" style="background:white">In 1996, Mapquest launched its web service.</a></div>
+<div>Directions for driving! Online! Wow!</div>
+<div>The problem: it was <em>slow</em> to load :(.</div>
+<div>MapQuest required a full page refresh to scroll or zoom, and was always aligned to tile boundaries.</div>
+<div>Then came <em>Google Maps</em>, which revolutionized everything, beginning in 2005.</div>
+<div><img src="anatomy/3-old-google-maps-1.JPG"></div>
+<div><em>But what was the revolution?</em><br>Was it the interface?<br>The red marker?<br>The weather widget?</div>
+<div>No!</div>
+<div>It was the <em>tile. <img src="anatomy/tiles/toner.jpg"></em></div>
+<div>Way back when (<em>1999-2006</em>), most web maps were made using a protocol called <em>WMS</em> (<a href="http://en.wikipedia.org/wiki/Web_Map_Service">Web Map Service</a>), which is still widely in use today</div>
+<div><img src="snowpocalypse.png">If you have a GIS background, WMS works kind of like you might expect, <a href="" style="background:#E4E3DB">serving up the <em>slice of layered map cake</em> that fits your browser window</a>, much the way GIS software can show you whatever layers you want, at whatever zoom you want.</div>
+<div>The trouble is, the GIS software model is <em>too slow and clunky for the web</em>.</div>
+<div>For this reason, <em>WMS</em> has largely been superceded by <em>TMS</em> (<a href="http://en.wikipedia.org/wiki/Tile_Map_Service">Tile Map Service</a>)</div>
+<div>A <em>tile</em> is just an <em>image file</em> of type <a href="http://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>.</div>
+<div>GIS folks: what is an <em>image</em> file that we use for data?</div> 
+<div>That's right, a <em>raster</em>!</div>
+<div>Whatever the zoom, whatever the map, tiles are always the same size: <em>256x256 pixels</em>.</div>
+<div><img src="anatomy/tiles-loading.gif">The key is: all these little tiles load <em>way faster</em> than one big map.</div>
+<div>You just grab the ones you need to fit your screen plus a few extra along the <em>top</em>, <em>bottom</em>, <em>left</em>, and <em>right</em>.</div>
+<div>Each <em>zoom level</em> has its own set of tiles!</div>
+<div><img src="anatomy/tiles/zoom0.png"><em>Zoom level 0: one tile for the world.</em></div>
+<div>With each additional zoom level, the number of tiles increases exponentially.</div>
+<div><img src="anatomy/tiles/zoom1.png"><em>Zoom level 1: 4 tiles for the world.</em></div>
+<div><img src="anatomy/tiles/zoom2-3-4-5.png"><em>Zoom level 2, 3, 4, 5</em></div>
+<div><img src="anatomy/tiles/zoom13.png"><em>Zoom level 13</em></div>
+<div>Tiles are <em>rendered</em> in advance (usually) then stored in a <em>cache</em>.</div>
+<div>Each map tile has a unique <em>address</em>!</div>
+<div>For example: <a href="http://tile.openstreetmap.org/4/2/6.png" target="_blank">http://tile.openstreetmap.org/4/2/6.png</a></div>
+<div>Remember before about <em>APIs</em>? Keep those in mind, now look at <em>THIS</em> URL:</div>
+<div>http://<em>tile.openstreetmap.org</em>/4/2/6.png -- this is the name of the tile server.</div>
+<div>http://tile.openstreetmap.org/<em>4</em>/2/6.png -- this is the z value, or the zoom level.</div>
+<div>http://tile.openstreetmap.org/4/<em>2/6</em>.png -- This is the x/y value, or the place in the grid for that zoom where the tile lives.</div>
+<div>One key <em>convention</em> that differs between <em>TMS</em> and <em>WMS</em> is <em>projection</em>.</div>
+<div>Tiled maps (typically) rely on <em>Web Mercator</em>.</div>
+<div>That's nice because <em>interoperability</em>, which is an important concept in <em>how the web should work...</em></div>
+<div>It means whatever the map, whatever the zoom, a tile will have the same boundaries<img src="anatomy/tiles.gif"></div>
+<div><em>Mercator projection</em> means that <em>latitude</em> and <em>longitude</em> lines make perfect right angles...</div>
+<div>...and <em>Web Mercator</em> means that these right angles form perfect squares...</div>
+<div> which has <em>kinda worked</em> for people for a long time... <br>maybe too long</div>
+<div><a href="http://commons.wikimedia.org/wiki/File:1855_Colton_Map_of_the_World_on_Mercator_Projection_-_Geographicus_-_WorldMercator-colton-1855.jpg"><img src="anatomy/mercator.jpg"></a></div>
+<div><img src="distortion.gif">If you're a geographer you know that transforming the globe from an <em>oblate spheroid</em> to a <em>flat map</em> distorts the area of continents dramatically,</div>
+<div><img src="mercator.png">...and much ink has been spilled over decades about the <a href="http://andywoodruff.com/blog/why-are-choropleth-mercator-maps-bad-because-we-said-so/">perceptual implications of using <em>Mercator</em> as your default projection...</a></div>
+<div>A talk for another time...</div>
+<div><em>WMS</em> can, by convention, use any projection. For a while was an argument for keeping it around...</div>
+<div>But were' not talking about <em>WMS</em> any more today.</div>
+<div>Please note: <em>slippy maps</em> have largely evolved to support <em>reference mapping</em> and in particular <em>navigation</em>. For <em>thematic mapping</em> they can sometimes be overkill.</div>
+<div><table><tr><td><em>No zoom needed!</em></td></tr><td><tr><img src="zoomin.png"></td></tr></table></div>
+<div>More on that next time!</div>
+<div>Make sense?</div>
+<div>Great!</div>
+<div>Let's go on some tangents!</div>
+<div>Tangent #1: Tiles are always rasters <em>EXCEPT</em> when they're not!</div>
+<div><img src="anatomy/vector_tiles.png"><em>What are they?</em> <a href="http://bl.ocks.org/wboykinm/7393674" target="_blank">(unrelated demo)</a></div>
+<div><em>Raster:</em> a prerendered image of your map data</div>
+<div><a href="https://www.mapbox.com/blog/vector-tiles/"><em>Vector tiles</em></a>: are an alternative way of storing the data that makes raster tiles. They still render to rasters for display.</div>
+<div><a href="https://www.mapbox.com/blog/vector-tiles/"><em>Vector tiles</em></a>: your map data sliced up in grid squares & stored as points, lines and polygons until the very last second!</div>
+<div>Has some advantages over maintaining your cache of rasters...</div>
+<div><em>Primarily:</em> Easier to <em>change styles</em> dynamically, on the fly.<br><em>Secondarily:</em> Storing data as vectors can save space. On the Internet, <em>space = time</em>.</div>
+<div>Tangent #2: Can’t interact with features on a raster. BUT <a href="https://www.mapbox.com/developers/utfgrid/">UTFGrid</a> (Mapbox invention) makes it possible.</div>
+<div><img src="anatomy/utfgrid.png"><a href="" style="background:white;opacity:0.6">UTFGrid is an invisible tile layer made up of arbitrary characters that index the shapes with their attributes.</a></div>
+<div><img src="CartoDB_Map.png"><em>You</em> used UTFGrids <a href="http://mizmay.github.io/web-map-quickstart/session-1/#45">last time in the <em>community gardens</em> map</a>.</div>
+<div>Tilemill, which we will play with next time, uses this invention to <em>add interactivity</em> right into the tiles.</div>
+<div>Tangent #3: <a href="http://d3js.org">D3</a> exists outside the world of tiles</div>
+<div>you can’t easily make road map in D3 <em>BUT</em> can do things that are clumsy in slippy maps like...</div>
+<div><img src="anatomy/d3-examples/d3_choropleth.png">choropleth maps or... <a href="http://sta.mn/jyx">sta.mn/jyx</a></div>
+<div><img src="anatomy/d3-examples/d3_cartogram.png">cartograms or... <a href="http://sta.mn/q99">sta.mn/q99</a></div>
+<div><img src="anatomy/d3-examples/projection_transitions2.png">different map projections (in the browser!) <a href="http://sta.mn/jfs">sta.mn/jfs</a></div>
+<div><img src="anatomy/d3-examples/geo.png">D3</div>
+<div><img src="anatomy/d3-examples/racial-divide.png">IS</div>
+<div><img src="anatomy/d3-examples/topojson.png">IN</div>
+<div><img src="anatomy/d3-examples/drought.png">SANE</div>
+<div>Find these examples and more in Kai Chang's <a href="http://exposedata.com/talk/d3-geo/">d3.geo presentation</a></div>
+<div>Very powerful, but steep learning curve</div>
+<div><a href="http://en.wikipedia.org/wiki/Mashup_(web_application_hybrid)">Mashups</a>: A type of mapping specific to the web that has evolved based on <em>slippy maps</em>.</div>
+<div>A <em>mashup</em> combines a <em>basemap</em> with a <em>data layer</em>.</div>
+<div><img src="mashup.png"></div>
+<div>It's always a <em>slippy map</em></div>
+<div>The data can come from a <em>local file</em> or an <em>API</em></div>
+<div><img src="cats.png"><a href="" style="background:#E4E3DB">It can make for <em>really bad</em> cartography.</a></div>
+<div>...  but has come a long way</div>
+<div>Data layers are <em>vector</em> layers (point, line, polygon). Sometimes you can interact with them (clicking to produce a popup, for example).</div>
+<div>You'll recognize this: <em>basemap</em> + <em>data</em></div>
+<div><img src="anatomy/basemap-datalayers-01.png"></div>
+<div><img src="anatomy/basemap-datalayers-02.png"></div>
+<div><img src="anatomy/basemap-datalayers-03.png"></div>
+<div><img src="anatomy/basemap-datalayers-04.png"></div>
+<div><img src="anatomy/basemap-datalayers-05.png"></div>
+<div><img src="anatomy/basemap-datalayers-06.png"></div>
+<div>Filetypes: sometimes you can use <em>shapefiles</em>, but <em>KML</em> is more common, or more recently, <a href="http://github.com/lyzidiamond/learn-geojson" target="_blank">GeoJSON</a></div>
+<div><img src="api.png"></div>
+<div>There are now lots of <em>APIs</em> that support mashups</div>
+<div>For example: <a href="https://developers.google.com/maps/documentation/javascript/">Google Maps API</a> / <a href="http://www.microsoft.com/maps/choose-your-bing-maps-API.aspx">Bing Maps API</a> / <a href="http://developer.here.com/web/guest/javascript-apis">Nokia HERE Maps API</a> / <a href="https://developers.arcgis.com/en/javascript/">ESRI ArcGIS API</a></div>
+<div>& there are <em>Javascript libraries</em> that support the common functions we need to integrate map tiles and other data.</div>
+<div>What does a Javascript mapping library do?</div>
+<div>Grabs the <em>tiles</em>, adds <em>content layer</em>, handles <em>interaction</em>.</div>
+<div>Simplest to learn is <a href="http://leafletjs.com">Leaflet</a>, although there are others: <a href="http://openlayers.org">OpenLayers</a> / <a href="http://modestmaps.com">Modest Maps</a> / <a href="http://polymaps.org">Polymaps</a></div>
+<div><img src="anatomy/leaflet-toner-snapshot-giant.png"><em>Time to make a simple mashup:</em></div>
+<div><table><tr><td><img src="leaflet_html.png"></table></tr></td></div>
+<div>Back to your text editors...</div>
+<div><a href="leaflet.html">Et voilà</a></div>
+<div>Ta Da! You now know enough to <a href="http://leafletjs.com/examples.html">try some tutorials on your own</a>.</div>
+<div>We'll go into this a bit more next time, but here's how it all fits together:</div>
+<div><img src="anatomy/anatomy-of-a-web-map.png"></div>
+<div>A huge debt of gratitute to <a href="https://twitter.com/bethschechter">Beth Schechter</a>, <a href="https://twitter.com/lyzidiamond">Lyzi Diamond</a>, and <a href="https://twitter.com/awoodruff">many</a>, <a href="https://twitter.com/vtcraghead">many</a> others whose blog posts and presentations informed our learning today!</div>
+<div>Presentation made with <a href="http://www.macwright.org/big/">big</a></div>
+</body></html>
