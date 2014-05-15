@@ -40,7 +40,21 @@
         }
       );
 
-      mapvar.addLayer(geojsonLayer);
+      function onLocationFound(e) {
+          var radius = e.accuracy / 2;
+
+          L.marker(e.latlng).addTo(mapvar)
+              .bindPopup("You are within " + radius + " meters of this point").openPopup();
+
+          L.circle(e.latlng, radius).addTo(map);
+      }
+
+      function onLocationError(e) {
+          alert(e.message);
+      }
+
+      mapvar.on('locationfound', onLocationFound);
+      mapvar.on('locationerror', onLocationError);
 
       mapvar.locate({setView: true, maxZoom: 16});
 
