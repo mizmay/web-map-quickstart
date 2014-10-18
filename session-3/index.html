@@ -1,0 +1,248 @@
+<!DOCTYPE html><html><head><title>Web-Mapping Quickstart: Session 1</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><style type='text/css'>
+body {
+  font-family: 'Helvetica';
+  letter-spacing:-3px;
+  background:#60fcb1;
+  background-size:100%;
+  color:#161e30;
+  margin:0;
+  padding:0;
+  font-weight:bold;
+}
+
+h1, h2, h3, p {
+  margin:0;
+}
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+li:before {
+  content: "→";
+  padding-right: 5px;
+}
+em, a {
+  font-style:normal;
+  color:#e5c007;
+}
+
+a {
+  background: #34d0e7;
+  color:#000;
+  text-decoration:none;
+}
+
+img {
+  height:100%;
+}
+
+div {
+  cursor:pointer;
+  cursor:hand;
+  position:absolute;
+  top:0px;
+  left:0px;
+  padding:75px;
+  line-height:130%;
+}
+
+div.center {
+  text-align:center;
+}
+
+div.imageText {
+  text-shadow:0px 0px 5px rgba(0,0,0,0.2);
+}
+</style><script type='text/javascript'>
+window.onload = function() {
+    var s = document.getElementsByTagName('div'), cur = 0, ti;
+    if (!s) return;
+    function go(n) {
+        cur = n;
+        var i = 1e3, e = s[n], t;
+        for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
+        e.style.display = 'inline';
+        e.style.fontSize = i + 'px';
+        if (e.firstChild.nodeName === 'IMG') {
+            document.body.style.backgroundImage = 'url(' + e.firstChild.src + ')';
+            e.firstChild.style.display = 'none';
+            if ('classList' in e) e.classList.add('imageText');
+        } else {
+            document.body.style.backgroundImage = '';
+            document.body.style.backgroundColor = e.style.backgroundColor;
+        }
+        if (ti !== undefined) window.clearInterval(ti);
+        t = parseInt(e.getAttribute('time-to-next') || 0, 10);
+        if (t > 0) ti = window.setTimeout(fwd, (t * 1000));
+        while (
+            e.offsetWidth > window.innerWidth ||
+            e.offsetHeight > window.innerHeight) {
+            e.style.fontSize = (i -= 2) + 'px';
+            if (i < 0) break;
+        }
+        e.style.marginTop = ((window.innerHeight - e.offsetHeight) / 2) + 'px';
+        if (window.location.hash !== n) window.location.hash = n;
+        document.title = e.textContent || e.innerText;
+    }
+    document.onclick = function() { go(++cur % (s.length)); };
+    function fwd() { go(Math.min(s.length - 1, ++cur)); }
+    function rev() { go(Math.max(0, --cur)); }
+    document.onkeydown = function(e) {
+        if (e.which === 39) fwd();
+        if (e.which === 37) rev();
+    };
+    document.ontouchstart = function(e) {
+        var x0 = e.changedTouches[0].pageX;
+        document.ontouchend = function(e) {
+            var x1 = e.changedTouches[0].pageX;
+            if (x1 - x0 < 0) fwd();
+            if (x1 - x0 > 0) rev();
+        };
+    };
+    function parse_hash() {
+        return Math.max(Math.min(
+            s.length - 1,
+            parseInt(window.location.hash.substring(1), 10)), 0);
+    }
+    if (window.location.hash) cur = parse_hash() || cur;
+    window.onhashchange = function() {
+        var c = parse_hash();
+        if (c !== cur) go(c);
+    };
+
+    go(cur);
+};
+</script></head><body>
+<div>Web Mapping <em>Quickstart</em></div>
+<div>Welcome Back</div>
+<div>Two weeks ago: <em>Session 1</em></div>
+<div>Web mapping <em>platforms</em> and <em>projects</em></div>
+<div>Last week: <em>Session 2</em></div>
+<div>Web mapping from <em>scratch</em></div>
+<div>This week: <em>Session 3</em></div>
+<div>Advanced web mapping</div>
+<div><ul><li><em>Design</em> and <em>cartography</em> principles for the web</li><li>More on <em>styling</em> and <em>interaction</em> (html, CSS, Javascript, CartoCSS)</li><li>Tilemill</li></div>
+<div>In print cartography, there are dozens of map types:</div>
+<div>Reference Maps</div>
+<div><table><tr><td><img src="wayfinding.png"></td><td>Wayfinding</td></tr></table></div>
+<div><img src="wayfinding2.png"></div>
+<div><table><tr><td>Transit</td></tr><tr><td><img src="transit.png"></td></tr></table></div>
+<div><table><tr><td>Navigation</td></tr><tr><td><img src="navigation.png"></td></tr></table></div>
+<div><img src="bartmap.gif"></div>
+<div><table><tr><td>Topographic</td></tr><tr><td><img src="topographic.png"></td></tr></table></div>
+<div>Thematic Maps</div>
+<div><img src="TeamGB_medalists.png"></div>
+<div><img src="cartogram.jpg"></div>
+<div><img src="dotdensity.png"></div>
+<div><img src="dotmap.png"></div>
+<div>We are entering the <em>GOLDEN AGE</em> of web mapping:</div>
+<div>There are <em>libraries</em> and <em>APIs</em> and <em>tutorials</em> to help you translate these map types to the web.</div>
+<div>... (but only a subset of these are easy with out-of-the box tools)</div>
+<div><em>Historically</em> web mapping has evolved without much <em>cartographic theory</em>...</div>
+<div>There was <em>Google</em> and then there were <em>mashups</em></div>
+<div><table><tr><td><img src="mashup.jpg"></td><td><a href="http://www.programmableweb.com/news/5-years-ago-today-web-mashup-was-born/2010/04/08">HousingMaps.com</a>, by Paul Rademacher, 2005</tr></table></div>
+<div>... which led to an <em>explosion</em> in special thematic maps</div>
+<div><img src="../session-2/cats.png"></div>
+<div>... and also this question in the minds of many cartographers:</div>
+<div><table><tr><td><img src="wings.gif"></td><td><img src="hummingbird.jpg"></td><td><img src="butterfly.jpg"></td></tr><tr colspan=3>Are web maps and print maps <em>homologous</em> or <em>analagous</em>?</table></div>
+<div><ul><li><a href="http://en.wikipedia.org/wiki/Dot_distribution_map#One-to-one" target="_blank">one-to-one dot maps</a></li><li><a href="http://en.wikipedia.org/wiki/Choropleth_map" target="_blank">choropleth</a> or <a href="http://wiki.gis.com/wiki/index.php/Chorochromatic_Maps" target="_blank">chorochromatic</a> maps</li><li>'<a href="http://xkcd.com/1138/" target="_blank">heatmaps</a>'</li></ul></div>
+<div><img src="webdotmap.png"></div>
+<div><img src="poly.png"></div>
+<div><img src="heatmap.png"></div>
+<div>I am not fond of heat maps.</div>
+<div>The term '<em>heatmap</em>' is imprecise. Isopleth? Point density? Interpolation?</div>
+<div><img src="interpolation.png"></div>
+<div>On the web it usually means <em>kernel density</em> and usually just shows <a href="http://xkcd.com/1138/" target="_blank">population density</a></div>
+<div><img src="heatmap_xkcd.png"></div>
+<div>Where the points are sparse or coincident, <em>kernel density</em> generates a meaningless blur:</div>
+<div><table><tr><td><img src="hmblur2.png"></td></tr><tr><td><img src="hmblur.png"></td></tr></table></div>
+<div>Common Js libraries that generate 'heatmaps' dynamically use zoom level as a proxy for kernel size, which <em>makes no sense</em> analytically.</div>
+<div><img src="kerneldensity.png"></div>
+<div>The default color scheme is horrid (nicknames: "<em>Tacky Angry Rainbow</em>" and "<em>Angry Fruit Salad</em>").</div>
+<div><figure><img src='tackyangryrainbow.png' alt='Tacky Angry Rainbow' /><figcaption>Tacky Angry Rainbow</figcaption></figure></div>
+<div><figure><img src='arbitraryheatmap.png' alt='Angry Fruit Salad' /><figcaption>Angry Fruit Salad</figcaption></figure></div>
+<div>They arise from demand from people who don't know what they are doing, but know they want to show a lot of points on a map.</div>
+<div>Alternative: clustering</div>
+<div><img src="googlegeo.png"></div>
+<div>Entirely different although it looks similar: <a href="http://support.esri.com/en/knowledgebase/GISDictionary/term/dot%20density%20map">dot density maps</a></div>
+<div><iframe src="http://demographics.coopercenter.org/DotMap/index.html" width="1200" height="800" frameborder="0" scrolling="no"></iframe></div>
+<div>Someone clever putting a lot of points on maps quite artfully: <a href="https://www.flickr.com/photos/walkingsf/sets/">Eric Fischer</a></div>
+<div><table><tr><td><img src="enf_nyc.jpg"></td></tr></table></div>
+<div><table><tr><td><img src="enf_london.jpg"></td></tr></table></div>
+<div><table><tr><td><img src="enf_sf.jpg"></td></tr></table></div>
+<div>In general all of these examples follow certain <em>slippy map</em> and <em>mashup</em> paradigms, which we talked about last time.</div>
+<div><img src="../session-2/anatomy/anatomy-of-a-web-map.png"></div>
+<div>The <em>hottest</em> other option right now is <em>D3</em>.</div>
+<div>D3 is a <em>Javascript library</em> built for data visualization.</div>
+<div>In all the best and worst ways:</div>
+<div><img src="../session-2/anatomy/d3-examples/geo.png">D3</div>
+<div><img src="../session-2/anatomy/d3-examples/racial-divide.png">IS</div>
+<div><img src="../session-2/anatomy/d3-examples/topojson.png">IN</div>
+<div><img src="../session-2/anatomy/d3-examples/drought.png">SANE</div>
+<div>If you want to learn D3, <a href="https://twitter.com/alignedleft">Scott Murray</a> who <a href="http://www.usfca.edu/Faculty/Scott_Murray/">teaches at USF</a> has some <a href="http://alignedleft.com/tutorials/d3">great resources</a>.</div>
+<div>I also like <a href="https://www.dashingd3js.com/">DashingD3js.com</a></div>
+<div>...there are other mapping libraries out there that can handle different projections, distortions, and animations... plus <a href="http://gis.stackexchange.com/questions/8032/how-do-various-javascript-mapping-libraries-compare">whatever else you want to do</a>.</div>
+<div>We should still strive for sound <em>cartography</em> in <em>mashups</em>.</div>
+<div>A few high level concepts from cartography, which is a <em>visual</em> enterprise:</div>
+<div>1. Visual variables</div>
+<div><table><tr><td><img src="visual_variables.png"></td></tr></table></div>
+<div><table><tr><td><img src="visual_variables2.png"></td></tr></table></div>
+<div>2. Visual hierarchy</div>
+<div><table><tr><td><img src="82_congo_elements_plopped.gif"></td><td>BAD<br>←<br><br>GOOD <br>→ </td><td><img src="83_congo_portrait.gif"></td></tr></table></div>
+<div>3. Visual argument</div>
+<div><table><tr><td><img src="visual_argument.png"></td></tr></table></div>
+<div>An important concept for web cartography is "<em>screen real-estate</em>"</div>
+<div><table><tr><td><img src="phonemap.jpg"></td></tr></table></div>
+<div><ul><li>Space is scarce</li><li>Mobile vs. desktop</li><li>Fluid vs. compartmentalized layout</li></div>
+<div>Slippy map is a way around all of this but.... for some maps it is overkill & potentially a cop-out.</div>
+<div><iframe src="http://leafletjs.com/examples/choropleth-example.html" width="1200" height="800" frameborder="0" scrolling="no"></iframe></div>
+<div>The main thing the web brings to cartography is <em>interactivity</em>, which can take many forms.</div>
+<div>In web design and development, people make entire careers out of designing for interactivity. The field is called <em>UI/UX</em>, which is shorthand for <em>user interface and user experience</em>.</div>
+<div>It means you think through how people who visit your site will interact with it, and you design the <em>interface</em> to guide the user toward the <em>experience</em> you want them to have.</div>
+<div>UI/UX is a really important component of web mapping.</div>
+<div>Project managers creating government web portals for geospatial data, I am talking to you.</div>
+<div>For this reason, while it makes sense in print cartography to talk about <em>map readers</em>, in web cartography we talk about <em>map users</em>.</div>
+<div>In our first session, we saw some forms of interactivity that are <em>standard</em> in out of the box tools.</div>
+<div>Panning & Zooming</div>
+<div><table><tr><td><img src="panzoom.png"></td></tr></table></div>
+<div>Info Boxes</div>
+<div><table><tr><td><img src="infobox.png"></td></tr></table></div>
+<div>Tooltips</div>
+<div><iframe src="http://www.greenpeace.org/international/Global/international/code/2012/marine-reserves-map/index.html" width="1200" height="800" frameborder="0" scrolling="no"></iframe></div>
+<div>Highlighting</div>
+<div><iframe src="http://cf.datawrapper.de/YI8Ha/22/" frameborder="0" allowtransparency="true" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen width="800" height="600"></iframe></div>
+<div>Charts</div>
+<div><table><tr><td><img src="chart.png"></td></tr></table></div>
+<div>Embedded images/video</div>
+<div><table><tr><td><img src="embed.png"></td></tr></table></div>
+<div>Geocode box</div>
+<div><table><tr><td><img src="geocode.png"></td></tr></table></div>
+<div>"Zoom to my location" button</div>
+<div><table><tr><td><img src="gotolocation.png"></td></tr></table></div>
+<div>Animation</div>
+<div><iframe src="http://cartodb.github.com/oldweather_wwi/" width="1000" height="800" frameborder="0" scrolling="no"></iframe></div>
+<div>All these <em>whizz-bangs</em> are neato!</div>
+<div>Let's play with a web map: In Chrome go to: <a href="http://leafletjs.com/examples/mobile.html">leafletjs.com/examples/mobile.html</a></div>
+<div>Click on Menu > Tools > View Source & copy/paste all the text you see into a text editor.</div>
+<div>File > Save As > mobile.html <br>(remember where you save it!)</div>
+<div>This tutorial uses a function from the Leaflet library to zoom to your approximate location.</div>
+<div>To make it work, you probably need a <em>web server</em> running.</div>
+<div>If you are on a mac or a Windows or Linux machine with Python installed and globally available, type: <br><em>python -m SimpleHTTPServer</em></div>
+<div><table><tr><td><img src="simplehttpserver.png"></table></tr></td></div>
+<div>Type "<em>localhost:8000</em>" into an new browser window & navigate to where you saved mobile.html</div>
+<div>We'll go through it chunk by chunk.</div>
+<div>Can you figure out how to switch the basemap to the Stamen toner tiles we used last week?</div>
+<div>CartoCSS</div>
+<div>For example:</div>
+<div><img src="cartocss.png"></div>
+<div>CartoCSS is based on CSS. Some things to understand:<ul><li>Just like with CSS, rules are applied in order. Later ones overwrite earlier ones.</li><li>There are <em>#selectors</em> which are like layers.</li><li>You can display your data as <em>points</em> or <em>lines</em> or <em>text</em> depending on what <em>symbolizer</em> you use.</li></ul></div>
+<div>Thanks everyone! See you on the interwebs: <em>@mizmay</em>....</div>
+<div>Presentation made with <a href="http://www.macwright.org/big/">big</a></div>
+</body></html>
