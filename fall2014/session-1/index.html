@@ -146,46 +146,27 @@
 <div>And then there are <em>web</em> maps... </div>
 <div data-bodyclass='internet-maps'><br><br><br>(maps on the internet)</div>
 <div>But what is a <em>web map</em>?</div>
-<div>A <strong>web map</strong> is a <em>map</em> displayed on the <em>web</em>.</div>
+<div>A <strong>web map</strong> is a map <em>displayed</em> on the <em>web</em>.</div>
 <div>An <em>embedded image</em> in a page is a web map. (But <strong>download this PDF</strong> does <em>not</em> a web map make.)</div>
-<div>Before we get into more <em>characteristics</em> of web maps, let's talk about <strong>how</strong> we put maps online.</div>
+<div>Let's talk about <strong>how</strong> we put maps online.</div>
 <div>Any <em>guesses</em>?</div>
 <div data-bodyclass="html">HTML!</div>
-<div><strong>HTML</strong> is the <em>language</em> of websites.</div>
+<div><strong>HTML</strong> is the <em>magical language</em> of websites.</div>
 <div><strong>HTML</strong>, along with <strong>CSS</strong> and <strong>JavaScript</strong>, make up most of what you <em>see</em> on the web.</div>
-<div><em>HTML</em> is like the <strong>noun</strong>, <em>CSS</em> is like the <strong>adjective</strong>, and <em>JavaScript</em> is like the <strong>verb</strong>.</div>
-<div>We will get into this more in the <strong>coming weeks</strong>. For now, on with the <em>vocabulary</em>.</div>
-<div>There are <strong>several</strong> types of maps, but we can mostly break them down into <em>two</em> categories:</div>
-<div><em>Thematic maps</em></div>
-<div>and <strong>Reference maps</strong>.</div>
-<div data-bodyclass='quote'>"Thematic maps are data maps of a specific subject or for a specific purpose. Statistical thematic maps include a variety of different map types such as choropleth or shaded maps, dot maps, proportional symbol maps, and isarithmic maps." - <a href="https://www.census.gov/geo/maps-data/maps/thematic.html">U.S. Census Bureau</a></div>
-<div>Some <em>examples</em>:</div>
-<div data-bodyclass='team-gb'></div>
-<div data-bodyclass='cartogram'></div>
-<div data-bodyclass='dot-density'></div>
-<div data-bodyclass='dotmap'></div>
-<div data-bodyclass='quote'>"A reference map is a map that emphasizes the geographic location of features. ... For these maps, the goal is to display a lot of different kinds of information without drawing the reader's attention to any one theme of information more than any other theme." - <a href="http://mappingcenter.esri.com/index.cfm?fa=maps.aboutReference">Esri Mapping Center</a></div>
-<div><em>Why</em> might you use a <strong>reference map</strong>?</div>
-<div data-bodyclass='wayfinding1'>Wayfinding</div>
-<div data-bodyclass='wayfinding2'></div>
-<div data-bodyclass='transit'>Transit</div>
-<div data-bodyclass='navigation'>Navigation</div>
-<div data-bodyclass='bart'></div>
-<div data-bodyclass='topographic'>Topographic</div>
-<div><em>Web maps</em> can either be <strong>reference maps</strong> or <strong>thematic maps</strong>.</div>
-<div>Again, we'll go <em>deeper</em> into this next week.</div>
-<div>To make <strong>either kind</strong>, we need to understand some of the <em>building blocks</em> of making web maps.</div>
-<div>All maps start with some <strong>data</strong>.</div>
-<div><em>What kinds of data</em> might we use to make a map?</div>
-<div>Now, <strong>what data formats</strong> might we use to make a map?</div>
+<div>If a website is a sentence, <em>HTML</em> is the <strong>noun</strong>, <em>CSS</em> is the <strong>adjective</strong>, and <em>JavaScript</em> is the <strong>verb</strong>.</div>
+<div>The other element of a web map is geographic data.</div>
+<div>There are <em>many</em> geographic data formats.</div>
+<div>They typically link <em>shapes and locations<em> with <em>attributes</em>, and sometimes encode styling.</div>
+<div>Now, <strong>what data formats</strong> might you encounter when making a web map?</div>
 <div><a href="http://en.wikipedia.org/wiki/Shapefile">Shapefile</a></div>
 <div><a href="http://help.arcgis.com/en/arcgisdesktop/10.0/help/index.html#//003n00000007000000">File geodatabases</a></div>
 <div><a href="http://en.wikipedia.org/wiki/Comma-separated_values">CSV (comma-separated values)</a></div>
 <div><a href="https://developers.google.com/kml/documentation/">KML</a></div>
 <div><a href="http://geojson.org">GeoJSON</a></div>
-<div><strong>All of these formats</strong> find themselves in the web mapping conversation. Sometimes because it's <em>difficult</em> to convert data from them.</div>
+<div>You might also encounter geospatial databases like <em>PostGIS</em> or <em>Arc Server</em> that store and serve data dynamically.</div>
+<div><strong>All of these formats</strong> find themselves in the web mapping conversation. Often because you need to convert data between them.<br><br>--> :( <--</div>
 <div>We'll talk <strong>more</strong> about data <em>later</em> in the class.</div>
-<div><em>Finally</em>, what <strong>tools</strong> do we use to make web maps?</div>
+<div>What <strong>tools</strong> do we use to make web maps?</div>
 <div><a href="http://maps.google.com">Google Maps</a></div>
 <div><a href="http://cartodb.com">CartoDB</a></div>
 <div><a href="http://osm.org">OpenStreetMap (OSM)</a></div>
@@ -215,6 +196,23 @@
 <div>On the whole, we use <strong>web maps</strong> for <em>data visualization</em>.</div>
 <div>As such, <strong>cartography</strong> remains important on web maps.</div>
 <div>[This is where Stephanie rants about cartography.]</div>
+<div>There are <strong>several</strong> types of maps, but we can mostly break them down into <em>two</em> categories:</div>
+<div><em>Thematic maps</em></div>
+<div>and <strong>Reference maps</strong>.</div>
+<div data-bodyclass='quote'>"Thematic maps are data maps of a specific subject or for a specific purpose. Statistical thematic maps include a variety of different map types such as choropleth or shaded maps, dot maps, proportional symbol maps, and isarithmic maps." - <a href="https://www.census.gov/geo/maps-data/maps/thematic.html">U.S. Census Bureau</a></div>
+<div>Some <em>examples</em>:</div>
+<div data-bodyclass='team-gb'></div>
+<div data-bodyclass='cartogram'></div>
+<div data-bodyclass='dot-density'></div>
+<div data-bodyclass='dotmap'></div>
+<div data-bodyclass='quote'>"A reference map is a map that emphasizes the geographic location of features. ... For these maps, the goal is to display a lot of different kinds of information without drawing the reader's attention to any one theme of information more than any other theme." - <a href="http://mappingcenter.esri.com/index.cfm?fa=maps.aboutReference">Esri Mapping Center</a></div>
+<div><em>Why</em> might you use a <strong>reference map</strong>?</div>
+<div data-bodyclass='wayfinding1'>Wayfinding</div>
+<div data-bodyclass='wayfinding2'></div>
+<div data-bodyclass='transit'>Transit</div>
+<div data-bodyclass='navigation'>Navigation</div>
+<div data-bodyclass='bart'></div>
+<div data-bodyclass='topographic'>Topographic</div>
 <div>So, you have some <em>homework</em>. But it's <em>fun homework</em>.</div>
 <div>Find a <strong>cool web map</strong> online and <em>bring the link</em> with you next week.</div>
 <div><em>Oh</em>, and think about <strong>why</strong> you think it's a cool web map.</div>
