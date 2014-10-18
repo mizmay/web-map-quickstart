@@ -1,0 +1,218 @@
+<!DOCTYPE html><html><head><title>Web-Mapping Quickstart: Session 1</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link href='/big.css' rel='stylesheet' type='text/css' />
+<style>
+  .catmap {
+    background-image: url(./images/catmap.png);
+    background-repeat: no-repeat;
+  }
+  .google {
+    background-image: url(./images/google.png);
+    background-repeat: no-repeat;
+  }
+  .paper-maps {
+    background-image: url(./images/paper_maps.jpg);
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    background-size: 80%;
+  }
+  .digital-maps {
+    background-image: url(./images/1-arcGIS.jpg);
+    background-repeat: no-repeat;
+    background-position: center 5px;
+  }
+  .internet-maps {
+    background-image: url(./images/internetmaps.png);
+    background-repeat: no-repeat;
+    background-position: center 25px;
+    background-size: 50%;
+  }
+  .html {
+    background-image: url(./images/html.png);
+    background-repeat: no-repeat;
+    background-position: center 25px;
+  }
+  .team-gb {
+    background-image: url(./images/TeamGB_medalists.png);
+    background-repeat: no-repeat;
+    background-position: center 120px;
+    background-color: #fff;
+  }
+  .cartogram {
+    background-image: url(./images/cartogram.jpg);
+    background-repeat: no-repeat;
+    background-position: center 120px;
+    background-color: #fff;
+  }
+  .dot-density {
+    background-image: url(./images/dotdensity.png);
+    background-repeat: no-repeat;
+    background-position: center 2px;
+    background-size: 75%;
+  }
+  .dotmap {
+    background-image: url(./images/dotmap.png);
+    background-repeat: no-repeat;
+    background-position: center 2px;
+  }
+  .wayfinding1 {
+    background-image: url(./images/wayfinding.png);
+    background-repeat: no-repeat;
+    background-position: center 5px;
+  }
+  .wayfinding2 {
+    background-image: url(./images/wayfinding2.png);
+    background-repeat: no-repeat;
+    background-position: center 5px;
+  }
+  .transit {
+    background-image: url(./images/transit.png);
+    background-repeat: no-repeat;
+    background-position: center 5px;
+  }
+  .navigation {
+    background-image: url(./images/navigation.png);
+    background-repeat: no-repeat;
+    background-position: center 5px;
+  }
+  .bart {
+    background-image: url(./images/bartmap.gif);
+    background-repeat: no-repeat;
+    background-position: center 5px;
+  }
+  .topographic {
+    background-image: url(./images/topographic.png);
+    background-repeat: no-repeat;
+    background-position: center 5px;
+  }
+  .tile-loading {
+    background-image: url(./images/tiles-loading.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .slippy-map {
+    background-image: url(./images/slippy-map.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .zero {
+    background-image: url(./images/zero.PNG);
+    background-repeat: no-repeat;
+    background-position: center 25px;
+
+  }
+  .four {
+    background-image: url(./images/tilegrid.png);
+    background-repeat: no-repeat;
+    background-position: center 40px;
+  }
+  .quote {
+    font-family: serif;
+  }
+</style>
+<script src='/big.js'></script>
+</head><body>
+
+<div>Web Mapping <em>Quickstart</em></div>
+<div>Let's talk about <strong>maps</strong>!</div>
+<div data-bodyclass="catmap"></div>
+<div><em>Stephanie May</em>: <a href='http://twitter.com/mizmay'>@mizmay</a> or <strong>smay@ccsfgis.org</strong>.<br><br><em>Lyzi Diamond</em>: <a href='http://twitter.com/lyzidiamond'>@lyzidiamond</a> or <strong>lyzidiamond@gmail.com.</strong></div>
+<div><em>Who</em> are you? <em>Why</em> are you here?</div>
+<div>What we'll <strong>cover</strong> in this class:</div>
+<div><em>Session 1</em>: Introduction</div>
+<div><em>Session 2</em>: Web mapping platforms and projects</div>
+<div><em>Session 3</em>: Web mapping from scratch</div>
+<div><em>Session 4</em>: Advanced web mapping</div>
+<div>What we <strong>won't</strong> cover:</div>
+<div>GIS and data wrangling</div>
+<div>Web servers and what is required to set up a system for collecting data</div>
+<div><em>Sound good?</em> Let's begin!</div>
+<div><strong>First things first:</strong> what is a <em>web map</em>?</div>
+<div>A <strong>web map</strong> is a <em>map</em> that lives on the <em>web</em>.</div>
+<div>Literally, an <em>image</em> embedded in a <strong>web page</strong> is a <em>web map</em>.</div>
+<div>But when we think about <em>web maps</em> we think of...</div>
+<div data-bodyclass="google">Google Maps!</div>
+<div>We think about <strong>interactivity</strong>.</div>
+<div>We think about <em>panning</em> and <em>zooming</em>.</div>
+<div>But there are <strong>plenty</strong> of web maps that <em>don't</em> have interactivity. There are <strong>plenty</strong> of web maps that aren't <em>Google Maps</em>.</div>
+<div>A <em>good place</em> to start might be with some <strong>vocabulary</strong>.</div>
+<div>There are <em>print</em> maps...</div>
+<div data-bodyclass='paper-maps'>(maps on paper)</div>
+<div>And there are <em>digital</em> maps... </div>
+<div data-bodyclass='digital-maps'>(maps on computers)</div>
+<div>And then there are <em>web</em> maps... </div>
+<div data-bodyclass='internet-maps'><br><br><br>(maps on the internet)</div>
+<div><strong>Simple</strong>, right?</div>
+<div>Before we get into more <em>characteristics</em> of web maps, let's talk about <strong>how</strong> we put maps online.</div>
+<div>Any <em>guesses</em>?</div>
+<div data-bodyclass="html">HTML!</div>
+<div><strong>HTML</strong> is the <em>language</em> of websites.</div>
+<div>Even an <em>embedded image</em> in a page is a web map. (But <strong>download this PDF</strong> does <em>not</em> a web map make.)</div>
+<div><strong>HTML</strong>, along with <strong>CSS</strong> and <strong>JavaScript</strong>, make up most of what you <em>see</em> on the web.</div>
+<div><em>HTML</em> is like the <strong>noun</strong>, <em>CSS</em> is like the <strong>adjective</strong>, and <em>JavaScript</em> is like the <strong>verb</strong>.</div>
+<div>We will get into this more in the <strong>coming weeks</strong>. For now, on with the <em>vocabulary</em>.</div>
+<div>There are <strong>several</strong> types of maps, but we can mostly break them down into <em>two</em> categories:</div>
+<div><em>Thematic maps</em></div>
+<div>and <strong>Reference maps</strong>.</div>
+<div data-bodyclass='quote'>"Thematic maps are data maps of a specific subject or for a specific purpose. Statistical thematic maps include a variety of different map types such as choropleth or shaded maps, dot maps, proportional symbol maps, and isarithmic maps." - <a href="https://www.census.gov/geo/maps-data/maps/thematic.html">U.S. Census Bureau</a></div>
+<div>Some <em>examples</em>:</div>
+<div data-bodyclass='team-gb'></div>
+<div data-bodyclass='cartogram'></div>
+<div data-bodyclass='dot-density'></div>
+<div data-bodyclass='dotmap'></div>
+<div data-bodyclass='quote'>"A reference map is a map that emphasizes the geographic location of features. ... For these maps, the goal is to display a lot of different kinds of information without drawing the reader's attention to any one theme of information more than any other theme." - <a href="http://mappingcenter.esri.com/index.cfm?fa=maps.aboutReference">Esri Mapping Center</a></div>
+<div><em>Why</em> might you use a <strong>reference map</strong>?</div>
+<div data-bodyclass='wayfinding1'>Wayfinding</div>
+<div data-bodyclass='wayfinding2'></div>
+<div data-bodyclass='transit'>Transit</div>
+<div data-bodyclass='navigation'>Navigation</div>
+<div data-bodyclass='bart'></div>
+<div data-bodyclass='topographic'>Topographic</div>
+<div><em>Web maps</em> can either be <strong>reference maps</strong> or <strong>thematic maps</strong>.</div>
+<div>Again, we'll go <em>deeper</em> into this next week.</div>
+<div>To make <strong>either kind</strong>, we need to understand some of the <em>building blocks</em> of making web maps.</div>
+<div>All maps start with some <strong>data</strong>.</div>
+<div><em>What kinds of data</em> might we use to make a map?</div>
+<div>Now, <strong>what data formats</strong> might we use to make a map?</div>
+<div><a href="http://en.wikipedia.org/wiki/Shapefile">Shapefile</a></div>
+<div><a href="http://help.arcgis.com/en/arcgisdesktop/10.0/help/index.html#//003n00000007000000">File geodatabases</a></div>
+<div><a href="http://en.wikipedia.org/wiki/Comma-separated_values">CSV (comma-separated values)</a></div>
+<div><a href="https://developers.google.com/kml/documentation/">KML</a></div>
+<div><a href="http://geojson.org">GeoJSON</a></div>
+<div><strong>All of these formats</strong> find themselves in the web mapping conversation. Sometimes because it's <em>difficult</em> to convert data from them.</div>
+<div>We'll talk <strong>more</strong> about data <em>later</em> in the class.</div>
+<div><em>Finally</em>, what <strong>tools</strong> do we use to make web maps?</div>
+<div><a href="http://maps.google.com">Google Maps</a></div>
+<div><a href="http://cartodb.com">CartoDB</a></div>
+<div><a href="http://osm.org">OpenStreetMap (OSM)</a></div>
+<div><a href="http://mapbox.com">Mapbox</a></div>
+<div><a href="http://arcgis.com">ArcGIS Online</a></div>
+<div>JavaScript libraries like <a href="http://leafletjs.com">Leaflet</a>, <a href="http://d3js.com">D3</a>, and <a href="http://gis.stackexchange.com/questions/8032/how-do-various-javascript-mapping-libraries-compare">many others</a>.</div>
+<div>How do <em>web maps</em> work?</div>
+<div>(A chunk of these slides came from the awesome <a href="http://maptime.github.io/anatomy-of-a-web-map">Anatomy of a Web Map</a> presentation by <a href="http://twitter.com/mappingmashups">Alan McConchie</a> and <a href="http://twitter.com/bethschechter">Beth Schechter</a> of <a href="http://stamen.com">Stamen</a> and <a href="http://maptime.io">Maptime</a> fame!)</div>
+<div>(I also wrote a <a href="http://lyzidiamond.com/posts/wtf-tilemill">blog post</a> that explains more about this stuff.)</div>
+<div>Let's talk about <em>tiles</em>, baby.</div>
+<div><strong>Raster tiles</strong>, anyway. <em>Vector tiles</em> some other time.</div>
+<div>"... web maps are made up of many small, square images called <em>tiles</em>."</div>
+<div>"These tiles are typically <strong>256x256 pixels</strong> and are placed <em>side-by-side</em> in order to create the illusion of a <strong>very large seamless image</strong>."</div>
+<div><a href="http://mapbox.com/developers/guide">(Thanks for the explanation, MapBox!)</a></div>
+<div data-bodyclass="tile-loading">All these little tiles load <em>way faster</em> than one big map.</div>
+<div data-bodyclass="slippy-map">This kind of map is colloquially called a <strong>slippy map</strong>.</div>
+<div>Each <em>zoom level</em> has its own set of <strong>tiles</strong>.</div>
+<div><em>Zoom level 0:</em> <strong>1</strong> tile for the world.</div>
+<div data-bodyclass="zero"></div>
+<div>With each additional <em>zoom level</em>, the number of tiles increases <strong>exponentially.</strong></div>
+<div><em>Zoom level 1:</em> <strong>4</strong> tiles for the world.</div>
+<div data-bodyclass="four"></div>
+<div><em>Zoom level 2:</em> <strong>16</strong> tiles for the world.</div>
+<div>... <strong>you get the idea.</strong></div>
+<div>Map tiles only render <em>when you're looking at them</em> in that moment, so tiles make maps <strong>hella fast</strong>.</div>
+<div>A bit later in the course, we'll go deeper into how tiles work inside of web maps.</div>
+<div>On the whole, we use <strong>web maps</strong> for <em>data visualization</em>.</div>
+<div>As such, <strong>cartography</strong> remains important on web maps.</div>
+<div>[This is where Stephanie rants about cartography.]</div>
+<div>So, you have some <em>homework</em>. But it's <em>fun homework</em>.</div>
+<div>Find a <strong>cool web map</strong> online and <em>bring the link</em> with you next week.</div>
+<div><em>Oh</em>, and think about <strong>why</strong> you think it's a cool web map.</div>
+<div>See you next week!</div>
+<div>PS Presentation made with <a href="http://www.macwright.org/big/">big</a></div>
+</body></html>
