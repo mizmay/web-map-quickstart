@@ -166,31 +166,13 @@
 <div>You might also encounter geospatial databases like <em>PostGIS</em> or <em>Arc Server</em> that store and serve data dynamically.</div>
 <div><strong>All of these formats</strong> find themselves in the web mapping conversation. Often because you need to convert data between them.<br><br> :( </div>
 <div>We'll talk <strong>more</strong> about data <em>later</em> in the class.</div>
-<div>What <strong>platforms</strong> do people use to make quick and dirty web maps?</div>
+<div>What <strong>tools</strong> do people use to make <em>quick and dirty</em> web maps?</div>
 <div><a href="http://maps.google.com">Google Maps</a></div>
 <div><a href="http://cartodb.com">CartoDB</a></div>
 <div><a href="http://osm.org">OpenStreetMap (OSM)</a></div>
 <div><a href="http://mapbox.com">Mapbox</a></div>
 <div><a href="http://arcgis.com">ArcGIS Online</a></div>
 <div>You can take things much further with JavaScript libraries like <a href="http://leafletjs.com">Leaflet</a>, <a href="http://d3js.com">D3</a>, and <a href="http://gis.stackexchange.com/questions/8032/how-do-various-javascript-mapping-libraries-compare">many others</a>.</div>
-<div>Since mostly people expect clickable, pannable, zoomable web maps....<br><br>let's talk about how that works.</div>
-<div>(A chunk of these slides came from the awesome <a href="http://maptime.github.io/anatomy-of-a-web-map">Anatomy of a Web Map</a> presentation by <a href="http://twitter.com/mappingmashups">Alan McConchie</a> and <a href="http://twitter.com/bethschechter">Beth Schechter</a> of <a href="http://stamen.com">Stamen</a> and <a href="http://maptime.io">Maptime</a> fame!)</div>
-<div>Let's talk about <em>tiles</em>, baby.</div>
-<div><strong>Raster tiles</strong>, anyway. <em>Vector tiles</em> some other time.</div>
-<div>"... web maps are made up of many small, square images called <em>tiles</em>."</div>
-<div>"These tiles are typically <strong>256x256 pixels</strong> and are placed <em>side-by-side</em> in order to create the illusion of a <strong>very large seamless image</strong>."</div>
-<div><a href="http://mapbox.com/developers/guide">(Thanks for the explanation, MapBox!)</a></div>
-<div data-bodyclass="tile-loading">All these little tiles load <em>way faster</em> than one big map.</div>
-<div data-bodyclass="slippy-map">This kind of map is colloquially called a <strong>slippy map</strong>.</div>
-<div>Each <em>zoom level</em> has its own set of <strong>tiles</strong>.</div>
-<div><em>Zoom level 0:</em> <strong>1</strong> tile for the world.</div>
-<div data-bodyclass="zero"></div>
-<div>With each additional <em>zoom level</em>, the number of tiles increases <strong>by a power of 2.</strong></div>
-<div><em>Zoom level 1:</em> <strong>4</strong> tiles for the world.</div>
-<div data-bodyclass="four"></div>
-<div><em>Zoom level 2:</em> <strong>16</strong> tiles for the world.</div>
-<div>... <strong>you get the idea.</strong></div>
-<div>Map tiles load only for the <em>area and zoom</em> you're looking at, so tiles make web maps <strong>hella faster</strong>.</div>
 <div>In print or on the web, <strong>maps</strong> are <em>information design</em>.</div>
 <div>As such, <strong>cartography</strong> remains important for web maps.</div>
 <div>[This is where Stephanie rants about cartography.]</div>
@@ -214,6 +196,8 @@
 <div>So, you have some <em>homework</em>. But it's <em>fun homework</em>.</div>
 <div>Find a <strong>cool web map</strong> online and <em>bring the link</em> with you next week.</div>
 <div><em>Oh</em>, and think about <strong>why</strong> you think it's a cool web map.</div>
+<div>Also here are some cool web map events and resources you should know about</div>
+<div>Maptime, mapschool, etc.</div>
 <div>See you next week!</div>
 <div>PS Presentation made with <a href="http://www.macwright.org/big/">big</a></div>
 </body></html>
