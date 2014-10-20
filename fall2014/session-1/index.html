@@ -250,6 +250,80 @@
 <div>So, you have some <em>homework</em>. But it's <em>fun homework</em>.</div>
 <div>Find a <strong>cool web map</strong> online and <em>bring the link</em> with you next week.</div>
 <div><em>Oh</em>, and think about <strong>why</strong> you think it's a cool web map.</div>
+<div><em>Historically</em> web mapping has evolved without much <em>cartographic theory</em>...</div>
+<div>There was <em>Google</em> and then there were <em>mashups</em></div>
+<div><table><tr><td><img src="mashup.jpg"></td><td><a href="http://www.programmableweb.com/news/5-years-ago-today-web-mashup-was-born/2010/04/08">HousingMaps.com</a>, by Paul Rademacher, 2005</tr></table></div>
+<div>... which led to an <em>explosion</em> in special thematic maps</div>
+<div><img src="../session-2/cats.png"></div>
+<div>... and also this question in the minds of many cartographers:</div>
+<div><table><tr><td><img src="wings.gif"></td><td><img src="hummingbird.jpg"></td><td><img src="butterfly.jpg"></td></tr><tr colspan=3>Are web maps and print maps <em>homologous</em> or <em>analagous</em>?</table></div>
+<div><ul><li><a href="http://en.wikipedia.org/wiki/Dot_distribution_map#One-to-one" target="_blank">one-to-one dot maps</a></li><li><a href="http://en.wikipedia.org/wiki/Choropleth_map" target="_blank">choropleth</a> or <a href="http://wiki.gis.com/wiki/index.php/Chorochromatic_Maps" target="_blank">chorochromatic</a> maps</li><li>'<a href="http://xkcd.com/1138/" target="_blank">heatmaps</a>'</li></ul></div>
+<div><img src="webdotmap.png"></div>
+<div><img src="poly.png"></div>
+<div><img src="heatmap.png"></div>
+<div>I am not fond of heat maps.</div>
+<div>The term '<em>heatmap</em>' is imprecise. Isopleth? Point density? Interpolation?</div>
+<div><img src="interpolation.png"></div>
+<div>On the web it usually means <em>kernel density</em> and usually just shows <a href="http://xkcd.com/1138/" target="_blank">population density</a></div>
+<div><img src="heatmap_xkcd.png"></div>
+<div>Where the points are sparse or coincident, <em>kernel density</em> generates a meaningless blur:</div>
+<div><table><tr><td><img src="hmblur2.png"></td></tr><tr><td><img src="hmblur.png"></td></tr></table></div>
+<div>Common Js libraries that generate 'heatmaps' dynamically use zoom level as a proxy for kernel size, which <em>makes no sense</em> analytically.</div>
+<div><img src="kerneldensity.png"></div>
+<div>The default color scheme is horrid (nicknames: "<em>Tacky Angry Rainbow</em>" and "<em>Angry Fruit Salad</em>").</div>
+<div><figure><img src='tackyangryrainbow.png' alt='Tacky Angry Rainbow' /><figcaption>Tacky Angry Rainbow</figcaption></figure></div>
+<div><figure><img src='arbitraryheatmap.png' alt='Angry Fruit Salad' /><figcaption>Angry Fruit Salad</figcaption></figure></div>
+<div>They arise from demand from people who don't know what they are doing, but know they want to show a lot of points on a map.</div>
+<div>Alternative: clustering</div>
+<div><img src="googlegeo.png"></div>
+<div>Entirely different although it looks similar: <a href="http://support.esri.com/en/knowledgebase/GISDictionary/term/dot%20density%20map">dot density maps</a></div>
+<div><iframe src="http://demographics.coopercenter.org/DotMap/index.html" width="1200" height="800" frameborder="0" scrolling="no"></iframe></div>
+<div>Someone clever putting a lot of points on maps quite artfully: <a href="https://www.flickr.com/photos/walkingsf/sets/">Eric Fischer</a></div>
+<div><table><tr><td><img src="enf_nyc.jpg"></td></tr></table></div>
+<div><table><tr><td><img src="enf_london.jpg"></td></tr></table></div>
+<div><table><tr><td><img src="enf_sf.jpg"></td></tr></table></div>
+<div>We should still strive for sound <em>cartography</em> in <em>mashups</em>.</div>
+<div>A few high level concepts from cartography, which is a <em>visual</em> enterprise:</div>
+<div>1. Visual variables</div>
+<div><table><tr><td><img src="visual_variables.png"></td></tr></table></div>
+<div><table><tr><td><img src="visual_variables2.png"></td></tr></table></div>
+<div>2. Visual hierarchy</div>
+<div><table><tr><td><img src="82_congo_elements_plopped.gif"></td><td>BAD<br>←<br><br>GOOD <br>→ </td><td><img src="83_congo_portrait.gif"></td></tr></table></div>
+<div>3. Visual argument</div>
+<div><table><tr><td><img src="visual_argument.png"></td></tr></table></div>
+<div>An important concept for web cartography is "<em>screen real-estate</em>"</div>
+<div><table><tr><td><img src="phonemap.jpg"></td></tr></table></div>
+<div><ul><li>Space is scarce</li><li>Mobile vs. desktop</li><li>Fluid vs. compartmentalized layout</li></div>
+<div>Slippy map is a way around all of this but.... for some maps it is overkill & potentially a cop-out.</div>
+<div><iframe src="http://leafletjs.com/examples/choropleth-example.html" width="1200" height="800" frameborder="0" scrolling="no"></iframe></div>
+<div>The main thing the web brings to cartography is <em>interactivity</em>, which can take many forms.</div>
+<div>In web design and development, people make entire careers out of designing for interactivity. The field is called <em>UI/UX</em>, which is shorthand for <em>user interface and user experience</em>.</div>
+<div>It means you think through how people who visit your site will interact with it, and you design the <em>interface</em> to guide the user toward the <em>experience</em> you want them to have.</div>
+<div>UI/UX is a really important component of web mapping.</div>
+<div>Project managers creating government web portals for geospatial data, I am talking to you.</div>
+<div>For this reason, while it makes sense in print cartography to talk about <em>map readers</em>, in web cartography we talk about <em>map users</em>.</div>
+<div>In our first session, we saw some forms of interactivity that are <em>standard</em> in out of the box tools.</div>
+<div>Panning & Zooming</div>
+<div><table><tr><td><img src="panzoom.png"></td></tr></table></div>
+<div>Info Boxes</div>
+<div><table><tr><td><img src="infobox.png"></td></tr></table></div>
+<div>Tooltips</div>
+<div><iframe src="http://www.greenpeace.org/international/Global/international/code/2012/marine-reserves-map/index.html" width="1200" height="800" frameborder="0" scrolling="no"></iframe></div>
+<div>Highlighting</div>
+<div><iframe src="http://cf.datawrapper.de/YI8Ha/22/" frameborder="0" allowtransparency="true" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen width="800" height="600"></iframe></div>
+<div>Charts</div>
+<div><table><tr><td><img src="chart.png"></td></tr></table></div>
+<div>Embedded images/video</div>
+<div><table><tr><td><img src="embed.png"></td></tr></table></div>
+<div>Geocode box</div>
+<div><table><tr><td><img src="geocode.png"></td></tr></table></div>
+<div>"Zoom to my location" button</div>
+<div><table><tr><td><img src="gotolocation.png"></td></tr></table></div>
+<div>Animation</div>
+<div><iframe src="http://cartodb.github.com/oldweather_wwi/" width="1000" height="800" frameborder="0" scrolling="no"></iframe></div>
+<div>All these <em>whizz-bangs</em> are neato!</div>
+
+
 <div>Also here are some cool web map events and resources you should know about</div>
 <div>Maptime, mapschool, etc.</div>
 <div>See you next week!</div>
