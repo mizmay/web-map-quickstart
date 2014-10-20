@@ -113,17 +113,8 @@
 </head><body>
 
 <div>Web Mapping <em>Quickstart</em></div>
-<div>Let's talk about <strong>maps</strong>!</div>
-<div data-bodyclass="catmap"></div>
 <div>We are:<br><br><em>Lyzi Diamond</em>: <a href='http://twitter.com/lyzidiamond'>@lyzidiamond</a> or <strong>lyzi@codeforamerica.org.</strong><br><br><em>Stephanie May</em>: <a href='http://twitter.com/mizmay'>@mizmay</a> or <strong>smay@ccsfgis.org</strong></div>.
 <div><em>Who</em> are you? <em>Why</em> are you here?</div>
-<div>When we say <em>web maps</em> people think of...</div>
-<div data-bodyclass="google">Google Maps!</div>
-<div>They expect <em>panning</em> and <em>zooming</em>.</div>
-<div>They expect clickability (<strong>interactivity</strong>)</div>
-<div>But there are <strong>plenty</strong> of web maps that <em>don't</em> need interactivity.</div>
-<div>EXAMPLE HERE</div>
-<div>There are <strong>plenty</strong> of web maps that aren't <em>Google Maps</em>.</div>
 <div>Course objectives: by the end of this class you should be able to....</div>
 <div>Think critically about web maps</div>
 <div>Understand the ecosystem</div>
@@ -138,7 +129,6 @@
 <div>Web servers and what is required to set up a system for collecting data</div>
 <div>Software development</div>
 <div><em>Sound good?</em> Let's begin!</div>
-<div>Today we'll start with some <strong>vocabulary</strong> and <strong>key concepts</strong> in mapping.</div>
 <div>There are <em>print</em> maps...</div>
 <div data-bodyclass='paper-maps'>(maps on paper)</div>
 <div>And there are <em>digital</em> maps... </div>
@@ -158,24 +148,87 @@
 <div>There are <em>many</em> geographic data formats.</div>
 <div>They typically link <em>shapes and locations</em> with <em>attributes</em>, and sometimes encode styling.</div>
 <div>Now, <strong>what data formats</strong> might you encounter when making a web map?</div>
+<div>By <em>a show of hands<em>, we'd like to know <strong>which of these you have encountered already</strong>:</div>
 <div><a href="http://en.wikipedia.org/wiki/Shapefile">Shapefile</a></div>
 <div><a href="http://help.arcgis.com/en/arcgisdesktop/10.0/help/index.html#//003n00000007000000">File geodatabases</a></div>
 <div><a href="http://en.wikipedia.org/wiki/Comma-separated_values">CSV (comma-separated values)</a></div>
 <div><a href="https://developers.google.com/kml/documentation/">KML</a></div>
 <div><a href="http://geojson.org">GeoJSON</a></div>
 <div>You might also encounter geospatial databases like <em>PostGIS</em> or <em>Arc Server</em> that store and serve data dynamically.</div>
-<div><strong>All of these formats</strong> find themselves in the web mapping conversation. Often because you need to convert data between them.<br><br> :( </div>
-<div>We'll talk <strong>more</strong> about data <em>later</em> in the class.</div>
+<div><strong>All of these formats</strong> find themselves in the web mapping conversation. Often because you need to convert data between them.</div>
+<div>When it comes to data and web mapping, another crucial part of the conversation is <a href="http://osm.org">OpenStreetMap (OSM)</a></div>
+<div>OpenStreetMap http://geospatialrevolution.psu.edu/episode1</div>
+<div>What is OpenStreetMap?</div>
+<div>... a crowd-sourced reference map</div>
+<div>"The <a href="https://www.google.com/search?q=%22wikipedia+of+maps%22">Wikipedia</a> of maps"</div>
+<div>... a community of mappers</div>
+<div><img src="editathon.jpeg"></div>
+<div><img src="mapkibera.jpeg"></div>
+<div><table style="width:300px"><tr><td><img src="sotmus.jpg"></td></tr></table></div>
+<div>Now including you!</div>
+<div>Exercise 1: OSM</div>
+<div>Go to OpenStreetMap.org</div>
+<div>Search for a place or an address</div>
+<div>Find the best match from Nominatum</div>
+<div>Click on it to zoom there</div>
+<div>Toggle through the different <em>reference</em> layers</div>
+<div>Each emphasizing a different set of <em>mappable</em> features</div>
+<div><img src="signup.png">Create an account...</div>
+<div>Two ways to edit OSM: web editor <a href="https://wiki.openstreetmap.org/wiki/ID">iD</a> or advanced editor <a href="https://josm.openstreetmap.de/">JOSM</a></div>
+<div style="color: black"><img src="sf_cityhall.png">iD: just click edit up in the corner ↖︎</div>
+<div style="color: black"><img src="sf_cityhall_editing.png"></div>
+<div><img src="sf_cityhall_editing_josm.png"><em>JOSM</em></div>
+<div>But what to edit? <em>Suggestions:</em></div>
+<div>Trace some buildings</div>
+<div>Add some addresses...</div>
+<div>Add some POIs (points of interest)</div>
+<div>To learn how to tag anything you add to the map: <a href="http://wiki.openstreetmap.org/wiki/Map_Features">wiki.osm.org / wiki / Map_Features</a></div>
+<div>Am I doing it the <em>right way?</em> Read about <a href="http://wiki.openstreetmap.org/wiki/Good_practice">wiki.osm.org / wiki / Good_practice</a></div>
+<div>Most important rule is to make <a href="http://wiki.openstreetmap.org/wiki/Good_changeset_comments">wiki.osm.org / wiki / Good_changeset_comments</a></div>
+<div>Let's give it a try</div>
+<div>Time for advanced maneuvers</div>
+<div>Play <a href="http://maproulette.org">MapRoulette</a></div>
+<div><img src="maproulette.png"></div>
+<div>- OR -</div>
+<div>Do some <a href="http://tasks.hotosm.org/">HOT tasks</a> (Humanitarian OSM Team)</div>
+<div><img src="hot.png"></div>
+<div>You know when OSM gets really cool?</div>
+<div><img src="pushpin.png">When you get <em>outside!</em></div>
+<div><img src="fieldpapers.png"></div>
+<div><img src="field-paper-3.png"></div>
+<div>Important things to know!</div>
+<div>1. No copying from <span style="color:blue">G</span><span style="color:red">o</span><span style="color:yellow">o</span><span style="color:blue">g</span><span style="color:green">l</span><span style="color:red">e</span> products!</div>
+<div>2. OSM is licensed under the Open Database License. There are certain <a href="http://www.openstreetmap.org/copyright">restrictions and requirements</a> when using or modifying OSM data.</div>
+<div>Some places to learn more: <a href="http://learnosm.org">www.learnosm.org</a> <a href="http://wiki.openstreetmap.org">wiki.osm.org</a> <a href="http://help.openstreetmap.org">help.osm.org</a></div>
+<div>OSM portion of this presentation borrows heavily from <a href="maptime.github.io/osm-101">OSM 101</a></div>
+<div>BREAK</div>
+<div>Apart from the OSM project itself, why is OSM so crucial to web mapping?</div>
+<div>Because <em>getting data is hard.</em>.</div>
+<div>You can download all of OpenStreetMap for free!</div>
+<div>Planet.osm</div>
+<div>(this is not recommended)</div>
+<div>You can also <a href="http://www.openstreetmap.org/export#map=18/37.75451/-122.42030">download a small portion of it</a> via a bounding box.</div>
+<div>By the way: OpenStreetMap data has its own data format.</div>
+<div>If you see geodata with the file extension <em>.osm</em>, <strong>don't panic</strong>. Though it is not commonly used in GIS, an increasing number of tools including <em>ArcGIS</em> and <em>QGIS</em> and <em>CartoDB</em> support .osm files to some degree.</div>
+<div>You may not want to deal with .osm, or you may need data from a larger area than the bounding box tools will support. Thankfully, you can download metro regions as shapefiles via <a href="http://metro.teczno.com/">Metro Extracts</a></div>
+<div>Other great sources for <em>free</em> data:</div>
+<div>Open data portals!</div>
+<div>Now that we've talked about data formats and getting data, we're basically raedy to make a may, right?</div>
 <div>What <strong>tools</strong> do people use to make <em>quick and dirty</em> web maps?</div>
 <div><a href="http://maps.google.com">Google Maps</a></div>
 <div><a href="http://cartodb.com">CartoDB</a></div>
-<div><a href="http://osm.org">OpenStreetMap (OSM)</a></div>
 <div><a href="http://mapbox.com">Mapbox</a></div>
 <div><a href="http://arcgis.com">ArcGIS Online</a></div>
 <div>You can take things much further with JavaScript libraries like <a href="http://leafletjs.com">Leaflet</a>, <a href="http://d3js.com">D3</a>, and <a href="http://gis.stackexchange.com/questions/8032/how-do-various-javascript-mapping-libraries-compare">many others</a>.</div>
+<div>LET ME STOP YOU RIGHT THERE</div>
 <div>In print or on the web, <strong>maps</strong> are <em>information design</em>.</div>
-<div>As such, <strong>cartography</strong> remains important for web maps.</div>
-<div>[This is where Stephanie rants about cartography.]</div>
+<div><em>Cartographers</em> have been thinking about how to do that effectively in print <strong>for hundreds of years</strong></div>
+<div>Too often in web mapping, design decisions are <em>constrained</em> by the <strong>available tools</strong>.</div>
+<div style="font-family: serif;letter-spacing:2px">"Cartographers limit themselves – because of a lack of software skills or a client’s desired final product – to using <em>pre-fabricated tools</em> for Web map design (e.g., Google Maps, Esri’s ArcGIS Online). By the time data-organization and design decisions are considered, the potential efficacy of the map’s communication is already <em>grossly constrained</em> by the <em>limitations of the tool chosen</em>." - <a href="https://twitter.com/iMuehlenhaus">Ian Muehlenhaus</a> in <a href="http://utpjournals.metapress.com/content/q765k1l7423732l6/?p=81fc8c6f7eb8460f9ec9aba4318ddb07">Going Viral: The Look of Online Persuasive Maps</a></div>
+<div>Developers don't understand mapping and mappers don't know how to write code</div>
+<div>We're gonna change all that. Starting next time, we will talk more about <em>magical languages</em> of web mapping introduced earlier.</div>
+<div>(Don't be intimidated)</div>
+<div>For today: some <strong>vocabulary</strong> and <strong>key concepts</strong> in mapping to help frame our conversations in future weeks.</div>
 <div>There are <strong>several</strong> types of maps, but we can mostly break them down into <em>two</em> categories:</div>
 <div><em>Thematic maps</em></div>
 <div>and <strong>Reference maps</strong>.</div>
