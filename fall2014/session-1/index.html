@@ -165,6 +165,21 @@
     background-repeat: no-repeat;
     background-position: center 40px;
   }
+  .data-sfgov {
+    background-image: url(./images/data-sfgov.png);
+    background-repeat: no-repeat;
+    background-position: center 40px;
+  }
+  .data-gov {
+    background-image: url(./images/data-gov.png);
+    background-repeat: no-repeat;
+    background-position: center 40px;
+  }
+  .oregon-geo {
+    background-image: url(./images/oregon-geo.png);
+    background-repeat: no-repeat;
+    background-position: center 40px;
+  }
   .quote {
     font-family: serif;
   }
@@ -263,18 +278,24 @@
 <div><em>Best</em> place to learn more is at the <a href="http://www.meetup.com/Bay-Area-OpenStreetMappers/events/213663192/?a=ea1_grp&rv=ea1&_af_eid=213663192&_af=event">OpenStreetMap #Editathon</a> coming up on <em>November 15</em>.</div>
 <div>OSM portion of this presentation borrows heavily from <a href="maptime.github.io/osm-101">OSM 101</a>.</div>
 <div>BREAK</div>
-<div>Apart from the OSM project itself, why is OSM so crucial to web mapping?</div>
-<div>Because <em>getting data is hard.</em>.</div>
-<div>You can download all of OpenStreetMap for free!</div>
+<div>Apart from the OSM project itself, <strong>why</strong> is OSM so <em>crucial</em> to web mapping?</div>
+<div>Because <em>getting data is hard</em>.</div>
+<div>You can download <strong>all</strong> of OpenStreetMap for <strong>free</strong>!</div>
 <div>Planet.osm</div>
-<div>(this is not recommended)</div>
-<div>You can also <a href="http://www.openstreetmap.org/export#map=18/37.75451/-122.42030">download a small portion of it</a> via a bounding box.</div>
-<div>By the way: OpenStreetMap data has its own data format.</div>
-<div>If you see geodata with the file extension <em>.osm</em>, <strong>don't panic</strong>. Though it is not commonly used in GIS, an increasing number of tools including <em>ArcGIS</em> and <em>QGIS</em> and <em>CartoDB</em> support .osm files to some degree.</div>
-<div>You may not want to deal with .osm, or you may need data from a larger area than the bounding box tools will support. Thankfully, you can download metro regions as shapefiles via <a href="http://metro.teczno.com/">Metro Extracts</a></div>
+<div>(this is <em>not</em> recommended)</div>
+<div>You can also <a href="http://www.openstreetmap.org/export#map=18/37.75451/-122.42030">download a small portion of it</a> using a <strong>bounding box</strong>.</div>
+<div><em>By the way:</em> OpenStreetMap data has its own <strong>data format</strong>.</div>
+<div>If you see geodata with the file extension <em>.osm</em>, <strong>don't panic</strong>. Though it is not commonly used in GIS, an increasing number of tools including <em>ArcGIS</em>,, <em>QGIS</em> and <em>CartoDB</em> support <strong>.osm</strong> files to some degree.</div>
+<div>You may not want to deal with <strong>.osm</strong>, or you may need data from a <em>larger area</em> than the bounding box tools will support. <em>Thankfully</em>, you can download metro regions as <strong>shapefiles</strong> via <a href="http://metro.teczno.com/">Metro Extracts</a></div>
 <div>Other great sources for <em>free</em> data:</div>
 <div>Open data portals!</div>
-<div>Now that we've talked about data formats and getting data, we're basically raedy to make a may, right?</div>
+<div data-bodyclass='data-sfgov'></div>
+<div><strong>Government agencies</strong> create and maintain <em>lots</em> of geodata.</div>
+<div><em>Sometimes</em> they put it <em>online</em> for download on an <strong>open data portal</strong>.
+<div data-bodyclass='data-gov'></div>
+<div data-bodyclass='oregon-geo'></div>
+<div><strong>Open data portals</strong> typically have <em>shapefile</em> data and <em>tabular</em> data (like in <strong>CSVs</strong>).</div>
+<div>Now that we've talked about <strong>data formats</strong> and <strong>getting data</strong>, we're basically ready to make a <em>map</em>, right?</div>
 <div>What <strong>tools</strong> do people use to make <em>quick and dirty</em> web maps?</div>
 <div><a href="http://maps.google.com">Google Maps</a></div>
 <div><a href="http://cartodb.com">CartoDB</a></div>
