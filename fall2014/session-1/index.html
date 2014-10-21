@@ -74,11 +74,6 @@
     background-repeat: no-repeat;
     background-position: center 5px;
   }
-  .bart {
-    background-image: url(./images/bartmap.gif);
-    background-repeat: no-repeat;
-    background-position: center 5px;
-  }
   .topographic {
     background-image: url(./images/topographic.png);
     background-repeat: no-repeat;
@@ -165,6 +160,21 @@
     background-repeat: no-repeat;
     background-position: center 40px;
   }
+  .data-sfgov {
+    background-image: url(./images/data-sfgov.png);
+    background-repeat: no-repeat;
+    background-position: center 40px;
+  }
+  .data-gov {
+    background-image: url(./images/data-gov.png);
+    background-repeat: no-repeat;
+    background-position: center 40px;
+  }
+  .oregon-geo {
+    background-image: url(./images/oregon-geo.png);
+    background-repeat: no-repeat;
+    background-position: center 40px;
+  }
   .awesome {
     background-image: url(./images/OpenAwesome.jpg);
     background-repeat: no-repeat;
@@ -176,6 +186,7 @@
   }
   .quote {
     font-family: serif;
+    letter-spacing: 2px;
   }
 </style>
 <script src='../../big.js'></script>
@@ -272,6 +283,24 @@
 <div><em>Best</em> place to learn more is at the <a href="http://www.meetup.com/Bay-Area-OpenStreetMappers/events/213663192/?a=ea1_grp&rv=ea1&_af_eid=213663192&_af=event">OpenStreetMap #Editathon</a> coming up on <em>November 15</em>.</div>
 <div>OSM portion of this presentation borrows from <a href="maptime.github.io/osm-101">OSM 101</a>.</div>
 <div>BREAK</div>
+<div>Apart from the OSM project itself, <strong>why</strong> is OSM so <em>crucial</em> to web mapping?</div>
+<div>Because <em>getting data is hard</em>.</div>
+<div>You can download <strong>all</strong> of OpenStreetMap for <strong>free</strong>!</div>
+<div>Planet.osm</div>
+<div>(this is <em>not</em> recommended)</div>
+<div>You can also <a href="http://www.openstreetmap.org/export#map=18/37.75451/-122.42030">download a small portion of it</a> using a <strong>bounding box</strong>.</div>
+<div><em>By the way:</em> OpenStreetMap data has its own <strong>data format</strong>.</div>
+<div>If you see geodata with the file extension <em>.osm</em>, <strong>don't panic</strong>. Though it is not commonly used in GIS, an increasing number of tools including <em>ArcGIS</em>,, <em>QGIS</em> and <em>CartoDB</em> support <strong>.osm</strong> files to some degree.</div>
+<div>You may not want to deal with <strong>.osm</strong>, or you may need data from a <em>larger area</em> than the bounding box tools will support. <em>Thankfully</em>, you can download metro regions as <strong>shapefiles</strong> via <a href="http://metro.teczno.com/">Metro Extracts</a></div>
+<div>Other great sources for <em>free</em> data:</div>
+<div>Open data portals!</div>
+<div data-bodyclass='data-sfgov'></div>
+<div><strong>Government agencies</strong> create and maintain <em>lots</em> of geodata.</div>
+<div><em>Sometimes</em> they put it <em>online</em> for download on an <strong>open data portal</strong>.
+<div data-bodyclass='data-gov'></div>
+<div data-bodyclass='oregon-geo'></div>
+<div><strong>Open data portals</strong> typically have <em>shapefile</em> data and <em>tabular</em> data (like in <strong>CSVs</strong>).</div>
+<div>Now that we've talked about <strong>data formats</strong> and <strong>getting data</strong>, we're basically ready to make a <em>map</em>, right?</div>
 <div>Apart from the OSM project itself, why is OSM so crucial to web mapping?</div>
 <div>Because <em>getting data is hard.</em>.</div>
 <div>You can download <em>the whole planet</em> from OpenStreetMap for free!</div>
@@ -297,6 +326,11 @@
 <div>In print or on the web, <strong>maps</strong> are <em>information design</em>.</div>
 <div><em>Cartographers</em> have been thinking about how to do that effectively in print for <strong>hundreds of years.</strong></div>
 <div>Too often in web mapping, design decisions are <em>constrained</em> by the <strong>available tools</strong>.</div>
+<div data-bodyclass='quote'>"Cartographers limit themselves – because of a lack of software skills or a client’s desired final product – to using <em>pre-fabricated tools</em> for Web map design (e.g., Google Maps, Esri’s ArcGIS Online). By the time data-organization and design decisions are considered, the potential efficacy of the map’s communication is already <em>grossly constrained</em> by the <em>limitations of the tool chosen</em>." - <a href="https://twitter.com/iMuehlenhaus">Ian Muehlenhaus</a> in <a href="http://utpjournals.metapress.com/content/q765k1l7423732l6/?p=81fc8c6f7eb8460f9ec9aba4318ddb07">Going Viral: The Look of Online Persuasive Maps</a></div>
+<div><em>Developers</em> don't understand <strong>mapping</strong> and <strong>mappers</strong> don't know how to <em>write code</em>.</div>
+<div>We're gonna <strong>change</strong> all that. Starting next time, we will talk more about <em>magical languages</em> of web mapping introduced earlier.</div>
+<div>(<strong>Don't</strong> be intimidated!)</div>
+<div>For today: some <strong>vocabulary</strong> and <strong>key concepts</strong> in mapping to help frame our conversations in future weeks.</div>
 <div style="font-family: serif;letter-spacing:2px">"Cartographers limit themselves – because of a lack of software skills or a client’s desired final product – to using <em>pre-fabricated tools</em> for Web map design (e.g., Google Maps, Esri’s ArcGIS Online). By the time data-organization and design decisions are considered, the potential efficacy of the map’s communication is already <em>grossly constrained</em> by the <em>limitations of the tool chosen</em>." - <a href="https://twitter.com/iMuehlenhaus">Ian Muehlenhaus</a> in <a href="http://utpjournals.metapress.com/content/q765k1l7423732l6/?p=81fc8c6f7eb8460f9ec9aba4318ddb07">Going Viral: The Look of Online Persuasive Maps</a></div>
 <div>For today: some <strong>vocabulary</strong> and <strong>key concepts</strong> in mapping to help us <em>think more critically</em> about web maps.</div>
 <div>There are <strong>several</strong> types of maps, but we can mostly break them down into <em>two</em> categories:</div>
