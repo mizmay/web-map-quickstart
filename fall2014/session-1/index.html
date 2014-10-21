@@ -178,7 +178,12 @@
   .awesome {
     background-image: url(./images/OpenAwesome.jpg);
     background-repeat: no-repeat;
-    background-position: center 160px; 
+    background-position: center 40px; 
+  }
+  .mashups {
+    background-image: url(./images/mashups.jpg);
+    background-repeat: no-repeat;
+    background-position: center 40px;
   }
   .credit {
     font-size: 12;
@@ -283,24 +288,7 @@
 <div><em>Best</em> place to learn more is at the <a href="http://www.meetup.com/Bay-Area-OpenStreetMappers/events/213663192/?a=ea1_grp&rv=ea1&_af_eid=213663192&_af=event">OpenStreetMap #Editathon</a> coming up on <em>November 15</em>.</div>
 <div>OSM portion of this presentation borrows from <a href="maptime.github.io/osm-101">OSM 101</a>.</div>
 <div>BREAK</div>
-<div>Apart from the OSM project itself, <strong>why</strong> is OSM so <em>crucial</em> to web mapping?</div>
-<div>Because <em>getting data is hard</em>.</div>
-<div>You can download <strong>all</strong> of OpenStreetMap for <strong>free</strong>!</div>
-<div>Planet.osm</div>
-<div>(this is <em>not</em> recommended)</div>
-<div>You can also <a href="http://www.openstreetmap.org/export#map=18/37.75451/-122.42030">download a small portion of it</a> using a <strong>bounding box</strong>.</div>
-<div><em>By the way:</em> OpenStreetMap data has its own <strong>data format</strong>.</div>
-<div>If you see geodata with the file extension <em>.osm</em>, <strong>don't panic</strong>. Though it is not commonly used in GIS, an increasing number of tools including <em>ArcGIS</em>,, <em>QGIS</em> and <em>CartoDB</em> support <strong>.osm</strong> files to some degree.</div>
-<div>You may not want to deal with <strong>.osm</strong>, or you may need data from a <em>larger area</em> than the bounding box tools will support. <em>Thankfully</em>, you can download metro regions as <strong>shapefiles</strong> via <a href="http://metro.teczno.com/">Metro Extracts</a></div>
-<div>Other great sources for <em>free</em> data:</div>
-<div>Open data portals!</div>
-<div data-bodyclass='data-sfgov'></div>
-<div><strong>Government agencies</strong> create and maintain <em>lots</em> of geodata.</div>
-<div><em>Sometimes</em> they put it <em>online</em> for download on an <strong>open data portal</strong>.
-<div data-bodyclass='data-gov'></div>
-<div data-bodyclass='oregon-geo'></div>
-<div><strong>Open data portals</strong> typically have <em>shapefile</em> data and <em>tabular</em> data (like in <strong>CSVs</strong>).</div>
-<div>Now that we've talked about <strong>data formats</strong> and <strong>getting data</strong>, we're basically ready to make a <em>map</em>, right?</div>
+
 <div>Apart from the OSM project itself, why is OSM so crucial to web mapping?</div>
 <div>Because <em>getting data is hard.</em>.</div>
 <div>You can download <em>the whole planet</em> from OpenStreetMap for free!</div>
@@ -312,10 +300,18 @@
 <div>OSM has its own data format.</div>
 <div>Though it is not commonly used in GIS, an increasing number of tools including <em>ArcGIS</em> and <em>QGIS</em> and <em>CartoDB</em> support .osm files to some degree.</div>
 <div>You can <a href="http://www.openstreetmap.org/export#map=18/37.75451/-122.42030">download a small portion of the planet</a> via a bounding box.</div>
-<div>Thankfully, you can also download metro regions as shapefiles via <a href="http://metro.teczno.com/">Metro Extracts</a></div>
+<div>Thankfully, you can also download metro regions as shapefiles via <a href="http://metro.teczno.com/">Metro Extracts</a>.</div>
+
+
 <div>Other great sources for <em>free</em> data:</div>
 <div>Open data portals!</div>
-<div>Now that we've talked about data formats and getting data, we're basically ready to make a may, right?</div>
+<div data-bodyclass='data-sfgov'></div>
+<div><strong>Government agencies</strong> create and maintain <em>lots</em> of geodata.</div>
+<div><em>Sometimes</em> they put it <em>online</em> for download on an <strong>open data portal</strong>.</div>
+<div data-bodyclass='data-gov'></div>
+<div data-bodyclass='oregon-geo'></div>
+<div><strong>Open data portals</strong> typically have <em>shapefile</em> data and <em>tabular</em> data (like in <strong>CSVs</strong>).</div>
+<div>Now that we've talked about <strong>data formats</strong> and <strong>getting data</strong>, we're basically ready to make a <em>map</em>, right?</div>
 <div>What <strong>tools</strong> do people use to make <em>quick and dirty</em> web maps?</div>
 <div><a href="http://maps.google.com">Google Maps</a></div>
 <div><a href="http://cartodb.com">CartoDB</a></div>
@@ -356,10 +352,10 @@
 <div>Also think about how it could be <em>better</em>.</div>
 <div><em>Historically</em> web mapping has evolved without much <em>cartographic theory</em>...</div>
 <div>There was <em>Google</em> and then there were <em>mashups</em></div>
-<div><table><tr><td><img src="mashup.jpg"></td><td><a href="http://www.programmableweb.com/news/5-years-ago-today-web-mashup-was-born/2010/04/08">HousingMaps.com</a>, by Paul Rademacher, 2005</tr></table></div>
-<div>... which led to an <em>explosion</em> in special thematic maps</div>
+<div data-bodyclass='mashups'<a href="http://www.programmableweb.com/news/5-years-ago-today-web-mashup-was-born/2010/04/08">HousingMaps.com</a>, by Paul Rademacher, 2005</div>
+<div>... which led to an <em>explosion</em> in <strong>special thematic maps...</strong></div>
 <div data-bodyclass='catmap'></div>
-<div>... that defy classification.</div>
+<div>... that <em>defy classification</em>.</div>
 <div><ul><li><a href="http://en.wikipedia.org/wiki/Dot_distribution_map#One-to-one" target="_blank">one-to-one dot maps</a></li><li><a href="http://en.wikipedia.org/wiki/Choropleth_map" target="_blank">choropleth</a> or <a href="http://wiki.gis.com/wiki/index.php/Chorochromatic_Maps" target="_blank">chorochromatic</a> maps</li><li>'<a href="http://xkcd.com/1138/" target="_blank">heatmaps</a>'</li></ul></div>
 <div><img src="webdotmap.png"></div>
 <div><img src="poly.png"></div>
