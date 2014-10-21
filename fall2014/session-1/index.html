@@ -175,6 +175,15 @@
     background-repeat: no-repeat;
     background-position: center 40px;
   }
+  .awesome {
+    background-image: url(./images/OpenAwesome.jpg);
+    background-repeat: no-repeat;
+    background-position: center 160px; 
+  }
+  .credit {
+    font-size: 12;
+    font-family: serif;
+  }
   .quote {
     font-family: serif;
     letter-spacing: 2px;
@@ -188,7 +197,7 @@
 <div><em>Who</em> are you? <em>Why</em> are you here?</div>
 <div><strong>Course Objectives:</strong> By the end of this class you <em>should</em> be able to....</div>
 <div><strong>Think critically</strong> about web maps</div>
-<div><strong>Understand</strong> the ecosystem</div>
+<div>Peek into <strong>the cloud</strong></div>
 <div><strong>Know</strong> where to start</div>
 <div>What we'll <strong>cover</strong> in this class:</div>
 <div><em>Session 1:</em> Web Mapping Concepts</div>
@@ -270,9 +279,9 @@
 <div><strong>Important things to know!</strong></div>
 <div>1. No copying from <span style="color:blue">G</span><span style="color:red">o</span><span style="color:yellow">o</span><span style="color:blue">g</span><span style="color:green">l</span><span style="color:red">e</span> products!</div>
 <div>2. OSM is licensed under the <strong>Open Database License</strong>. There are certain <a href="http://www.openstreetmap.org/copyright">restrictions and requirements</a> when <em>using</em> or <em>modifying</em> OSM data.</div>
-<div>Some places to <strong>learn more</astrong>: <a href="http://learnosm.org">learnosm.org</a> / <a href="http://wiki.openstreetmap.org">wiki.osm.org</a> / <a href="http://help.openstreetmap.org">help.osm.org</a></div>
+<div>Some places to <strong>learn more</strong>: <a href="http://learnosm.org">learnosm.org</a> / <a href="http://wiki.openstreetmap.org">wiki.osm.org</a> / <a href="http://help.openstreetmap.org">help.osm.org</a></div>
 <div><em>Best</em> place to learn more is at the <a href="http://www.meetup.com/Bay-Area-OpenStreetMappers/events/213663192/?a=ea1_grp&rv=ea1&_af_eid=213663192&_af=event">OpenStreetMap #Editathon</a> coming up on <em>November 15</em>.</div>
-<div>OSM portion of this presentation borrows heavily from <a href="maptime.github.io/osm-101">OSM 101</a>.</div>
+<div>OSM portion of this presentation borrows from <a href="maptime.github.io/osm-101">OSM 101</a>.</div>
 <div>BREAK</div>
 <div>Apart from the OSM project itself, <strong>why</strong> is OSM so <em>crucial</em> to web mapping?</div>
 <div>Because <em>getting data is hard</em>.</div>
@@ -292,6 +301,21 @@
 <div data-bodyclass='oregon-geo'></div>
 <div><strong>Open data portals</strong> typically have <em>shapefile</em> data and <em>tabular</em> data (like in <strong>CSVs</strong>).</div>
 <div>Now that we've talked about <strong>data formats</strong> and <strong>getting data</strong>, we're basically ready to make a <em>map</em>, right?</div>
+<div>Apart from the OSM project itself, why is OSM so crucial to web mapping?</div>
+<div>Because <em>getting data is hard.</em>.</div>
+<div>You can download <em>the whole planet</em> from OpenStreetMap for free!</div>
+<div data-bodyclass='awesome'></div>
+<div>(that drawing by <a href="https://twitter.com/meghanhade">Meghan Hade</a>)</div>
+<div>Planet.osm</div>
+<div>(this is not recommended - the file is huge)</div>
+<div>But: If you see geodata with the file extension <em>.osm</em>, <strong>don't panic</strong>.</div>
+<div>OSM has its own data format.</div>
+<div>Though it is not commonly used in GIS, an increasing number of tools including <em>ArcGIS</em> and <em>QGIS</em> and <em>CartoDB</em> support .osm files to some degree.</div>
+<div>You can <a href="http://www.openstreetmap.org/export#map=18/37.75451/-122.42030">download a small portion of the planet</a> via a bounding box.</div>
+<div>Thankfully, you can also download metro regions as shapefiles via <a href="http://metro.teczno.com/">Metro Extracts</a></div>
+<div>Other great sources for <em>free</em> data:</div>
+<div>Open data portals!</div>
+<div>Now that we've talked about data formats and getting data, we're basically ready to make a may, right?</div>
 <div>What <strong>tools</strong> do people use to make <em>quick and dirty</em> web maps?</div>
 <div><a href="http://maps.google.com">Google Maps</a></div>
 <div><a href="http://cartodb.com">CartoDB</a></div>
@@ -300,13 +324,15 @@
 <div>You can take things much further with JavaScript libraries like <a href="http://leafletjs.com">Leaflet</a>, <a href="http://d3js.com">D3</a>, and <a href="http://gis.stackexchange.com/questions/8032/how-do-various-javascript-mapping-libraries-compare">many others</a>.</div>
 <div>LET ME STOP YOU RIGHT THERE</div>
 <div>In print or on the web, <strong>maps</strong> are <em>information design</em>.</div>
-<div><em>Cartographers</em> have been thinking about how to do that effectively in print <strong>for hundreds of years</strong></div>
+<div><em>Cartographers</em> have been thinking about how to do that effectively in print for <strong>hundreds of years.</strong></div>
 <div>Too often in web mapping, design decisions are <em>constrained</em> by the <strong>available tools</strong>.</div>
 <div data-bodyclass='quote'>"Cartographers limit themselves – because of a lack of software skills or a client’s desired final product – to using <em>pre-fabricated tools</em> for Web map design (e.g., Google Maps, Esri’s ArcGIS Online). By the time data-organization and design decisions are considered, the potential efficacy of the map’s communication is already <em>grossly constrained</em> by the <em>limitations of the tool chosen</em>." - <a href="https://twitter.com/iMuehlenhaus">Ian Muehlenhaus</a> in <a href="http://utpjournals.metapress.com/content/q765k1l7423732l6/?p=81fc8c6f7eb8460f9ec9aba4318ddb07">Going Viral: The Look of Online Persuasive Maps</a></div>
 <div><em>Developers</em> don't understand <strong>mapping</strong> and <strong>mappers</strong> don't know how to <em>write code</em>.</div>
 <div>We're gonna <strong>change</strong> all that. Starting next time, we will talk more about <em>magical languages</em> of web mapping introduced earlier.</div>
 <div>(<strong>Don't</strong> be intimidated!)</div>
 <div>For today: some <strong>vocabulary</strong> and <strong>key concepts</strong> in mapping to help frame our conversations in future weeks.</div>
+<div style="font-family: serif;letter-spacing:2px">"Cartographers limit themselves – because of a lack of software skills or a client’s desired final product – to using <em>pre-fabricated tools</em> for Web map design (e.g., Google Maps, Esri’s ArcGIS Online). By the time data-organization and design decisions are considered, the potential efficacy of the map’s communication is already <em>grossly constrained</em> by the <em>limitations of the tool chosen</em>." - <a href="https://twitter.com/iMuehlenhaus">Ian Muehlenhaus</a> in <a href="http://utpjournals.metapress.com/content/q765k1l7423732l6/?p=81fc8c6f7eb8460f9ec9aba4318ddb07">Going Viral: The Look of Online Persuasive Maps</a></div>
+<div>For today: some <strong>vocabulary</strong> and <strong>key concepts</strong> in mapping to help us <em>think more critically</em> about web maps.</div>
 <div>There are <strong>several</strong> types of maps, but we can mostly break them down into <em>two</em> categories:</div>
 <div><em>Thematic maps</em></div>
 <div>and <strong>Reference maps</strong>.</div>
@@ -323,16 +349,17 @@
 <div data-bodyclass='transit'>Transit</div>
 <div data-bodyclass='navigation'>Navigation</div>
 <div data-bodyclass='topographic'>Topographic</div>
+<div>All of these map classes are well described in <em>print cartography</em>, but they have corollaries in <em>web cartography</em> as well.</div>
 <div>So, you have some <em>homework</em>. But it's <em>fun homework</em>.</div>
 <div>Find a <strong>cool web map</strong> online and <em>bring the link</em> with you next week.</div>
-<div><em>Oh</em>, and think about <strong>why</strong> you think it's a cool web map.</div>
+<div><em>Oh</em>, and think about what <em>type</em> of web map it is and <strong>why</strong> you think it's a cool web map.</div>
+<div>Also think about how it could be better</div>
 <div><em>Historically</em> web mapping has evolved without much <em>cartographic theory</em>...</div>
 <div>There was <em>Google</em> and then there were <em>mashups</em></div>
 <div><table><tr><td><img src="mashup.jpg"></td><td><a href="http://www.programmableweb.com/news/5-years-ago-today-web-mashup-was-born/2010/04/08">HousingMaps.com</a>, by Paul Rademacher, 2005</tr></table></div>
 <div>... which led to an <em>explosion</em> in special thematic maps</div>
-<div><img src="../session-2/cats.png"></div>
-<div>... and also this question in the minds of many cartographers:</div>
-<div><table><tr><td><img src="wings.gif"></td><td><img src="hummingbird.jpg"></td><td><img src="butterfly.jpg"></td></tr><tr colspan=3>Are web maps and print maps <em>homologous</em> or <em>analagous</em>?</table></div>
+<div data-bodyclass='catmap'></div>
+<div>... that defy classification.</div>
 <div><ul><li><a href="http://en.wikipedia.org/wiki/Dot_distribution_map#One-to-one" target="_blank">one-to-one dot maps</a></li><li><a href="http://en.wikipedia.org/wiki/Choropleth_map" target="_blank">choropleth</a> or <a href="http://wiki.gis.com/wiki/index.php/Chorochromatic_Maps" target="_blank">chorochromatic</a> maps</li><li>'<a href="http://xkcd.com/1138/" target="_blank">heatmaps</a>'</li></ul></div>
 <div><img src="webdotmap.png"></div>
 <div><img src="poly.png"></div>
@@ -370,7 +397,7 @@
 <div>An important concept for web cartography is "<em>screen real-estate</em>"</div>
 <div><table><tr><td><img src="phonemap.jpg"></td></tr></table></div>
 <div><ul><li>Space is scarce</li><li>Mobile vs. desktop</li><li>Fluid vs. compartmentalized layout</li></div>
-<div>Slippy map is a way around all of this but.... for some maps it is overkill & potentially a cop-out.</div>
+<div><em>Panning</em> and <em>zooming</em>, which we will talk more about next time, are a way around all of this but.... for some maps it is overkill & potentially a cop-out.</div>
 <div><iframe src="http://leafletjs.com/examples/choropleth-example.html" width="1200" height="800" frameborder="0" scrolling="no"></iframe></div>
 <div>The main thing the web brings to cartography is <em>interactivity</em>, which can take many forms.</div>
 <div>In web design and development, people make entire careers out of designing for interactivity. The field is called <em>UI/UX</em>, which is shorthand for <em>user interface and user experience</em>.</div>
@@ -378,7 +405,7 @@
 <div>UI/UX is a really important component of web mapping.</div>
 <div>Project managers creating government web portals for geospatial data, I am talking to you.</div>
 <div>For this reason, while it makes sense in print cartography to talk about <em>map readers</em>, in web cartography we talk about <em>map users</em>.</div>
-<div>In our first session, we saw some forms of interactivity that are <em>standard</em> in out of the box tools.</div>
+<div>Next time we will explore some forms of interactivity that are <em>standard</em> in out of the box tools.</div>
 <div>Panning & Zooming</div>
 <div><table><tr><td><img src="panzoom.png"></td></tr></table></div>
 <div>Info Boxes</div>
@@ -398,10 +425,7 @@
 <div>Animation</div>
 <div><iframe src="http://cartodb.github.com/oldweather_wwi/" width="1000" height="800" frameborder="0" scrolling="no"></iframe></div>
 <div>All these <em>whizz-bangs</em> are neato!</div>
-
-
-<div>Also here are some cool web map events and resources you should know about</div>
-<div>Maptime, mapschool, etc.</div>
+<div>But we must use them sparingly, wisely, and with purpose.</div>
 <div>See you next week!</div>
-<div>PS Presentation made with <a href="http://www.macwright.org/big/">big</a></div>
+<div>Presentation made with <a href="http://www.macwright.org/big/">big</a></div>
 </body></html>
