@@ -1,165 +1,154 @@
-<!DOCTYPE html><html><head><title>Web-Mapping Quickstart: Session 1</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<!DOCTYPE html><html><head><title>Web-Mapping Quickstart: Session 2</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <link href='../../big.css' rel='stylesheet' type='text/css' />
 <style>
-  .catmap {
-    background-image: url(./images/catmap.png);
+  .browser {
+    background-image: url(./images/browser.png);
     background-repeat: no-repeat;
+    background-position: center 1px;
   }
-  .google {
-    background-image: url(./images/google.png);
+  .flashtweet {
+    background-image: url(./images/flashtweet.png);
     background-repeat: no-repeat;
+    background-position: center 1px;
   }
-  .paper-maps {
-    background-image: url(./images/paper_maps.jpg);
+  .flashbad {
+    background-image: url(./images/flash-bad.png);
     background-repeat: no-repeat;
-    background-position: center 5px;
-    background-size: 80%;
+    background-position: center 1px;
   }
-  .digital-maps {
-    background-image: url(./images/1-arcGIS.jpg);
+  .nominatim {
+    background-image: url(./images/nominatim.png);
     background-repeat: no-repeat;
-    background-position: center 5px;
+    background-position: center 1px;
   }
-  .internet-maps {
-    background-image: url(./images/internetmaps.png);
+  .gmaps {
+    background-image: url(./images/gmaps.png);
     background-repeat: no-repeat;
-    background-position: center 25px;
-    background-size: 50%;
+    background-position: center 1px;
   }
-  .html {
-    background-image: url(./images/html.png);
+  .upload {
+    background-image: url(./images/upload.png);
     background-repeat: no-repeat;
-    background-position: center 25px;
+    background-position: center 1px;
   }
-  .team-gb {
-    background-image: url(./images/TeamGB_medalists.png);
+  .table {
+    background-image: url(./images/table.png);
     background-repeat: no-repeat;
-    background-position: center 120px;
-    background-color: #fff;
+    background-position: center 1px;
   }
-  .cartogram {
-    background-image: url(./images/cartogram.jpg);
+  .georeference {
+    background-image: url(./images/georeference.png);
     background-repeat: no-repeat;
-    background-position: center 120px;
-    background-color: #fff;
+    background-position: center 1px;
   }
-  .dot-density {
-    background-image: url(./images/dotdensity.png);
+  .info {
+    background-image: url(./images/info.png);
     background-repeat: no-repeat;
-    background-position: center 2px;
-    background-size: 75%;
+    background-position: center 1px;
   }
-  .dotmap {
-    background-image: url(./images/dotmap.png);
+  .infowindow {
+    background-image: url(./images/infowindow.png);
     background-repeat: no-repeat;
-    background-position: center 2px;
-  }
-  .wayfinding1 {
-    background-image: url(./images/wayfinding.png);
-    background-repeat: no-repeat;
-    background-position: center 5px;
-  }
-  .wayfinding2 {
-    background-image: url(./images/wayfinding2.png);
-    background-repeat: no-repeat;
-    background-position: center 5px;
-  }
-  .transit {
-    background-image: url(./images/transit.png);
-    background-repeat: no-repeat;
-    background-position: center 5px;
-  }
-  .navigation {
-    background-image: url(./images/navigation.png);
-    background-repeat: no-repeat;
-    background-position: center 5px;
-  }
-  .bart {
-    background-image: url(./images/bartmap.gif);
-    background-repeat: no-repeat;
-    background-position: center 5px;
-  }
-  .topographic {
-    background-image: url(./images/topographic.png);
-    background-repeat: no-repeat;
-    background-position: center 5px;
-  }
-  .tile-loading {
-    background-image: url(./images/tiles-loading.gif);
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-  .slippy-map {
-    background-image: url(./images/slippy-map.gif);
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-  .zero {
-    background-image: url(./images/zero.PNG);
-    background-repeat: no-repeat;
-    background-position: center 25px;
-
-  }
-  .four {
-    background-image: url(./images/tilegrid.png);
-    background-repeat: no-repeat;
-    background-position: center 40px;
+    background-position: center 1px;
   }
   .quote {
     font-family: serif;
+    letter-spacing: 2px;
   }
 </style>
-<script src='/big.js'></script>
+<script src='../../big.js'></script>
 </head><body>
 
-<div>What is a web mapping platform?</div>
-<div>Simplest mapping platform: an internet browser</div>
-<div><img src="browser.png"></div>
-<div>A <em>modern</em> browser conforms to certain standards and conventions in how content is created.</div>
-<div>This allows any <em>modern</em> browser to be a web mapping platform.</div>
-<div>A web mapping platform that used to be common, but is not any more:</div>
-<div><iframe width=1000px height=800px src="http://www.newseum.org/todaysfrontpages/flash/"></iframe></div>
-<div>Ten years ago, flash was <em>it</em></div>
-<div><ul><li>Embedded reader</li><li>Special coding language</li><li>Complete creative control</li></ul></div>
-<div><img src="flashtweet.png"></div>
-<div>Now mainly the subject of derisive jokes</div>
-<div>Requires a plugin (install, enable, update, security, crashing)</div>
-<div><img src="flash-bad.png"></div>
-<div>Doesn’t integrate with other content on the page</div>
-<div>HTML5 allows much of its functionality (animation, video, audio)</div>
-<div>Doesn’t work on smartphones and tablets</div>
-<div>Often overkill (easier way to achieve the same result)</div>
-<div>So now your browser is your <em>first</em>, <em>best</em> web mapping platform.</div>
-<div>Here are some other web mapping <em>platforms</em> and <em>projects</em> we will discuss today:</div>
-<div>CartoDB</div>
-<div>MapBox</div>
-<div>OpenStreetMap</div>
-<div>We'll also do two exercises today:</div>
-<div>Exercise 1 focuses on <em>thematic</em> mapping</div>
-<div>Exercise 2 focuses on <em>reference</em> mapping</div>
-<div>First, let's define some terms</div>
-<div>Shapefile</div>
-<div>Zip file</div>
-<div>Geocoding</div>
-<div>Ok, ready for our first exercise!</div>
-<div>Exercise 1: Make a Webmap of <em>Community Gardens</em> using CartoDB</div>
-<div>Download some data on the <a href="https://data.sfgov.org/Public-Health/Community-Gardens-San-Francisco-CA/tkhq-qkum/div">locations of Community Gardens in San Francisco</a></div>
-<div>Note where you downloaded SanFranciscoCommunityGardens.zip</div>
-<div>Create a free CartoDB account for yourself (https://cartodb.com/signup)</div>
-<div><img src="upload.png"></div>
-<div><img src="table.png"></div>
-<div>A word about <em>geocoding</em> or <em>georeferencing</em></div>
-<div><img src="georeference.png"></div>
-<div>Click <em>Map View</em> in the upper left corner to see the community garden points on a map of San Francisco.</div>
-<div>Modify the <em>basemap</em></div>
-<div>Customize the info windows</div>
-<div><img src="info.png"></div>
-<div><img src="infowindow.png"></div>
+
+  <div>Web Mapping <em>Quickstart</em></div>
+  <div><strong>Last week</strong> was <em>Session 1:</em> Web Mapping Concepts.</div>
+  <div>We gave you some <em>homework</em>. Did you <strong>do it</strong>?</div>
+  <div>Let's see some of those <em>sexy web maps</em>.</div>
+  <div><strong>Awesome!</strong> <em>Thanks</em> for bringing those in.</div>
+  <div>Today is <em>Session 2:</em> Web Mapping Platforms and Projects.</div>
+  <div>What is a <strong>web mapping platform</strong>?</div>
+  <div><em>Simplest</em> mapping platform: an <strong>internet browser</strong>.</div>
+  <div data-bodyclass='browser'></div>
+  <div>A <em>modern</em> browser conforms to certain <strong>standards</strong> and <strong>conventions</strong> in how content is created.</div>
+  <div>This allows any <em>modern</em> browser to be a <strong>web mapping platform</strong>.</div>
+  <div>A <strong>web mapping platform</strong> that <em>used</em> to be common, but is <em>not anymore</em>:</div>
+  <div><iframe width=1000px height=800px src="http://www.newseum.org/todaysfrontpages/flash/"></iframe></div>
+  <div>Ten years ago, <strong>Flash</strong> was <em>it</em>.</div>
+  <div><ul><li>Embedded reader</li><li><strong>Special coding language</strong></li><li><em>Complete creative control</em></li></ul></div>
+  <div data-bodyclass='flashtweet'></div>
+  <div>Now, <strong>Flash</strong> is mainly the subject of <em>derisive jokes</em>.</div>
+  <div>It requires a <em>plugin</em> (install, enable, update, security, crashing)</div>
+  <div data-bodyclass='flashbad'></div>
+  <div>It <strong>doesn’t integrate</strong> with other content on the page.</div>
+  <div>It <em>doesn’t work</em> on <strong>smartphones</strong> and <strong>tablets</strong>.</div>
+  <div>It's <em>often overkill</em>, with an <strong>easier</strong> way to achieve the <strong>same</strong> result.</div>
+  <div>Namely, <em>HTML5</em> allows for <strong>much</strong> of Flash's functionality (animation, video, audio)</div>
+  <div>So now your browser is your <strong>first</strong>, <em>best</em> web mapping platform.</div>
+  <div>Here are some other web mapping <strong>platforms</strong> and <strong>projects</strong> we will discuss today:</div>
+  <div><a href="http://mapbox.com">Mapbox</a></div>
+  <div><a href="http://cartodb.com">CartoDB</a></div>
+
+
+  <div>We'll also do <em>two exercises</em> today:</div>
+  <div><strong>Exercise 1</strong> focuses on <em>thematic</em> mapping.</div>
+  <div><strong>Exercise 2</strong> focuses on <em>reference</em> mapping.</div>
+  <div>First, let's <em>define some terms</em>.</div>
+  <div>Zip file</div>
+  <div><a href="http://en.wikipedia.org/wiki/Shapefile">Shapefile</a></div>
+
+
+  <div><strong>This is a big long section about geographic data, but I'm not going to be there, so maybe we can skip it. Up to you!</strong></div>
+
+  <div>Let's <em>take a minute</em> and <strong>dive deep</strong> into shapefiles.</div>
+  <div>(This info comes from the <a href="http://maptime.github.io/geodata">Introduction to Geodata</a> presentation from <a href="http://twitter.com/maptimeoak">MaptimeOAK</a>.)</div>
+  <div><strong>Shapefile</strong> is actually a misnomer: the data format requires <em>three different files</em> to store its core data (plus some <strong>optional</strong> files).</div>
+  <div>When you <strong>first encounter</strong> a shapefile, it's usually in a <em>folder</em>.</div>
+  <div>A typical shapefile has <strong>four</strong>  files in that folder: a <em>dbf</em>, a <em>prj</em>, a <em>shp</em>, and a <em>shx</em>.</div>
+  <div>The <strong>three mandatory</strong> files are the <em>dbf</em>, the <em>shp</em>, and the <em>shx</em>.</div>
+  <div>The <em>dbf</em> contains the <strong>attribute</strong> information for the dataset with <strong>different values</strong> for each feature.</div>
+  <div>The <em>prj</em> contains the <strong>projection</strong> information for the dataset.</div>
+  <div><strong>Don't worry</strong>, we <em>won't</em> talk about projections today. :-P</div>
+  <div>The <em>shx</em> file is an <strong>index</strong> file that is <em>necessary</em> for shapefiles to work.</div>
+  <div>The <strong>shp</strong> file contains the dataset's <em>geometry</em> information. (Points, lines, polygons, etc).</div>
+  <div><em>Shapefiles</em> can be used with most <strong>desktop GIS</strong> and <strong>spatial analysis</strong> tools.</div>
+  <div><em>Shapefiles</em> are <strong>not</strong> used in web maps.</div>
+  <div><strong>However</strong>, as we'll see in the <em>exercise</em>, there are <strong>many</strong> web mapping tools that can <em>convert</em> shapefiles to web-friendly formats.</div>
+
+  <div>Geocoding</div>
+  <div data-bodyclass='quote'>Geocoding is the process of <strong>enriching a description</strong> of a location, most typically a postal address or place name, with <em>geographic coordinates</em> from spatial reference data such as building polygons, land parcels, street addresses, ZIP codes (postal codes) and so on. - <a href='http://en.wikipedia.org/wiki/Geocoding'>Wikipedia</a></div>
+  <div>Geocoding is <strong>HARD</strong>.</div>
+  <div>Why? Because <em>addresses are weird</em>.</div>
+  <div data-bodyclass='nominatim'></div>
+  <div><em>Existing geocoders</em> are either <strong>expensive</strong>, <strong>slow</strong>, <strong>inefficient</strong>, or <strong>inaccurate</strong>.</div>
+  <div data-bodyclass='gmaps'></div>
+  <div>If you're trying to <strong>geocode</strong> addresses <em>one at a time</em>, or you have a <em>small amount</em> of addresses to geocode, you should be <strong>fine</strong> with existing tools.</div>
+  <div>We'll see this here in a minute!</div>
+  <div>(But <em>let me know</em> if you want to talk more about the <strong>struggles</strong> of geocoding.)</div>
+
+
+<div><em>Okay.</em> We're ready for our <strong>first exercise</strong>!</div>
+<div><em>Exercise 1:</em> Make a <em>web map</em> of <strong>Community Gardens</strong> using CartoDB.</div>
+<div>Download some data on the <a href="https://data.sfgov.org/Public-Health/Community-Gardens-San-Francisco-CA/tkhq-qkum/div">locations of Community Gardens in San Francisco</a>.</div>
+<div>Note where you downloaded <strong>SanFranciscoCommunityGardens.zip</strong>.</div>
+<div>Create a <em>free</em> CartoDB account for yourself at <a href='http://cartodb.com/signup'>cartodb.com /signup</a>.</div>
+<div data-bodyclass='upload'></div>
+<div data-bodyclass='table'></div>
+<div>A word about <em>geocoding</em> or <em>georeferencing</em>.</div>
+<div data-bodyclass='georeference'></div>
+<div>Click <strong>Map View</strong> in the upper left corner to see the community garden <em>points on a map</em> of San Francisco.</div>
+<div>Modify the <em>basemap</em>.</div>
+<div>Customize the <strong>info windows</strong>.</div>
+<div data-bodyclass='info'></div>
+<div data-bodyclass='infowindow'></div>
 <div>Save!</div>
-<div>Custom Icon</div>
-<div>Custom Basemap</div>
+<div>Add a <strong>custom icon</strong>.</div>
+<div>Add a <em>custom basemap</em>.</div>
 <div>Share!</div>
+
+
 <div>BREAK</div>
+
+
 <div>OpenStreetMap http://geospatialrevolution.psu.edu/episode1</div>
 <div>What is OpenStreetMap?</div>
 <div>... a crowd-sourced reference map</div>
