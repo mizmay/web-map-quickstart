@@ -1,205 +1,307 @@
-<!DOCTYPE html><html><head><title>Web-Mapping Quickstart: Session 1</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<!DOCTYPE html><html><head><title>Web-Mapping Quickstart: Session 2</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <link href='../../big.css' rel='stylesheet' type='text/css' />
 <style>
-  .catmap {
-    background-image: url(./images/catmap.png);
+  .browser {
+    background-image: url(./images/browser.png);
     background-repeat: no-repeat;
+    background-position: center 1px;
   }
-  .google {
-    background-image: url(./images/google.png);
+  .flashtweet {
+    background-image: url(./images/flashtweet.png);
     background-repeat: no-repeat;
+    background-position: center 1px;
   }
-  .paper-maps {
-    background-image: url(./images/paper_maps.jpg);
+  .flashbad {
+    background-image: url(./images/flash-bad.png);
     background-repeat: no-repeat;
-    background-position: center 5px;
-    background-size: 80%;
+    background-position: center 1px;
   }
-  .digital-maps {
-    background-image: url(./images/1-arcGIS.jpg);
+  .nominatim {
+    background-image: url(./images/nominatim.png);
     background-repeat: no-repeat;
-    background-position: center 5px;
+    background-position: center 1px;
   }
-  .internet-maps {
-    background-image: url(./images/internetmaps.png);
+  .gmaps {
+    background-image: url(./images/gmaps.png);
     background-repeat: no-repeat;
-    background-position: center 25px;
-    background-size: 50%;
-  }
-  .html {
-    background-image: url(./images/html.png);
-    background-repeat: no-repeat;
-    background-position: center 25px;
-  }
-  .team-gb {
-    background-image: url(./images/TeamGB_medalists.png);
-    background-repeat: no-repeat;
-    background-position: center 120px;
-    background-color: #fff;
-  }
-  .cartogram {
-    background-image: url(./images/cartogram.jpg);
-    background-repeat: no-repeat;
-    background-position: center 120px;
-    background-color: #fff;
-  }
-  .dot-density {
-    background-image: url(./images/dotdensity.png);
-    background-repeat: no-repeat;
-    background-position: center 2px;
-    background-size: 75%;
-  }
-  .dotmap {
-    background-image: url(./images/dotmap.png);
-    background-repeat: no-repeat;
-    background-position: center 2px;
-  }
-  .wayfinding1 {
-    background-image: url(./images/wayfinding.png);
-    background-repeat: no-repeat;
-    background-position: center 5px;
-  }
-  .wayfinding2 {
-    background-image: url(./images/wayfinding2.png);
-    background-repeat: no-repeat;
-    background-position: center 5px;
-  }
-  .transit {
-    background-image: url(./images/transit.png);
-    background-repeat: no-repeat;
-    background-position: center 5px;
-  }
-  .navigation {
-    background-image: url(./images/navigation.png);
-    background-repeat: no-repeat;
-    background-position: center 5px;
-  }
-  .bart {
-    background-image: url(./images/bartmap.gif);
-    background-repeat: no-repeat;
-    background-position: center 5px;
-  }
-  .topographic {
-    background-image: url(./images/topographic.png);
-    background-repeat: no-repeat;
-    background-position: center 5px;
-  }
-  .tile-loading {
-    background-image: url(./images/tiles-loading.gif);
-    background-repeat: no-repeat;
+    background-position: center 1px;
     background-size: 100%;
   }
-  .slippy-map {
-    background-image: url(./images/slippy-map.gif);
+  .upload {
+    background-image: url(./images/upload.png);
     background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .table {
+    background-image: url(./images/table.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .georeference {
+    background-image: url(./images/georeference.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .info {
+    background-image: url(./images/info.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .infowindow {
+    background-image: url(./images/infowindow.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .cupcakebase {
+    background-image: url(./images/cupcakebase.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
     background-size: 100%;
   }
-  .zero {
-    background-image: url(./images/zero.PNG);
+  .cupcakes {
+    background-image: url(./images/cupcakes.png);
     background-repeat: no-repeat;
-    background-position: center 25px;
-
+    background-position: center 1px;
+    background-size: 100%;
   }
-  .four {
-    background-image: url(./images/tilegrid.png);
+  .craigslist {
+    background-image: url(./images/craigslist.png);
     background-repeat: no-repeat;
-    background-position: center 40px;
+    background-position: center 1px;
+    background-size: 100%;
+  }
+  .mapbox1 {
+    background-image: url(./images/mapbox1.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 100%;
+  }
+  .mapbox2 {
+    background-image: url(./images/mapbox2.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .mapbox3 {
+    background-image: url(./images/mapbox3.png);
+    background-repeat: no-repeat;
+    background-position: center 1px; 
+    background-size: 100%;   
+  }
+  .nullisland {
+    background-image: url(./images/nullisland1.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 100%;
+  }
+  .naturalearth {
+    background-image: url(./images/naturalearth1.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 100%;
+  }
+  .ushahidi {
+    background-image: url(./images/ushahidi.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 100%;
+  }
+  .archipelago {
+    background-image: url(https://smathermather.files.wordpress.com/2014/09/null_archipelago.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .mapbox4 {
+    background-image: url(./images/mapbox4.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .mapbox5 {
+    background-image: url(./images/mapbox5.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .mapbox6 {
+    background-image: url(./images/mapbox6.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .mapbox7 {
+    background-image: url(./images/mapbox7.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .mapbox8 {
+    background-image: url(./images/mapbox8.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
   }
   .quote {
     font-family: serif;
+    letter-spacing: 2px;
   }
 </style>
-<script src='/big.js'></script>
+<script src='../../big.js'></script>
 </head><body>
 
-<div>What is a web mapping platform?</div>
-<div>Simplest mapping platform: an internet browser</div>
-<div><img src="browser.png"></div>
-<div>A <em>modern</em> browser conforms to certain standards and conventions in how content is created.</div>
-<div>This allows any <em>modern</em> browser to be a web mapping platform.</div>
-<div>A web mapping platform that used to be common, but is not any more:</div>
+<div>Web Mapping <em>Quickstart</em></div>
+<div><strong>Last week</strong> was <em>Session 1:</em> Web Mapping Concepts.</div>
+<div>We gave you some <em>homework</em>. Did you <strong>do it</strong>?</div>
+<div>Let's see some of those <em>sexy web maps</em>.</div>
+<div><strong>Awesome!</strong> <em>Thanks</em> for bringing those in.</div>
+<div>Today is <em>Session 2:</em> Web Mapping Platforms and Projects.</div>
+<div>What is a <strong>web mapping platform</strong>?</div>
+<div><em>Simplest</em> mapping platform: an <strong>internet browser</strong>.</div>
+<div data-bodyclass='browser'></div>
+<div>A <em>modern</em> browser conforms to certain <strong>standards</strong> and <strong>conventions</strong> in how content is created.</div>
+<div>This allows any <em>modern</em> browser to be a <strong>web mapping platform</strong>.</div>
+<div>A <strong>web mapping platform</strong> that <em>used</em> to be common, but is <em>not anymore</em>:</div>
 <div><iframe width=1000px height=800px src="http://www.newseum.org/todaysfrontpages/flash/"></iframe></div>
-<div>Ten years ago, flash was <em>it</em></div>
-<div><ul><li>Embedded reader</li><li>Special coding language</li><li>Complete creative control</li></ul></div>
-<div><img src="flashtweet.png"></div>
-<div>Now mainly the subject of derisive jokes</div>
-<div>Requires a plugin (install, enable, update, security, crashing)</div>
-<div><img src="flash-bad.png"></div>
-<div>Doesn’t integrate with other content on the page</div>
-<div>HTML5 allows much of its functionality (animation, video, audio)</div>
-<div>Doesn’t work on smartphones and tablets</div>
-<div>Often overkill (easier way to achieve the same result)</div>
-<div>So now your browser is your <em>first</em>, <em>best</em> web mapping platform.</div>
-<div>Here are some other web mapping <em>platforms</em> and <em>projects</em> we will discuss today:</div>
-<div>CartoDB</div>
-<div>MapBox</div>
-<div>OpenStreetMap</div>
-<div>We'll also do two exercises today:</div>
-<div>Exercise 1 focuses on <em>thematic</em> mapping</div>
-<div>Exercise 2 focuses on <em>reference</em> mapping</div>
-<div>First, let's define some terms</div>
-<div>Shapefile</div>
+<div>Ten years ago, <strong>Flash</strong> was <em>it</em>.</div>
+<div><ul><li>Embedded reader</li><li><strong>Special coding language</strong></li><li><em>Complete creative control</em></li></ul></div>
+<div data-bodyclass='flashtweet'><br><br>Now, <strong>Flash</strong> is mainly the subject of <em>derisive jokes</em>.</div>
+<div>It requires a <em>plugin</em> (install, enable, update, security, crashing)</div>
+<div data-bodyclass='flashbad'></div>
+<div>It <strong>doesn’t integrate</strong> with other content on the page.</div>
+<div>It <em>doesn’t work</em> on <strong>smartphones</strong> and <strong>tablets</strong>.</div>
+<div>It's <em>often overkill</em>, with an <strong>easier</strong> way to achieve the <strong>same</strong> result.</div>
+<div>Namely, <em>HTML5</em> allows for <strong>much</strong> of Flash's functionality (animation, video, audio)</div>
+<div>So now your browser is your <strong>first</strong>, <em>best</em> web mapping platform.</div>
+<div>Here are some other web mapping <strong>platforms</strong> and <strong>projects</strong> we will discuss today:</div>
+<div><a href="http://mapbox.com">Mapbox</a></div>
+<div><a href="http://cartodb.com">CartoDB</a></div>
+<div>We'll also do <em>two exercises</em> today:</div>
+<div><strong>Exercise 1</strong> focuses on <em>reference</em> mapping.</div>
+<div><strong>Exercise 2</strong> focuses on <em>thematic</em> mapping.</div>
+<div>Let's talk about <em>basemaps</em>.</div>
+<div>What is a <strong>basemap</strong>?</div>
+<div data-bodyclass='quote'>"The term <em>basemap</em> is seen often in GIS and refers to a collection of GIS data and/or orthorectified imagery that form the <strong>background setting</strong> for a map.  The function of the basemap is to <em>provide background detail</em> necessary to <strong>orient the location</strong> of the map." - Caitlin Dempsey Morais on <a href="http://www.gislounge.com/basemaps-defined/">GIS Lounge</a></div>
+<div>What <strong>map elements</strong> do we expect in a <em>basemap</em>?</div>
+<div data-bodyclass='quote'>"<strong>Typical</strong> GIS data and imagery that make up the layers for a basemap: streets, parcels, boundaries (country, county, city boundaries), shaded relief of a digital elevation model, waterways, and aerial or satellite imagery.  Depending on the type of map, <em>any combination</em> of those layers can be used." - Caitlin Dempsey Morais on <a href="http://www.gislounge.com/basemaps-defined/">GIS Lounge</a></div>
+<div>Think about the <strong>language</strong> here for a moment. <em>Base</em>map. What is the <strong>implication</strong>?</div>
+<div>When you have a <strong>base</strong>, you can build things on <em>top</em> of it. <strong>Right?</strong></div>
+<div data-bodyclass='cupcakebase'></div>
+<div data-bodyclass='cupcakes'></div>
+<div>This <strong>basemap</strong> is made up of <em>tiles</em> from <a href='http://mapbox.com'>Mapbox</a>.</div>
+<div>(We'll talk more about <em>how tiles work</em> next time.)</div>
+<div>What <strong>data</strong> do we see on this <em>basemap</em>?</div>
+<div data-bodyclass='cupcakebase'></div>
+<div>All of the <strong>data</strong> that makes up this <em>basemap</em> is from <a href="http://osm.org">OpenStreetMap</a>!</div>
+<div>Now check out <strong>this basemap</strong>.</div>
+<div data-bodyclass='craigslist'></div>
+<div>This map is <em>also</em> made of <strong>OSM</strong> data!</div>
+<div>Both the <strong>main Mapbox tiles</strong> and the <strong>Craigslist tiles</strong> have decided which <em>data</em> they want to <em>render (show)</em> on their basemaps.</div>
+<div><strong>Any basemap</strong> can have <strong>any data</strong> on it styled <strong>any way</strong>. The <em>question</em> is what makes the <em>most sense</em> for a particular map.</div>
+<div>We will talk about these things today as we <em>make some maps</em> in our <strong>browsers</strong>.</div>
+
+<div>FIRST BREAK</div>
+
+<div>Time for our <strong>first exercise</strong>!</div>
+<div>We will make a map of <strong>your hometown</strong> with <em>Mapbox</em>.</div>
+<div>(If your hometown is <strong>San Francisco</strong>, pick a different one.)</div>
+
+
+<div>Head to <a href="http://mapbox.com">Mapbox.com</a>.</div>
+<div data-bodyclass='mapbox1'><strong>In the top right corner, <em>sign in</em> or <em>sign up</em>.</strong></div>
+<div data-bodyclass='mapbox2'></div>
+<div>Once you're <em>signed in</em>, click <strong>Projects</strong> at the top of the page, then click <strong>Create Project</strong>.</div>
+<div data-bodyclass='mapbox3'><strong>This is what you should see.</strong></div>
+<div><em>TANGENT TIME</em></div>
+<div><em>Notice</em> where the map is <strong>centered</strong>?</div>
+<div>It's centered on <em>Null Island</em>.</div>
+<div data-bodyclass='mapbox3'></div>
+<div>What is <strong>Null Island</strong>? <em>Null Island</em> is where <strong>bad data</strong> goes to <em>die</em>.</div>
+<div data-bodyclass='nullisland'></div>
+<div><a href="http://en.wikipedia.org/wiki/Null_Island">Null Island</a> is a <strong>common joking subject</strong> among cartographers.</div>
+<div data-bodyclass='ushahidi'></div>
+<div data-bodyclass='archipelago'><strong>The Null Island Archipelago</strong></div>
+<div data-bodyclass='quote'>"Although intended humorously, the fiction has a <em>serious purpose</em> and is used by mapping systems to <strong>trap errors</strong>." - <a href='http://en.wikipedia.org/wiki/Null_Island'>Wikipedia</a></div>
+<div><strong>How</strong> might <em>Null Island</em> help cartographers <strong>trap erorrs</strong>?</div>
+<div><a href='http://naturalearthdata.com'>Natural Earth Data</a> uses it as a <em>troubleshooting</em> tool. Your data should <strong>not</strong> end up on Null Island.</div>
+<div data-bodyclass='naturalearth'></div>
+<div>So while a <em>funny</em> joke to think and talk about, <strong>Null Island</strong> defintiely has its place in <em>digital</em> and <em>web</em> cartography.</div>
+<div><em>OKAY</em>, back to the <strong>exercise</strong>.</div>
+<div data-bodyclass='mapbox3'>Click <strong>Save</strong> at the top.</div>
+<div data-bodyclass='mapbox4'><br><br><br>Awesome! Now we can <em>edit</em> the map and <em>keep</em> our changes.</div>
+<div>The <strong>goal</strong> of this exercise is to think about how we can use <em>cartography</em> to make an <strong>awesome</strong> reference map.</div>
+<div>Remember the definition of a <em>reference map</em>?</div>
+<div data-bodyclass='quote'>"A <strong>reference map</strong> is a map that emphasizes the <em>geographic location</em> of features. ... For these maps, the goal is to display a lot of <em>different kinds of information</em> without drawing the reader's attention to any one theme of information more than any other theme." - <a href="http://mappingcenter.esri.com/index.cfm?fa=maps.aboutReference">Esri Mapping Center</a></div>
+<div>We want to make sure that we dispay <em>a lot</em> of information without <strong>drawing attention</strong> to any one theme.</div>
+<div>Remember that the <em>data</em> on <strong>Mapbox</strong> maps is from <em>OpenStreetMap</em>, just like the maps we saw earlier.</div>
+<div>And just like <strong>Craigslist</strong>, we get to decide <em>what data</em> ends up on our map.</div>
+<div>Using the <em>search</em> or just <strong>panning and zooming</strong>, head to your <em>hometown</em>.</div>
+<div data-bodyclass='mapbox3'>Click <strong>Style</strong> at the top left.</div>
+<div data-bodyclass='mapbox5'><br><br><br><br><br>Click <em>Discard palatte</em>. We want to make our <strong>own</strong> style decisions.</div>
+<div data-bodyclass='mapbox6'><br><br><br><br><br><br>Mapbox provides you <em>many</em> style options. You can pick any of the <strong>preset</strong> color schemes, or you can <em>customize</em> the styling.</div>
+<div>You can change the <strong>baselayers</strong> to be <em>terrain</em> or <em>satellite</em>, you can decide which <strong>language</strong> you want the map in, and you can decide what <em>features</em> you want to show.</div>
+<div><strong>Play around</strong> with this for a little while! Remember the <em>goal</em> is to make a <strong>legible reference map</strong> of your hometown.</div>
+<div>When you <em>like your styling</em>, click <strong>Save</strong>. We can always <em>change</em> it in the future.</div>
+<div>While we're <strong>at it</strong>, let's save some <em>details</em> about our project. Click <strong>Project</strong>.</div>
+<div data-bodyclass='mapbox7'><br><br><br><br><br><br><em>Add some info</em> about your map and <strong>save</strong>.</div>
+<div>This section also gives you info on how to <strong>find</strong> your map on the web and how to <em>embed</em> it in another webpage.</div>
+<div>Before we step away from <strong>Mapbox</strong>, let's look at <em>one more thing</em> we can do with this platform.</div>
+<div>Up at the top, click on <strong>Data</strong>.</div>
+<div data-bodyclass='mapbox8'><br><br><br>Here, we can add <em>thematic information</em> to our map. Mapbox lets us either <strong>manually draw</strong> data or <strong>upload</strong> data from other files.</div>
+<div><strong>Add a point</strong> on <em>something interesting</em> in your hometown.</div>
+<div><em>Style</em> it using the tools provided.</div>
+<div>When you're done, <strong>save</strong> your map and <strong>send us</strong> the link! <em>smay@ccsfgis.org</em> and <em>ldiamond@ccsfigs.org</em>.</div>
+<div>Just to <strong>bring it full circle</strong>...</div>
+<div>You'll notice that one of the <em>pieces of information</em> in the <strong>Project</strong> section was a <em>Map ID</em>.</div>
+<div data-bodyclass='mapbox7'></div>
+<div>The <em>Map ID</em> is used when making a <strong>web map from scratch</strong>. It allows you to use your map as <em>basemap tiles</em>.</div>
+<div>We will explore that more next week, but <em>recognize</em> that what you did today was create a <strong>basemap</strong>.</div>
+<div><strong>Good job!</strong> Wasn't that <em>fun</em>?</div>
+<div>SECOND BREAK</div>
+<div>Time for our <strong>second exercise</strong>!</div>
+<div>This exercise will be about making <em>thematic maps</em>.</div>
+<div data-bodyclass='quote'>"<strong>Thematic maps</strong> are data maps of a <em>specific subject</em> or for a <em>specific purpose</em>. Statistical thematic maps include a variety of different <strong>map types</strong> such as choropleth or shaded maps, dot maps, proportional symbol maps, and isarithmic maps." - <a href="https://www.census.gov/geo/maps-data/maps/thematic.html">U.S. Census Bureau</a></div>
+<div>Some <em>terms to define</em> first:</div>
 <div>Zip file</div>
+<div><a href="http://en.wikipedia.org/wiki/Shapefile">Shapefile</a></div>
+<div><strong>NOTE FOR STEPHANIE: This is a big long section about geographic data, but I'm not going to be there, so maybe we can skip it. Up to you!</strong></div>
+<div>Let's <em>take a minute</em> and <strong>dive deep</strong> into shapefiles.</div>
+<div>(This info comes from the <a href="http://maptime.github.io/geodata">Introduction to Geodata</a> presentation from <a href="http://twitter.com/maptimeoak">MaptimeOAK</a>.)</div>
+<div><strong>Shapefile</strong> is actually a misnomer: the data format requires <em>three different files</em> to store its core data (plus some <strong>optional</strong> files).</div>
+<div>When you <strong>first encounter</strong> a shapefile, it's usually in a <em>folder</em>.</div>
+<div>A typical shapefile has <strong>four</strong>  files in that folder: a <em>dbf</em>, a <em>prj</em>, a <em>shp</em>, and a <em>shx</em>.</div>
+<div>The <strong>three mandatory</strong> files are the <em>dbf</em>, the <em>shp</em>, and the <em>shx</em>.</div>
+<div>The <em>dbf</em> contains the <strong>attribute</strong> information for the dataset with <strong>different values</strong> for each feature.</div>
+<div>The <em>prj</em> contains the <strong>projection</strong> information for the dataset.</div>
+<div><strong>Don't worry</strong>, we <em>won't</em> talk about projections today. :-P</div>
+<div>The <em>shx</em> file is an <strong>index</strong> file that is <em>necessary</em> for shapefiles to work.</div>
+<div>The <strong>shp</strong> file contains the dataset's <em>geometry</em> information. (Points, lines, polygons, etc).</div>
+<div><em>Shapefiles</em> can be used with most <strong>desktop GIS</strong> and <strong>spatial analysis</strong> tools.</div>
+<div><em>Shapefiles</em> are <strong>not</strong> used in web maps.</div>
+<div><strong>However</strong>, as we'll see in the <em>exercise</em>, there are <strong>many</strong> web mapping tools that can <em>convert</em> shapefiles to web-friendly formats.</div>
 <div>Geocoding</div>
-<div>Ok, ready for our first exercise!</div>
-<div>Exercise 1: Make a Webmap of <em>Community Gardens</em> using CartoDB</div>
-<div>Download some data on the <a href="https://data.sfgov.org/Public-Health/Community-Gardens-San-Francisco-CA/tkhq-qkum/div">locations of Community Gardens in San Francisco</a></div>
-<div>Note where you downloaded SanFranciscoCommunityGardens.zip</div>
-<div>Create a free CartoDB account for yourself (https://cartodb.com/signup)</div>
-<div><img src="upload.png"></div>
-<div><img src="table.png"></div>
-<div>A word about <em>geocoding</em> or <em>georeferencing</em></div>
-<div><img src="georeference.png"></div>
-<div>Click <em>Map View</em> in the upper left corner to see the community garden points on a map of San Francisco.</div>
-<div>Modify the <em>basemap</em></div>
-<div>Customize the info windows</div>
-<div><img src="info.png"></div>
-<div><img src="infowindow.png"></div>
+<div data-bodyclass='quote'>"Geocoding is the process of <strong>enriching a description</strong> of a location, most typically a postal address or place name, with <em>geographic coordinates</em> from spatial reference data such as building polygons, land parcels, street addresses, ZIP codes (postal codes) and so on." - <a href='http://en.wikipedia.org/wiki/Geocoding'>Wikipedia</a></div>
+<div>Geocoding is <strong>HARD</strong>.</div>
+<div>Why? Because <em>addresses are weird</em>.</div>
+<div data-bodyclass='nominatim'></div>
+<div><em>Existing geocoders</em> are either <strong>expensive</strong>, <strong>slow</strong>, <strong>inefficient</strong>, or <strong>inaccurate</strong>.</div>
+<div data-bodyclass='gmaps'></div>
+<div>If you're trying to <strong>geocode</strong> addresses <em>one at a time</em>, or you have a <em>small amount</em> of addresses to geocode, you should be <strong>fine</strong> with existing tools.</div>
+<div>We'll see this here in a minute!</div>
+<div>(But <em>let me know</em> if you want to talk more about the <strong>struggles</strong> of geocoding.)</div>
+<div><em>Okay.</em> We're ready for our <strong>second exercise</strong>!</div>
+<div><em>Exercise 2:</em> Make a <em>web map</em> of <strong>Community Gardens</strong> using <a href='http://cartodb.com'>CartoDB</a>.</div>
+<div>Download some data on the <a href="https://data.sfgov.org/Public-Health/Community-Gardens-San-Francisco-CA/tkhq-qkum/div">locations of Community Gardens in San Francisco</a>.</div>
+<div>Note where you downloaded <strong>SanFranciscoCommunityGardens.zip</strong>.</div>
+<div>Create a <em>free</em> CartoDB account for yourself at <a href='http://cartodb.com/signup'>cartodb.com /signup</a>.</div>
+<div data-bodyclass='upload'></div>
+<div data-bodyclass='table'></div>
+<div>A word about <em>geocoding</em> or <em>georeferencing</em>.</div>
+<div data-bodyclass='georeference'></div>
+<div>Click <strong>Map View</strong> in the upper left corner to see the community garden <em>points on a map</em> of San Francisco.</div>
+<div>Modify the <em>basemap</em>.</div>
+<div>Customize the <strong>info windows</strong>.</div>
+<div data-bodyclass='info'></div>
+<div data-bodyclass='infowindow'></div>
 <div>Save!</div>
-<div>Custom Icon</div>
-<div>Custom Basemap</div>
+<div>Add a <strong>custom icon</strong>.</div>
+<div>Add a <em>custom basemap</em>.</div>
 <div>Share!</div>
-<div>BREAK</div>
-<div>OpenStreetMap http://geospatialrevolution.psu.edu/episode1</div>
-<div>What is OpenStreetMap?</div>
-<div>... a crowd-sourced reference map</div>
-<div>"The <a href="https://www.google.com/search?q=%22wikipedia+of+maps%22">Wikipedia</a> of maps"</div>
-<div>... a community of mappers</div>
-<div><img src="editathon.jpeg"></div>
-<div><img src="mapkibera.jpeg"></div>
-<div><table style="width:300px"><tr><td><img src="sotmus.jpg"></td></tr></table></div>
-<div>Now including you!</div>
-<div>Go to OpenStreetMap.org</div>
-<div>Search for a place or an address</div>
-<div>Find the best match from Nominatum</div>
-<div>Click on it to zoom there</div>
-<div>Toggle through the different <em>reference</em> layers</div>
-<div>Each emphasizing a different set of <em>mappable</em> features</div>
-<div><img src="signup.png">Create an account...</div>
-<div>To learn how to tag anything you add to the map: <a href="http://wiki.openstreetmap.org/wiki/Map_Features">wiki.osm.org / wiki / Map_Features</a></div>
-<div>Am I doing it the <em>right way?</em> Read about <a href="http://wiki.openstreetmap.org/wiki/Good_practice">wiki.osm.org / wiki / Good_practice</a></div>
-<div>Most important rule is to make <a href="http://wiki.openstreetmap.org/wiki/Good_changeset_comments">wiki.osm.org / wiki / Good_changeset_comments</a></div>
-<div>Let's get started!</div>
-<div>Two ways to edit OSM: web editor <a href="https://wiki.openstreetmap.org/wiki/ID">iD</a> or advanced editor <a href="https://josm.openstreetmap.de/">JOSM</a></div>
-<div style="color: black"><img src="sf_cityhall.png">iD: just click edit up in the corner ↖︎</div>
-<div style="color: black"><img src="sf_cityhall_editing.png"></div>
-<div><img src="sf_cityhall_editing_josm.png"><em>JOSM</em></div>
-<div>But what to edit? <em>Suggestions:</em></div>
-<div>Trace some buildings</div>
-<div>Add some addresses...</div>
-<div>Add some POIs (points of interest)</div>
-<div>Play <a href="http://maproulette.org">MapRoulette</a></div>
-<div><img src="maproulette.png"></div>
-<div>Do some <a href="http://tasks.hotosm.org/">HOT tasks</a> (Humanitarian OSM Team)</div>
-<div><img src="hot.png"></div>
-<div><img src="pushpin.png">Get <em>outside!</em></div>
-<div><img src="fieldpapers.png"></div>
-<div><img src="field-paper-3.png"></div>
-<div>Important things to know!</div>
-<div>1. No copying from <span style="color:blue">G</span><span style="color:red">o</span><span style="color:yellow">o</span><span style="color:blue">g</span><span style="color:green">l</span><span style="color:red">e</span> products!</div>
-<div>2. OSM is licensed under the Open Database License. There are certain <a href="http://www.openstreetmap.org/copyright">restrictions and requirements</a> when using or modifying OSM data.</div>
-<div>You can extract metro regions as shapefiles via <a href="http://metro.teczno.com/">Metro Extracts</a> or smaller regions via <a href="http://extract.bbbike.org/">BBBike Extractor</a></div>
-<div>And some places to learn more: <a href="http://learnosm.org">www.learnosm.org</a> <a href="http://wiki.openstreetmap.org">wiki.osm.org</a> <a href="http://help.openstreetmap.org">help.osm.org</a></div>
-<div>OSM portion of this presentation borrows heavily from <a href="maptime.github.io/osm-101">OSM 101</a></div>
+<div><strong>That's it for this week!</strong> Next week we'll talk about <em>Web Mapping from Scratch</em>.</div>
+<div>We'll also be sure to <em>send you the slides</em> from today.</div>
+<div><strong>Thanks!</strong></div>
 <div>Presentation made with <a href="http://www.macwright.org/big/">big</a></div>
 </body></html>
