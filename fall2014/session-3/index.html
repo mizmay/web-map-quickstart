@@ -119,13 +119,58 @@ window.onload = function() {
 
     go(cur);
 };
-</script></head><body>
+</script>
+<style>
+  .browser {
+    background-image: url(./images/browser.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .flashtweet {
+    background-image: url(./images/flashtweet.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .flashbad {
+    background-image: url(./images/flash-bad.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+</style>
+</head><body>
 <div>Web Mapping <em>Quickstart</em></div>
 <div>Welcome Back</div>
 <div>Last week: <em>Session 1</em></div>
 <div>Web mapping <em>platforms</em> and <em>projects</em></div>
 <div>This week: <em>Session 2</em></div>
 <div>Web mapping from <em>scratch</em></div>
+<!-- inserting this here so we can decide what to use:
+
+<div>Some <strong>web mapping platforms</strong> we mentioned last time that meet this profile:</div>
+<div><a href="http://cartodb.com">CartoDB</a></div>
+<div><a href="http://mapbox.com">Mapbox</a></div>
+<div><a href="http://arcgis.com">ArcGIS Online</a></div>
+<div><em>Simplest</em> mapping platform: an <strong>internet browser</strong>.</div>
+<div data-bodyclass='browser'></div>
+<div>A <em>modern</em> browser conforms to certain <strong>standards</strong> and <strong>conventions</strong> in how content is created.</div>
+<div>This allows any <em>modern</em> browser to be a <strong>web mapping platform</strong>.</div>
+<div>A <strong>web mapping platform</strong> that <em>used</em> to be common, but is <em>not anymore</em>:</div>
+<div><iframe width=1000px height=800px src="http://www.newseum.org/todaysfrontpages/flash/"></iframe></div>
+<div>Ten years ago, <strong>Flash</strong> was <em>it</em>.</div>
+<div><ul><li>Embedded reader</li><li><strong>Special coding language</strong></li><li><em>Complete creative control</em></li></ul></div>
+<div data-bodyclass='flashtweet'><br><br>Now, <strong>Flash</strong> is mainly the subject of <em>derisive jokes</em>.</div>
+<div>It requires a <em>plugin</em> (install, enable, update, security, crashing)</div>
+<div data-bodyclass='flashbad'></div>
+<div>It <strong>doesn’t integrate</strong> with other content on the page.</div>
+<div>It <em>doesn’t work</em> on <strong>smartphones</strong> and <strong>tablets</strong>.</div>
+<div>It's <em>often overkill</em>, with an <strong>easier</strong> way to achieve the <strong>same</strong> result.</div>
+<div>Namely, <em>HTML5</em> allows for <strong>much</strong> of Flash's functionality (animation, video, audio)</div>
+<div>So now your browser is your <strong>first</strong>, <em>best</em> web mapping platform.</div>
+
+-->
+
+
+
 <div>Why is it important to learn about web mapping from the browser up?</div>
 <div style="font-family: serif;letter-spacing:2px">"Cartographers limit themselves – because of a lack of software skills or a client’s desired final product – to using <em>pre-fabricated tools</em> for Web map design (e.g., Google Maps, Esri’s ArcGIS Online). By the time data-organization and design decisions are considered, the potential efficacy of the map’s communication is already <em>grossly constrained</em> by the <em>limitations of the tool chosen</em>." - <a href="https://twitter.com/iMuehlenhaus">Ian Muehlenhaus</a> in <a href="http://utpjournals.metapress.com/content/q765k1l7423732l6/?p=81fc8c6f7eb8460f9ec9aba4318ddb07">Going Viral: The Look of Online Persuasive Maps</a></div>
 <div>Before we start making web maps from scratch, some <em>ontology</em>:</div>

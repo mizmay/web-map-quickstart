@@ -1,21 +1,6 @@
 <!DOCTYPE html><html><head><title>Web-Mapping Quickstart: Session 2</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <link href='../../big.css' rel='stylesheet' type='text/css' />
 <style>
-  .browser {
-    background-image: url(./images/browser.png);
-    background-repeat: no-repeat;
-    background-position: center 1px;
-  }
-  .flashtweet {
-    background-image: url(./images/flashtweet.png);
-    background-repeat: no-repeat;
-    background-position: center 1px;
-  }
-  .flashbad {
-    background-image: url(./images/flash-bad.png);
-    background-repeat: no-repeat;
-    background-position: center 1px;
-  }
   .nominatim {
     background-image: url(./images/nominatim.png);
     background-repeat: no-repeat;
@@ -145,34 +130,46 @@
 
 <div>Web Mapping <em>Quickstart</em></div>
 <div><strong>Last week</strong> was <em>Session 1:</em> Web Mapping Concepts.</div>
-<div>We gave you some <em>homework</em>. Did you <strong>do it</strong>?</div>
-<div>Let's see some of those <em>sexy web maps</em>.</div>
-<div><strong>Awesome!</strong> <em>Thanks</em> for bringing those in.</div>
+<div>We gave you some <em>homework</em>.</div>
+<div>Let's see some of those <em>web maps</em>.</div>
 <div>Today is <em>Session 2:</em> Web Mapping Platforms and Projects.</div>
 <div>What is a <strong>web mapping platform</strong>?</div>
-<div><em>Simplest</em> mapping platform: an <strong>internet browser</strong>.</div>
-<div data-bodyclass='browser'></div>
-<div>A <em>modern</em> browser conforms to certain <strong>standards</strong> and <strong>conventions</strong> in how content is created.</div>
-<div>This allows any <em>modern</em> browser to be a <strong>web mapping platform</strong>.</div>
-<div>A <strong>web mapping platform</strong> that <em>used</em> to be common, but is <em>not anymore</em>:</div>
-<div><iframe width=1000px height=800px src="http://www.newseum.org/todaysfrontpages/flash/"></iframe></div>
-<div>Ten years ago, <strong>Flash</strong> was <em>it</em>.</div>
-<div><ul><li>Embedded reader</li><li><strong>Special coding language</strong></li><li><em>Complete creative control</em></li></ul></div>
-<div data-bodyclass='flashtweet'><br><br>Now, <strong>Flash</strong> is mainly the subject of <em>derisive jokes</em>.</div>
-<div>It requires a <em>plugin</em> (install, enable, update, security, crashing)</div>
-<div data-bodyclass='flashbad'></div>
-<div>It <strong>doesn’t integrate</strong> with other content on the page.</div>
-<div>It <em>doesn’t work</em> on <strong>smartphones</strong> and <strong>tablets</strong>.</div>
-<div>It's <em>often overkill</em>, with an <strong>easier</strong> way to achieve the <strong>same</strong> result.</div>
-<div>Namely, <em>HTML5</em> allows for <strong>much</strong> of Flash's functionality (animation, video, audio)</div>
-<div>So now your browser is your <strong>first</strong>, <em>best</em> web mapping platform.</div>
-<div>Here are some other web mapping <strong>platforms</strong> and <strong>projects</strong> we will discuss today:</div>
+<div>Think of the <strong>tools</strong> people use to make <em>quick and dirty</em> web maps.</div>
+<div>Common features of a <em>web mapping platform</em>:</div>
+<div>1. They don't require any <strong>programming</strong></div>
+<div>So, no <strong>HTML</strong>, <strong>CSS</strong>, or <strong>Javascript</strong>.</div>
+<div>And you don't have to worry about <em>cross-browser</em> <strong>functionality</strong>.</div>
+<div>2. They provide some options for <strong>cartographic styling</strong>.</div>
+<div>So, you can customize the <strong>basemap</strong>, <strong>symbology</strong>, and <strong>info boxes</strong>.</div>
+<div>3. They typically provide some <em>add-ins</em> for <strong>functionality</strong>.</div>
+<div>Such as: <em>a time slider</em> or <em>custom scrolling</em> through a sequence of features.</div>
+<div>4. They typically include <em>hosting</em>, so you don't have to worry about setting up <strong>web servers</strong>, etc.</div>
+<div>However, there are some <strong>drawbacks</strong> to <em>mapping platforms</em>:</div>
+<div>1. The maps can be <em>tough to incorporate</em> into <em>existing websites</em>, both <strong>thematically</strong> and <strong>technically</strong>.</div>
+<div><strong>Thematically</strong>, the styling options may not be sufficient to allow you to <em>match</em> the <em>look and feel</em> of a website.</div>
+<div><strong>Technically</strong>, you will either have to <em>include</em> your map on your website with an <em>external link</em>....</div>
+<div>... so visitors are navigating <em>away</em> from your other content to see your map.</div>
+<div>Or <strong>embed</strong> it with an <em>iframe</em>.</div>
+<div>Which is a <em>website within a website</em>...</div>
+<div>And may take <strong>extra time</strong> to load.</div>
+<div>2. You are stuck in the <em>basemap</em> versus <em>content</em> paradigm</em>.</div>
+<div>With <em>data</em> layered on top of <em>reference layers</em> and <em>labels</em>.</div>
+<div>Remember last time I mentioned <em>key concepts</em> in <em>cartography</em>, such as <strong>visual hierarchy</strong> and creating <strong>visual arguments</strong>?</div>
+<div>Displaying your <em>mastery of these concepts</em> can be tough if you can't <strong>integrate</strong> your data with your basemap layers.</div>
+<div>We see a lot of <em>tricks with transparency</em> in the face of <strong>cartographic dilemmas</strong>.</div>
+<div>3. Every map <em>pans</em>, <em>zooms</em>, and has <em>info boxes</em></div>
+<div>This <em>cookie-cutter</em> approach has the advantage of <em>giving people what they expect</em>...</div>
+<div>But as we discussed last week, it can be <em>overkill</em>:</div>
+<div><iframe src="http://leafletjs.com/examples/choropleth-example.html" width="1200" height="800" frameborder="0" scrolling="no"></iframe></div>
+<div>And it <em>limits</em> the diversity of <em>cartographic techniques</em> you can use.</div>
+<div>That said, sometimes a <em>mapping platform</em> is the expedient way to get things done.</div>
+<div>Here are some other web mapping <strong>platforms</strong> we will discuss today:</div>
 <div><a href="http://mapbox.com">Mapbox</a></div>
 <div><a href="http://cartodb.com">CartoDB</a></div>
 <div>We'll also do <em>two exercises</em> today:</div>
 <div><strong>Exercise 1</strong> focuses on <em>reference</em> mapping.</div>
 <div><strong>Exercise 2</strong> focuses on <em>thematic</em> mapping.</div>
-<div>Let's talk about <em>basemaps</em>.</div>
+<div>Let's talk about <em>basemaps</em> again.</div>
 <div>What is a <strong>basemap</strong>?</div>
 <div data-bodyclass='quote'>"The term <em>basemap</em> is seen often in GIS and refers to a collection of GIS data and/or orthorectified imagery that form the <strong>background setting</strong> for a map.  The function of the basemap is to <em>provide background detail</em> necessary to <strong>orient the location</strong> of the map." - Caitlin Dempsey Morais on <a href="http://www.gislounge.com/basemaps-defined/">GIS Lounge</a></div>
 <div>What <strong>map elements</strong> do we expect in a <em>basemap</em>?</div>
