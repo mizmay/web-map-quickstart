@@ -144,7 +144,7 @@
 <div><a href="http://cartodb.com">CartoDB</a></div>
 <div><a href="http://mapbox.com">Mapbox</a></div>
 <div><a href="http://arcgis.com">ArcGIS Online</a></div>
-<div>And Suzanne brought up <a href="https://support.google.com/fusiontables/answer/2571232?hl=en">Google Fusion Tables</a></div>
+<div>And Suzanne brought up <a href="https://support.google.com/fusiontables/answer/2571232?hl=en">Google Fusion Tables</a>!</div>
 <div>Common features of a <em>web-mapping platform</em>:</div>
 <div>1. They don't require any <strong>programming</strong></div>
 <div>So, no <strong>HTML</strong>, <strong>CSS</strong>, or <strong>Javascript</strong>.</div>
@@ -163,13 +163,13 @@
 <div>Which is a <em>website within a website</em>...</div>
 <div>And may take <strong>extra time</strong> to load.</div>
 <div>... Otherwise, you'll have to use <em>Javascript</em>.<br><br>We'll talk about that <strong>later</strong> and <em>next time</em> when we talk about <em>web-mapping from scratch</em>.</div>
-<div>2. You are stuck in the <em>basemap</em> versus <em>content</em> paradigm</em>.</div>
+<div>2. You are stuck in the <em>basemap</em> versus <em>content</em> paradigm</em> (e.g. <strong>mashups</strong>).</div>
 <div>With <em>data</em> layered on top of <em>reference layers</em> and <em>labels</em>.</div>
 <div>Remember last time I mentioned <em>key concepts</em> in <em>cartography</em>, such as <strong>visual hierarchy</strong> and creating <strong>visual arguments</strong>?</div>
 <div>Displaying your <em>mastery of these concepts</em> can be tough if you can't <strong>integrate</strong> your data with your basemap layers.</div>
 <div>We see a lot of <em>tricks with transparency</em> in the face of <strong>cartographic dilemmas</strong>.</div>
 <div data-bodyclass='platforms'></div>
-<div>There are <strong>tools</strong> that get around <strong>this</strong>,</div> 
+<div>There are <strong>ways</strong> around <strong>this</strong>,</div> 
 <div>...for example the <a href="https://developers.google.com/maps/">Google Maps API</a> allows for <em>selective styling</em> of basemap layers that you can <em>intersperse</em> with your data,</div>
 <div>...but most people don't <em>bother</em></div>
 <div>...because we're <em>used</em> to web maps that looks <strong>this way</strong></div>
@@ -179,24 +179,14 @@
 <div>But as we discussed last week, it can be <em>overkill</em>:</div>
 <div><iframe src="http://leafletjs.com/examples/choropleth-example.html" width="1200" height="800" frameborder="0" scrolling="no"></iframe></div>
 <div>And it <em>limits</em> the diversity of <em>cartographic techniques</em> you can use.</div>
-<div>That said, sometimes a <em>mapping platform</em> is the expedient way to <strong>get things done</strong>.</div>
-<div>Here are the web-mapping <strong>platforms</strong> we will discuss today:</div>
-<div><a href="http://mapbox.com">Mapbox</a></div>
-<div><a href="http://cartodb.com">CartoDB</a></div>
-<div>We'll also do <em>two exercises</em> today:</div>
-<div><strong>Exercise 1</strong> focuses on <em>reference</em> mapping.</div>
-<div><strong>Exercise 2</strong> focuses on <em>thematic</em> mapping.</div>
-<div>First things <strong>first</strong>: create or sign in to your first <em>free account</em> for today.</div>
-<div>Head to <a href="http://mapbox.com">Mapbox.com</a>.</div>
-<div data-bodyclass='mapbox1'><strong>In the top right corner, <em>sign in</em> or <em>sign up</em>.</strong></div>
-<div data-bodyclass='mapbox2'></div>
-<div>BREAK</div>
-<div>Let's talk about <em>basemaps</em> again.</div>
+<div>4. Mapping platforms typically cost <em>$$$</em></div>
+<div>Pricing structures vary, but may include <strong>monthly</strong> fees for hosting, and fees based on <strong>usage</strong>, and <strong>licensing fees</strong>.</div>
+<div>That said, sometimes a <em>web-mapping platform</em> is the expedient way to <strong>get things done</strong>.</div>
+<div>And the base-level <strong>free</strong> accounts are great for <em>learning</em> and <em>playing around</em>.</div>
+
+<div>Let's take a <strong>deeper look</strong> at <em>basemaps</em>.</div>
 <div>What is a <strong>basemap</strong>?</div>
-<div data-bodyclass='quote'>"The term <em>basemap</em> is seen often in GIS and refers to a collection of GIS data and/or orthorectified imagery that form the <strong>background setting</strong> for a map.  The function of the basemap is to <em>provide background detail</em> necessary to <strong>orient the location</strong> of the map." - Caitlin Dempsey Morais on <a href="http://www.gislounge.com/basemaps-defined/">GIS Lounge</a></div>
-<div>What <strong>map elements</strong> do we expect in a <em>basemap</em>?</div>
-<div data-bodyclass='quote'>"<strong>Typical</strong> GIS data and imagery that make up the layers for a basemap: streets, parcels, boundaries (country, county, city boundaries), shaded relief of a digital elevation model, waterways, and aerial or satellite imagery.  Depending on the type of map, <em>any combination</em> of those layers can be used." - Caitlin Dempsey Morais on <a href="http://www.gislounge.com/basemaps-defined/">GIS Lounge</a></div>
-<div>Think about the <strong>language</strong> here for a moment. <em>Base</em>map. What is the <strong>implication</strong>?</div>
+<div>Remember our discussion last week of <strong>mashups</strong>. <em>Base</em>map. What is the <strong>implication</strong>?</div>
 <div>When you have a <strong>base</strong>, you can build things on <em>top</em> of it. <strong>Right?</strong></div>
 <div data-bodyclass='cupcakebase'></div>
 <div data-bodyclass='cupcakes'></div>
@@ -208,9 +198,31 @@
 <div>Now check out <strong>this basemap</strong>.</div>
 <div data-bodyclass='craigslist'></div>
 <div>This map is <em>also</em> made of <strong>OSM</strong> data!</div>
-<div>Both the <strong>main Mapbox tiles</strong> and the <strong>Craigslist tiles</strong> have decided which <em>data</em> they want to <em>render (show)</em> on their basemaps.</div>
-<div><strong>Any basemap</strong> can have <strong>any data</strong> on it styled <strong>any way</strong>. The <em>question</em> is what makes the <em>most sense</em> for a particular map.</div>
-<div>We will talk about these things today as we <em>make some maps</em> in our <strong>browsers</strong>.</div>
+<div>Cartographic decisions have been made about what <em>data</em> to <em>render (show)</em> <strong>how</strong> on these basemaps.</div>
+<div data-bodyclass='quote'>"The term <em>basemap</em> is seen often in GIS and refers to a collection of GIS data and/or orthorectified imagery that form the <strong>background setting</strong> for a map.  The function of the basemap is to <em>provide background detail</em> necessary to <strong>orient the location</strong> of the map." - Caitlin Dempsey Morais on <a href="http://www.gislounge.com/basemaps-defined/">GIS Lounge</a></div>
+<div>A more <strong>flattering</strong> definition than we've allowed so far.</div>
+<div>In <strong>truth</strong>, basemaps have come a long way.</div>
+<div><img src="anatomy/basemap-datalayers-01.png"></div>
+<div><img src="anatomy/basemap-datalayers-02.png"></div>
+<div><img src="anatomy/basemap-datalayers-03.png"></div>
+<div><img src="anatomy/basemap-datalayers-04.png"></div>
+<div><img src="anatomy/basemap-datalayers-05.png"></div>
+<div><img src="anatomy/basemap-datalayers-06.png"></div>
+<div>What <strong>map elements</strong> do we expect in a <em>basemap</em>?</div>
+<div data-bodyclass='quote'>"<strong>Typical</strong> GIS data and imagery that make up the layers for a basemap: streets, parcels, boundaries (country, county, city boundaries), shaded relief of a digital elevation model, waterways, and aerial or satellite imagery.  Depending on the type of map, <em>any combination</em> of those layers can be used." - Caitlin Dempsey Morais on <a href="http://www.gislounge.com/basemaps-defined/">GIS Lounge</a></div>
+
+<div>Here are the web-mapping <strong>platforms</strong> we will discuss today:</div>
+<div><a href="http://mapbox.com">Mapbox</a></div>
+<div><a href="http://cartodb.com">CartoDB</a></div>
+<div>We'll also do <em>two exercises</em> today:</div>
+<div>In <strong>Exercise 1</strong> we <strong>draw markers</strong> on a custom <a href="http://mapbox.com">Mapbox</a> basemap.</div>
+<div>In <strong>Exercise 2</strong> we <em>get fancy</em> with <a href="http://cartodb.com">CartoDB</a>.</div>
+<div>Before the <strong>break</strong>: create or sign in to your first <em>free account</em> for today.</div>
+<div>Head to <a href="http://mapbox.com">Mapbox.com</a>.</div>
+<div data-bodyclass='mapbox1'><strong>In the top right corner, <em>sign in</em> or <em>sign up</em>.</strong></div>
+<div data-bodyclass='mapbox2'></div>
+
+<div>BREAK</div>
 
 <div>Time for our <strong>first exercise</strong>!</div>
 <div>We will make a map of <strong>your hometown</strong> with <em>Mapbox</em>.</div>
