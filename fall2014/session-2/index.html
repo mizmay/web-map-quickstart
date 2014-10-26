@@ -5,6 +5,7 @@
     background-image: url(./images/Capture-PSD-475x493.png);
     background-repeat: no-repeat;
     background-position: center 1px;
+    background-size:100%;
   }
   .nominatim {
     background-image: url(./images/nominatim.png);
@@ -161,24 +162,25 @@
 <div>Or <strong>embed</strong> it with an <em>iframe</em>.</div>
 <div>Which is a <em>website within a website</em>...</div>
 <div>And may take <strong>extra time</strong> to load.</div>
-<div>We'll provide a <strong>partial</strong> solution to the <em>technical</em> part next time when we talk about <em>web-mapping from scratch</em>.</div>
+<div>... Otherwise, you'll have to use <em>Javascript</em>.<br><br>We'll talk about that <strong>later</strong> and <em>next time</em> when we talk about <em>web-mapping from scratch</em>.</div>
 <div>2. You are stuck in the <em>basemap</em> versus <em>content</em> paradigm</em>.</div>
 <div>With <em>data</em> layered on top of <em>reference layers</em> and <em>labels</em>.</div>
 <div>Remember last time I mentioned <em>key concepts</em> in <em>cartography</em>, such as <strong>visual hierarchy</strong> and creating <strong>visual arguments</strong>?</div>
 <div>Displaying your <em>mastery of these concepts</em> can be tough if you can't <strong>integrate</strong> your data with your basemap layers.</div>
 <div>We see a lot of <em>tricks with transparency</em> in the face of <strong>cartographic dilemmas</strong>.</div>
-<div>There are <strong>tools</strong> that get around this,</div> 
+<div data-bodyclass='platforms'></div>
+<div>There are <strong>tools</strong> that get around <strong>this</strong>,</div> 
 <div>...for example the <a href="https://developers.google.com/maps/">Google Maps API</a> allows for <em>selective styling</em> of basemap layers that you can <em>intersperse</em> with your data,</div>
-<div>...but most people don't <em>bother</em> with <strong>this</strong></div>
-<div data-bodyclass='platforms'>...because we're <em>used</em> to web maps that looks <strong>this way</strong></div>
-<div>...and you'd need some <em>Javascript</em>.</div>
+<div>...but most people don't <em>bother</em></div>
+<div>...because we're <em>used</em> to web maps that looks <strong>this way</strong></div>
+<div>...and again you'd need some <em>Javascript</em> to fix it.</div>
 <div>3. Every map <em>pans</em>, <em>zooms</em>, and has <em>info boxes</em></div>
 <div>This <em>cookie-cutter</em> approach has the advantage of <em>giving people what they expect</em>...</div>
 <div>But as we discussed last week, it can be <em>overkill</em>:</div>
 <div><iframe src="http://leafletjs.com/examples/choropleth-example.html" width="1200" height="800" frameborder="0" scrolling="no"></iframe></div>
 <div>And it <em>limits</em> the diversity of <em>cartographic techniques</em> you can use.</div>
-<div>That said, sometimes a <em>mapping platform</em> is the expedient way to get things done.</div>
-<div>Here are some other web-mapping <strong>platforms</strong> we will discuss today:</div>
+<div>That said, sometimes a <em>mapping platform</em> is the expedient way to <strong>get things done</strong>.</div>
+<div>Here are the web-mapping <strong>platforms</strong> we will discuss today:</div>
 <div><a href="http://mapbox.com">Mapbox</a></div>
 <div><a href="http://cartodb.com">CartoDB</a></div>
 <div>We'll also do <em>two exercises</em> today:</div>
@@ -188,7 +190,7 @@
 <div>Head to <a href="http://mapbox.com">Mapbox.com</a>.</div>
 <div data-bodyclass='mapbox1'><strong>In the top right corner, <em>sign in</em> or <em>sign up</em>.</strong></div>
 <div data-bodyclass='mapbox2'></div>
-<div>FIRST BREAK</div>
+<div>BREAK</div>
 <div>Let's talk about <em>basemaps</em> again.</div>
 <div>What is a <strong>basemap</strong>?</div>
 <div data-bodyclass='quote'>"The term <em>basemap</em> is seen often in GIS and refers to a collection of GIS data and/or orthorectified imagery that form the <strong>background setting</strong> for a map.  The function of the basemap is to <em>provide background detail</em> necessary to <strong>orient the location</strong> of the map." - Caitlin Dempsey Morais on <a href="http://www.gislounge.com/basemaps-defined/">GIS Lounge</a></div>
