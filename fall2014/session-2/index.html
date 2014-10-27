@@ -5,7 +5,6 @@
     background-image: url(./images/Capture-PSD-475x493.png);
     background-repeat: no-repeat;
     background-position: center 1px;
-    background-size:100%;
   }
   .nominatim {
     background-image: url(./images/nominatim.png);
@@ -130,6 +129,7 @@
     background-image: url(./images/storymap.png);
     background-repeat: no-repeat;
     background-position: center 1px;
+    background-size: 100%;
   }
   .largelots {
     background-image: url(./images/largelots.png);
@@ -147,11 +147,13 @@
     background-image: url(./images/mashup.png);
     background-repeat: no-repeat;
     background-position: center 1px;
+    background-size: 100%;
   }
   .agol-pricing {
     background-image: url(./images/agol-pricing.png);
     background-repeat: no-repeat;
     background-position: center 1px;
+    background-size: 100%;
   }
   .webapp-builder {
     background-image: url(./images/webapp-builder.png);
@@ -164,14 +166,42 @@
     background-repeat: no-repeat;
     background-position: center 1px;
   }
-  .mabox-pricing {
+  .mapbox-pricing {
     background-image: url(./images/mapbox-pricing.png);
     background-repeat: no-repeat;
     background-position: center 1px;
+    background-size: 100%;
+  }
+  .yelp {
+    background-image: url(./images/yelp.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 90%;
+  }
+  .gstatic {
+    background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284);
+    background-repeat: no-repeat;
+    background-position: center 20px;
+  }
+  .gstatic2 {
+    background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=San+Francisco,CA&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284);
+    background-repeat: no-repeat;
+    background-position: center 20px;
+  }
+  .twitter-search {
+    background-image: url(./images/twitter-search.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 90%;
   }
   .quote {
     font-family: serif;
     letter-spacing: 2px;
+  }
+  .url, .code {
+    font-family: Courier;
+    letter-spacing: 2px;
+    color: gray;
   }
 </style>
 <script src='../../big.js'></script>
@@ -188,7 +218,7 @@
 <div><a href="http://mapbox.com">Mapbox</a></div>
 <div><a href="http://arcgis.com">ArcGIS Online</a></div>
 <div>And Suzanne brought up <a href="https://support.google.com/fusiontables/answer/2571232?hl=en">Google Fusion Tables</a>!</div>
-<div>Common features of a <em>web-mapping platform</em>:</div>
+<div>Common features of <em>web mapping platforms</em>:</div>
 <div><strong>Feature #1:</strong> They <em>don't</em> require any <strong>programming</strong></div>
 <div>So, no <strong>HTML</strong>, <strong>CSS</strong>, or <strong>JavaScript</strong>.</div>
 <div data-bodyclass='webapp-builder'></div>
@@ -206,48 +236,102 @@
 <div data-bodyclass='storymap'></div>
 <div><strong>Thematically</strong>, the styling options may not be sufficient to allow you to <em>match</em> the <em>look and feel</em> of a website.</div>
 <div><strong>Technically</strong>, you will either have to <em>include</em> your map on your website with an <em>external link</em>....</div>
-<div>... so visitors are navigating <em>away</em> from your other content to see your map...</div>
-<div>... or <strong>embed</strong> it with an <em>iframe</em>...</div>
-<div>...which is a <em>website within a website</em>...</div>
+<div><a href='http://www.antievictionmappingproject.net/ellis.html'>Click here</a> to view a map of <strong>Ellis Act evictions</strong> in <em>San Francisco</em>!</div>
+<div>... so visitors are navigating <em>away</em> from your other content to see your map.</div>
+<div>Or you'll have to <strong>embed</strong> your map with an <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe'>iframe</a>, or a <em>website within a website</em>.</div>
+<!--<div><iframe src="http://mizmay.github.io/web-map-quickstart/fall2014/session-2" width="1200px" height="700px"></iframe></div>-->
 <div>... and may take <strong>extra time</strong> to load.</div>
-<div><iframe style="width: 100%; height: 580px; border: 1px solid #ccc;" src="http://www.afdc.energy.gov/locator/stations/widget/" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></div>
 <div>Otherwise, you'll have to use <em>JavaScript</em>.<br><br>(We'll talk about that <strong>later</strong> and <em>next time</em> when we talk about <em>web-mapping from scratch</em>.)</div>
 <div><em>Drawback #2:</em> You are stuck in the <strong>basemap</strong> versus <em>content</em> paradigm</em> (e.g. <strong>mashups</strong>) with <em>data</em> layered on top of <strong>reference layers</strong> and <strong>labels</strong>.</div>
 <div>Remember last time I mentioned <em>key concepts</em> in <em>cartography</em>, such as <strong>visual hierarchy</strong> and creating <strong>visual arguments</strong>?</div>
 <div data-bodyclass='europe-faces'></div>
 <div>Displaying your <em>mastery of these concepts</em> can be tough if you can't <strong>integrate</strong> your <em>data</em> with your <em>basemap layers</em>.</div>
 <div data-bodyclass='mashup'></div>
-<div>We see a lot of <em>tricks with transparency</em> in the face of <strong>cartographic dilemmas</strong>.</div>
+<div>We see a lot of <em>tricks with transparency</em> in the face of <strong>cartographic dilemmas</strong> like this.</div>
 <div data-bodyclass='platforms'></div>
-<div>There are <strong>ways</strong> around <strong>this</strong>,</div> 
-<div>...for example the <a href="https://developers.google.com/maps/">Google Maps API</a> allows for <em>selective styling</em> of basemap layers that you can <em>intersperse</em> with your data...</div>
-<div>...but most people don't <em>bother</em>...</div>
-<div>...because we're <em>used</em> to web maps that look <strong>this way</strong>...</div>
-<div>...and, <strong>again</strong>, you'd need some <em>Javascript</em> to fix it.</div>
+<div>There are <strong>ways around</strong> this.</div>
+<div>For example, the <a href="https://developers.google.com/maps/">Google Maps API</a> allows for <em>selective styling</em> of basemap layers that you can <em>intersperse</em> with your data...</div>
+<div>...but most people don't <em>bother</em> to do that.</div>
+<div data-bodyclass='yelp'></div>
+<div>We're <em>used</em> to web maps that look <strong>this way</strong>...</div>
+<div>...and, <strong>again</strong>, you'd need to use <em>JavaScript</em> to fix it.</div>
 <div><em>Drawback #3:</em> Every map <strong>pans</strong>, <strong>zooms</strong>, and has <strong>info boxes</strong></div>
 <div>This <em>cookie-cutter</em> approach has the advantage of <strong>giving people what they expect</strong>...</div>
 <div>... but as we discussed last week, it can be <em>overkill</em>:</div>
 <div><iframe src="http://leafletjs.com/examples/choropleth-example.html" width="1200" height="800" frameborder="0" scrolling="no"></iframe></div>
 <div>And it <strong>limits</strong> the diversity of <em>cartographic techniques</em> you can use.</div>
 <div><em>Drawback #4:</em> Mapping platforms typically cost <strong>hella $$$</strong></div>
-<div>Pricing structures vary, but may include <strong>monthly</strong> fees for hosting, and fees based on <strong>usage</strong>, and <strong>licensing fees</strong>.</div>
+<div>Pricing structures vary, but may include <em>monthly</em> fees for <strong>hosting</strong>, fees based on <strong>usage</strong>, and <strong>licensing fees</strong>.</div>
 <div data-bodyclass='agol-pricing'></div>
 <div data-bodyclass='mapbox-pricing'></div>
 <div>That said, sometimes a <em>web mapping platform</em> is the <em>expedient</em> way to <strong>get things done</strong>.</div>
 <div>And the base-level <strong>free</strong> accounts are great for <em>learning</em> and <em>playing around</em>.</div>
 
 <div>The <strong>web-mapping platforms</strong> we will discuss today:</div>
+<div><a href='http://maps.google.com'>Google Maps</a></div>
 <div><a href="http://mapbox.com">Mapbox</a></div>
 <div><a href="http://cartodb.com">CartoDB</a></div>
-<div>We will also do <em>two exercises</em> today:</div>
-<div>In <strong>Exercise 1</strong> we <strong>draw markers</strong> on a custom <a href="http://mapbox.com">Mapbox</a> basemap.</div>
-<div>In <strong>Exercise 2</strong> we <em>get fancy</em> with <a href="http://cartodb.com">CartoDB</a>.</div>
+<div>We will also do <em>three exercises</em> today:</div>
+<div>In <strong>Exercise 1</strong> we will play with static maps from the <em>Google Maps API</em> in the browser.</div>
+<div>In <strong>Exercise 2</strong> we will <em>draw markers</em> on a custom <a href="http://mapbox.com">Mapbox</a> basemap.</div>
+<div>In <strong>Exercise 3</strong> we will <em>get fancy</em> with <a href="http://cartodb.com">CartoDB</a>.</div>
+
+<div>BREAK</div>
+
+<div><strong>Before</strong> we start our <em>first exercise</em>, let's <strong>recap</strong>.</div>
+<div><em>Web mapping platforms</em> take away some ability to <strong>customize</strong>, but they are <strong>great</strong> for making <em>quick and dirty</em> web maps.</div>
+<div>Other benefits include: your <strong>browser</strong> is your <em>principal tool</em>.</div>
+<div><a href='http://twitter.com/briantimoney'>Brian Timoney</a> wrote a post this year on his blog <a href='http://mapbrief.com'>MapBrief</a> titled <a href='http://mapbrief.com/2014/01/17/in-praise-of-the-static-map/'>"In Praise of the Static Map"</a>. He writes:</div>
+<div data-bodyclass='quote'>"You need to make a map. And you want to use the web. If you’re a geospatial professional it’s likely you misapprehend the task in 3 crucial ways:<ul><li>You will <em>underestimate</em> the time it will take to create an interactive map using one of the usual Javascript mapping APIs.</li><li>You will <em>overestimate</em> the amount of time your audience will spend using your map.</li><li>You will <em>overestimate</em> your audience’s enthusiasm for “interacting” with your map.</li></ul>If time is money, then my money-making advice to you is…embrace the Static Map."</div>
+<div>He is <strong>not</strong> saying that all interactive maps are <em>overkill</em> or <em>difficult to make</em>.</div>
+<div>It turns out that it is just <em>quite easy</em> to make <strong>custom static maps</strong> in the browser!</div>
+<div><strong>Quickly</strong>, let's talk about <em>sending information around</em> online.</div>
+<div><em>Ever notice</em> how URLs get <strong>really long</strong> after you submit a <em>form</em> on a website?</div>
+<div>That's your <strong>browser</strong> sending <em>the information you entered</em> to the <strong>server</strong> where the <em>website lives</em>.</div>
+<div>This information gives the server <strong>extra instructions</strong> on how to do whatever it's doing.</div>
+<div data-bodyclass='twitter-search'></div>
+<div>In searching for "maps" on Twitter, the URL that got sent was: <code style='color:gray;'>https://twitter.com/search?q=maps&src=typd</code>.</div>
+<div>This URL includes two pieces of information: <code style='color:gray;'>q=maps</code> and <code style='color:gray;'>src=typd</code>.</div>
+<div><code style='color:gray;'>q=maps</code> is the <em>search query</em>. <code style='color:gray;'>src=typd</code> tells Twitter that I <em>typed</em> in the search request rather than <em>clicking on a link</em>.</div>
+<div>Those pieces of information <strong>helped Twitter</strong> give me the <em>information I wanted</em>.</div>
+<div>A <strong>cool</strong> thing: this can apply to <em>maps</em> too!</div>
+<div>We can send <strong>information</strong> to a server in our URL that will <em>make a map</em> for us.</div>
+<div>Let's <em>try it out</em> with the <a href='https://developers.google.com/maps/documentation/staticmaps/#quick_example'>Google Maps Static API</a>.</div>
+<div>Take a look at this map:</div>
+<div data-bodyclass='gstatic'><br><br><br><br><ul><li>Google basemap</li><li>Centered in Lower Manhattan</li><li>Three map markers in different colors</li></div>
+<div>All of the <strong>customization</strong> in this map was made in the <em>URL</em>, which is the magic of the <strong>Google Maps Static API</strong>.</div>
+<div>The <strong>URL</strong> for this map is:</div>
+<div data-bodyclass='url'>https://maps.googleapis.com/maps/api/staticmap? center=Brooklyn+Bridge,New+York,NY &zoom=13&size=600x300&maptype=roadmap &markers=color:blue%7Clabel:S%7C40.702147,-74.015794 &markers=color:green%7Clabel:G%7C40.711614,-74.012318 &markers=color:red%7Clabel:C%7C40.718217,-73.998284</div>
+<div>Gah, <strong>so big</strong>! Each piece of the <em>URL</em> corresponds with a piece of <strong>customization</strong> on the map. Let's <em>break it down</em>.</div>
+<div>Go to <a href='http://bit.ly/gstatic'>bit.ly/gstatic</a> to <em>open</em> this link in your <strong>browser</strong>.</div>
+<div data-bodyclass='url'><strong>https://maps.googleapis.com/maps/api/staticmap?</strong><br>center=Brooklyn+Bridge,New+York,NY<br>&zoom=13&size=600x300&maptype=roadmap<br>&markers=color:blue<br>%7Clabel:S<br>%7C40.702147,-74.015794<br>&markers=color:green<br>%7Clabel:G<br>%7C40.711614,-74.012318<br>&markers=color:red<br>%7Clabel:C<br>%7C40.718217,-73.998284</div>
+<div>The <strong>base URL</strong> is <code style='color: gray;'>https://maps.googleapis.com/ maps/api/staticmap?</code>. Everything <em>after</em> that is something we can <strong>customize</strong>. These <strong>settings</strong> are divided by <code style='color:gray;'>&</code>'s.</div>
+<div>The <em>first thing</em> we can customize is where the map is <strong>centered</strong>.</div>
+<div data-bodyclass='url'>https://maps.googleapis.com/maps/api/staticmap?<br><strong>center=Brooklyn+Bridge,New+York,NY</strong><br>&zoom=13&size=600x300&maptype=roadmap<br>&markers=color:blue<br>%7Clabel:S<br>%7C40.702147,-74.015794<br>&markers=color:green<br>%7Clabel:G<br>%7C40.711614,-74.012318<br>&markers=color:red<br>%7Clabel:C<br>%7C40.718217,-73.998284</div>
+<div>In the <em>URL bar</em> in your browser, <strong>change</strong> <code style='color:gray;'>center=Brooklyn+Bridge,New+York,NY</code> to <code style='color:gray;'>center=San+Francisco,CA</code>. <strong>Refresh</strong> the page.</div>
+<div>Our <strong>new URL</strong> should look like <em>this</em>:</div>
+<div data-bodyclass='url'>https://maps.googleapis.com/maps/api/staticmap?<br><strong>center=San+Francisco,CA</strong><br>&zoom=13&size=600x300&maptype=roadmap<br>&markers=color:blue<br>%7Clabel:S<br>%7C40.702147,-74.015794<br>&markers=color:green<br>%7Clabel:G<br>%7C40.711614,-74.012318<br>&markers=color:red<br>%7Clabel:C<br>%7C40.718217,-73.998284</div>
+<div>And our <strong>new map</strong> should look like <em>this</em>:</div>
+<div data-bodyclass='gstatic2'><br><br><br><br><ul><li>Google basemap</li><li>Centered in <strong>San Francisco</strong></li><li>No map markers</li></div>
+<div>Cool, right? <em>What else</em> can we customize?</div>
+<div><code style='color:gray;'>zoom=13</code> is the <strong>zoom level</strong> of the map. We will talk more about zooms <em>next week</em>, but for now enter a number between <strong>0</strong> and <strong>20</strong>.</div>
+<div><code style='color:gray;'>size=600x300</code> is the <em>size</em> of the map in <strong>pixels</strong>.</div>
+<div><code style='color:gray;'>maptype=roadmap</code> is the <em>basemap style</em>. Try <code style='color:gray;'>terrain</code> instead.</div>
+<div>Then we have the <code style='color:gray;'>markers=</code> properties, which are a little more <em>complicated</em>.</div>
+<div>The map markers themselves have a series of customizable elements, separated by <code style='color:gray;'>%7C</code>, which is the ASCII-encoded version of |.</div>
+<div><code style='color:gray;'>markers=color:blue<br>%7Clabel:S<br>%7c40.702147,-74.015794</code></div>
+<div><code style='color:gray;'>color:blue</code> defines the <strong>color</strong> of the marker.</div>
+<div><code style='color:gray;'>label:S</code> defines the <strong>label</strong> of the marker.</div>
+<div><code style='color:gray;'>40.702147,-74.015794</code> defines the <strong>location</strong> of the marker.</div>
+<div><em>Try</em> adding your <em>own marker</em> somewhere in <strong>San Francisco</strong>.</div>
+<div>You can <strong>read more</strong> about the <em>Google Maps Static API</em> <a href='https://developers.google.com/maps/documentation/staticmaps/#quick_example'>here</a>.</div>
 <div>Before the <strong>break</strong>: create or sign in to your first <em>free account</em> for today.</div>
 <div>Head to <a href="http://mapbox.com">Mapbox.com</a>.</div>
 <div data-bodyclass='mapbox1'><strong>In the top right corner, <em>sign in</em> or <em>sign up</em>.</strong></div>
 <div data-bodyclass='mapbox2'></div>
 
 <div>BREAK</div>
+
 
 <div>Let's take a <strong>deeper look</strong> at <em>basemaps</em>.</div>
 <div>What is a <strong>basemap</strong>?</div>
