@@ -140,9 +140,32 @@
     background-image: url(./images/wsj.png);
     background-repeat: no-repeat;
     background-position: center 1px;
+    background-size: 100%;
+    text-shadow: 0.1em 0.1em #000;
   }
   .mashup {
     background-image: url(./images/mashup.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .agol-pricing {
+    background-image: url(./images/agol-pricing.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .webapp-builder {
+    background-image: url(./images/webapp-builder.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 100%;
+  }
+  .europe-faces {
+    background-image: url(http://photos1.blogger.com/blogger/5379/496/1600/europe.0.jpg);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .mabox-pricing {
+    background-image: url(./images/mapbox-pricing.png);
     background-repeat: no-repeat;
     background-position: center 1px;
   }
@@ -157,7 +180,7 @@
 <div>Web Mapping <em>Quickstart</em></div>
 <div><strong>Last week</strong> was <em>Session 1:</em> Web Mapping Concepts.</div>
 <div>We gave you some <em>homework</em>.</div>
-<div>Let's see some of those <em>web maps</em>.</div>
+<div>Let's see some of those <strong>web maps</strong>.</div>
 <div>Today is <em>Session 2:</em> Web Mapping Platforms and Projects.</div>
 <div>What is a <strong>web mapping platform</strong>?</div>
 <div>Think of the <strong>tools</strong> people use to make <em>quick and dirty</em> web maps.</div>
@@ -166,18 +189,20 @@
 <div><a href="http://arcgis.com">ArcGIS Online</a></div>
 <div>And Suzanne brought up <a href="https://support.google.com/fusiontables/answer/2571232?hl=en">Google Fusion Tables</a>!</div>
 <div>Common features of a <em>web-mapping platform</em>:</div>
-<div>1. They <em>don't</em> require any <strong>programming</strong></div>
+<div><strong>Feature #1:</strong> They <em>don't</em> require any <strong>programming</strong></div>
 <div>So, no <strong>HTML</strong>, <strong>CSS</strong>, or <strong>JavaScript</strong>.</div>
-<div>And you don't have to worry about <em>cross-browser</em> <strong>functionality</strong>.</div>
-<div>2. They provide some <em>options</em> for <strong>cartographic styling</strong>.</div>
+<div data-bodyclass='webapp-builder'></div>
+<div>And you don't have to worry about <a href='http://en.wikipedia.org/wiki/Cross-browser'>cross-browser functionality</a>.</div>
+<div><strong>Feature #2:</strong> They provide some <em>options</em> for <strong>cartographic styling</strong>.</div>
 <div>So, you can customize the <strong>basemap</strong>, <strong>symbology</strong>, and <strong>info boxes</strong>.</div>
-<div data-bodyclass='wsj'><br><br><br>Wall Street Journal + CartoDB</div>
-<div>3. They typically provide some <em>add-ins</em> for <strong>functionality</strong>.</div>
+<div data-bodyclass='wsj'><br><br><br><em>Wall Street Journal + CartoDB</em></div>
+<div><strong>Feature #3:</strong> They typically provide some <em>add-ins</em> for <strong>functionality</strong>.</div>
 <div>Such as: <em>a time slider</em> or <em>custom scrolling</em> through a sequence of features.</div>
-<div><iframe src="http://nychenge.com/map.html#13/40.7510/-73.9751/5/27" width="800px" height="700px" frameborder="0"></iframe></div>
-<div>4. They typically include <em>hosting</em>, so you don't have to worry about setting up <strong>web servers</strong>, etc.</div>
+<div><em>For example</em>, <a href='http://nychenge.com/'>NYC Henge</a> shows the <strong>shadows</strong> cast across the NYC street grid during <em>sunset</em> each day of the year:</div>
+<div><iframe src="http://nychenge.com/map.html#13/40.7510/-73.9751/5/27" width="1200px" height="700px" frameborder="0"></iframe></div>
+<div><strong>Feature #4:</strong> They typically include <em>hosting</em>, so you don't have to worry about setting up <strong>web servers</strong>, etc.</div>
 <div>However, there are some <strong>drawbacks</strong> to <em>mapping platforms</em>:</div>
-<div>1. The maps can be <em>tough to incorporate</em> into <em>existing websites</em>, both <strong>thematically</strong> and <strong>technically</strong>.</div>
+<div><em>Drawback #1:</em> The maps can be <em>tough to incorporate</em> into <em>existing websites</em>, both <strong>thematically</strong> and <strong>technically</strong>.</div>
 <div data-bodyclass='storymap'></div>
 <div><strong>Thematically</strong>, the styling options may not be sufficient to allow you to <em>match</em> the <em>look and feel</em> of a website.</div>
 <div><strong>Technically</strong>, you will either have to <em>include</em> your map on your website with an <em>external link</em>....</div>
@@ -187,31 +212,34 @@
 <div>... and may take <strong>extra time</strong> to load.</div>
 <div><iframe style="width: 100%; height: 580px; border: 1px solid #ccc;" src="http://www.afdc.energy.gov/locator/stations/widget/" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></div>
 <div>Otherwise, you'll have to use <em>JavaScript</em>.<br><br>(We'll talk about that <strong>later</strong> and <em>next time</em> when we talk about <em>web-mapping from scratch</em>.)</div>
-<div>2. You are stuck in the <strong>basemap</strong> versus <em>content</em> paradigm</em> (e.g. <strong>mashups</strong>) with <em>data</em> layered on top of <strong>reference layers</strong> and <strong>labels</strong>.</div>
+<div><em>Drawback #2:</em> You are stuck in the <strong>basemap</strong> versus <em>content</em> paradigm</em> (e.g. <strong>mashups</strong>) with <em>data</em> layered on top of <strong>reference layers</strong> and <strong>labels</strong>.</div>
 <div>Remember last time I mentioned <em>key concepts</em> in <em>cartography</em>, such as <strong>visual hierarchy</strong> and creating <strong>visual arguments</strong>?</div>
-<div>Displaying your <em>mastery of these concepts</em> can be tough if you can't <strong>integrate</strong> your data with your basemap layers.</div>
+<div data-bodyclass='europe-faces'></div>
+<div>Displaying your <em>mastery of these concepts</em> can be tough if you can't <strong>integrate</strong> your <em>data</em> with your <em>basemap layers</em>.</div>
 <div data-bodyclass='mashup'></div>
 <div>We see a lot of <em>tricks with transparency</em> in the face of <strong>cartographic dilemmas</strong>.</div>
 <div data-bodyclass='platforms'></div>
 <div>There are <strong>ways</strong> around <strong>this</strong>,</div> 
-<div>...for example the <a href="https://developers.google.com/maps/">Google Maps API</a> allows for <em>selective styling</em> of basemap layers that you can <em>intersperse</em> with your data,</div>
-<div>...but most people don't <em>bother</em></div>
-<div>...because we're <em>used</em> to web maps that looks <strong>this way</strong></div>
-<div>...and again you'd need some <em>Javascript</em> to fix it.</div>
-<div>3. Every map <em>pans</em>, <em>zooms</em>, and has <em>info boxes</em></div>
-<div>This <em>cookie-cutter</em> approach has the advantage of <em>giving people what they expect</em>...</div>
-<div>But as we discussed last week, it can be <em>overkill</em>:</div>
+<div>...for example the <a href="https://developers.google.com/maps/">Google Maps API</a> allows for <em>selective styling</em> of basemap layers that you can <em>intersperse</em> with your data...</div>
+<div>...but most people don't <em>bother</em>...</div>
+<div>...because we're <em>used</em> to web maps that look <strong>this way</strong>...</div>
+<div>...and, <strong>again</strong>, you'd need some <em>Javascript</em> to fix it.</div>
+<div><em>Drawback #3:</em> Every map <strong>pans</strong>, <strong>zooms</strong>, and has <strong>info boxes</strong></div>
+<div>This <em>cookie-cutter</em> approach has the advantage of <strong>giving people what they expect</strong>...</div>
+<div>... but as we discussed last week, it can be <em>overkill</em>:</div>
 <div><iframe src="http://leafletjs.com/examples/choropleth-example.html" width="1200" height="800" frameborder="0" scrolling="no"></iframe></div>
-<div>And it <em>limits</em> the diversity of <em>cartographic techniques</em> you can use.</div>
-<div>4. Mapping platforms typically cost <em>$$$</em></div>
+<div>And it <strong>limits</strong> the diversity of <em>cartographic techniques</em> you can use.</div>
+<div><em>Drawback #4:</em> Mapping platforms typically cost <strong>hella $$$</strong></div>
 <div>Pricing structures vary, but may include <strong>monthly</strong> fees for hosting, and fees based on <strong>usage</strong>, and <strong>licensing fees</strong>.</div>
-<div>That said, sometimes a <em>web-mapping platform</em> is the expedient way to <strong>get things done</strong>.</div>
+<div data-bodyclass='agol-pricing'></div>
+<div data-bodyclass='mapbox-pricing'></div>
+<div>That said, sometimes a <em>web mapping platform</em> is the <em>expedient</em> way to <strong>get things done</strong>.</div>
 <div>And the base-level <strong>free</strong> accounts are great for <em>learning</em> and <em>playing around</em>.</div>
 
-<div>Here are the web-mapping <strong>platforms</strong> we will discuss today:</div>
+<div>The <strong>web-mapping platforms</strong> we will discuss today:</div>
 <div><a href="http://mapbox.com">Mapbox</a></div>
 <div><a href="http://cartodb.com">CartoDB</a></div>
-<div>We'll also do <em>two exercises</em> today:</div>
+<div>We will also do <em>two exercises</em> today:</div>
 <div>In <strong>Exercise 1</strong> we <strong>draw markers</strong> on a custom <a href="http://mapbox.com">Mapbox</a> basemap.</div>
 <div>In <strong>Exercise 2</strong> we <em>get fancy</em> with <a href="http://cartodb.com">CartoDB</a>.</div>
 <div>Before the <strong>break</strong>: create or sign in to your first <em>free account</em> for today.</div>
