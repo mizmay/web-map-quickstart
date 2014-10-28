@@ -178,6 +178,12 @@
     background-position: center 1px;
     background-size: 90%;
   }
+  .basemap-cartodb {
+    background-image: url(./images/basemap-cartodb.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 90%;
+  }
   .gstatic {
     background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284);
     background-repeat: no-repeat;
@@ -190,6 +196,42 @@
   }
   .twitter-search {
     background-image: url(./images/twitter-search.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 90%;
+  }
+  .basemap1 {
+    background-image: url(./images/basemap-datalayers-01.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 90%;
+  }
+  .basemap2 {
+    background-image: url(./images/basemap-datalayers-02.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 90%;
+  }
+  .basemap3 {
+    background-image: url(./images/basemap-datalayers-03.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 90%;
+  }
+  .basemap4 {
+    background-image: url(./images/basemap-datalayers-04.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 90%;
+  }
+  .basemap5 {
+    background-image: url(./images/basemap-datalayers-05.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 90%;
+  }
+  .basemap6 {
+    background-image: url(./images/basemap-datalayers-06.png);
     background-repeat: no-repeat;
     background-position: center 1px;
     background-size: 90%;
@@ -208,10 +250,10 @@
 </head><body>
 
 <div>Web Mapping <em>Quickstart</em></div>
-<div><strong>Last week</strong> was <em>Session 1:</em> Web Mapping Concepts.</div>
+<div><strong>Last week</strong> was <em>Session 1:</em> Web Mapping Concepts</div>
 <div>We gave you some <em>homework</em>.</div>
 <div>Let's see some of those <strong>web maps</strong>.</div>
-<div>Today is <em>Session 2:</em> Web Mapping Platforms and Projects.</div>
+<div>Today is <em>Session 2:</em> Web Mapping Platforms and Projects</div>
 <div>What is a <strong>web mapping platform</strong>?</div>
 <div>Think of the <strong>tools</strong> people use to make <em>quick and dirty</em> web maps.</div>
 <div><a href="http://cartodb.com">CartoDB</a></div>
@@ -239,8 +281,8 @@
 <div><a href='http://www.antievictionmappingproject.net/ellis.html'>Click here</a> to view a map of <strong>Ellis Act evictions</strong> in <em>San Francisco</em>!</div>
 <div>... so visitors are navigating <em>away</em> from your other content to see your map.</div>
 <div>Or you'll have to <strong>embed</strong> your map with an <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe'>iframe</a>, or a <em>website within a website</em>.</div>
-<!--<div><iframe src="http://mizmay.github.io/web-map-quickstart/fall2014/session-2" width="1200px" height="700px"></iframe></div>-->
-<div>... and may take <strong>extra time</strong> to load.</div>
+<div><iframe src="http://mizmay.github.io/web-map-quickstart/fall2014/session-2" width="1200px" height="700px"></iframe></div>
+<div>... which may (will probably) take <strong>extra time</strong> to load.</div>
 <div>Otherwise, you'll have to use <em>JavaScript</em>.<br><br>(We'll talk about that <strong>later</strong> and <em>next time</em> when we talk about <em>web-mapping from scratch</em>.)</div>
 <div><em>Drawback #2:</em> You are stuck in the <strong>basemap</strong> versus <em>content</em> paradigm</em> (e.g. <strong>mashups</strong>) with <em>data</em> layered on top of <strong>reference layers</strong> and <strong>labels</strong>.</div>
 <div>Remember last time I mentioned <em>key concepts</em> in <em>cartography</em>, such as <strong>visual hierarchy</strong> and creating <strong>visual arguments</strong>?</div>
@@ -281,7 +323,7 @@
 <div><strong>Before</strong> we start our <em>first exercise</em>, let's <strong>recap</strong>.</div>
 <div><em>Web mapping platforms</em> take away some ability to <strong>customize</strong>, but they are <strong>great</strong> for making <em>quick and dirty</em> web maps.</div>
 <div>Other benefits include: your <strong>browser</strong> is your <em>principal tool</em>.</div>
-<div><a href='http://twitter.com/briantimoney'>Brian Timoney</a> wrote a post this year on his blog <a href='http://mapbrief.com'>MapBrief</a> titled <a href='http://mapbrief.com/2014/01/17/in-praise-of-the-static-map/'>"In Praise of the Static Map"</a>. He writes:</div>
+<div><a href='http://twitter.com/briantimoney'>Brian Timoney</a> wrote a post this year on his blog <a href='http://mapbrief.com'>MapBrief</a> titled <a href='http://mapbrief.com/2014/01/17/in-praise-of-the-static-map/'>"In Praise of the Static Map"</a>. <em>He writes:</em></div>
 <div data-bodyclass='quote'>"You need to make a map. And you want to use the web. If you’re a geospatial professional it’s likely you misapprehend the task in 3 crucial ways:<ul><li>You will <em>underestimate</em> the time it will take to create an interactive map using one of the usual Javascript mapping APIs.</li><li>You will <em>overestimate</em> the amount of time your audience will spend using your map.</li><li>You will <em>overestimate</em> your audience’s enthusiasm for “interacting” with your map.</li></ul>If time is money, then my money-making advice to you is…embrace the Static Map."</div>
 <div>He is <strong>not</strong> saying that all interactive maps are <em>overkill</em> or <em>difficult to make</em>.</div>
 <div>It turns out that it is just <em>quite easy</em> to make <strong>custom static maps</strong> in the browser!</div>
@@ -291,7 +333,7 @@
 <div>This information gives the server <strong>extra instructions</strong> on how to do whatever it's doing.</div>
 <div data-bodyclass='twitter-search'></div>
 <div>In searching for "maps" on Twitter, the URL that got sent was: <code style='color:gray;'>https://twitter.com/search?q=maps&src=typd</code>.</div>
-<div>This URL includes two pieces of information: <code style='color:gray;'>q=maps</code> and <code style='color:gray;'>src=typd</code>.</div>
+<div>This URL includes <strong>two pieces</strong> of information: <code style='color:gray;'>q=maps</code> and <code style='color:gray;'>src=typd</code>.</div>
 <div><code style='color:gray;'>q=maps</code> is the <em>search query</em>. <code style='color:gray;'>src=typd</code> tells Twitter that I <em>typed</em> in the search request rather than <em>clicking on a link</em>.</div>
 <div>Those pieces of information <strong>helped Twitter</strong> give me the <em>information I wanted</em>.</div>
 <div>A <strong>cool</strong> thing: this can apply to <em>maps</em> too!</div>
@@ -313,12 +355,12 @@
 <div data-bodyclass='url'>https://maps.googleapis.com/maps/api/staticmap?<br><strong>center=San+Francisco,CA</strong><br>&zoom=13&size=600x300&maptype=roadmap<br>&markers=color:blue<br>%7Clabel:S<br>%7C40.702147,-74.015794<br>&markers=color:green<br>%7Clabel:G<br>%7C40.711614,-74.012318<br>&markers=color:red<br>%7Clabel:C<br>%7C40.718217,-73.998284</div>
 <div>And our <strong>new map</strong> should look like <em>this</em>:</div>
 <div data-bodyclass='gstatic2'><br><br><br><br><ul><li>Google basemap</li><li>Centered in <strong>San Francisco</strong></li><li>No map markers</li></div>
-<div>Cool, right? <em>What else</em> can we customize?</div>
+<div><strong>Cool</strong>, right? <em>What else</em> can we customize?</div>
 <div><code style='color:gray;'>zoom=13</code> is the <strong>zoom level</strong> of the map. We will talk more about zooms <em>next week</em>, but for now enter a number between <strong>0</strong> and <strong>20</strong>.</div>
 <div><code style='color:gray;'>size=600x300</code> is the <em>size</em> of the map in <strong>pixels</strong>.</div>
 <div><code style='color:gray;'>maptype=roadmap</code> is the <em>basemap style</em>. Try <code style='color:gray;'>terrain</code> instead.</div>
 <div>Then we have the <code style='color:gray;'>markers=</code> properties, which are a little more <em>complicated</em>.</div>
-<div>The map markers themselves have a series of customizable elements, separated by <code style='color:gray;'>%7C</code>, which is the ASCII-encoded version of |.</div>
+<div>The map markers themselves have a series of <strong>customizable elements</strong> separated by <code style='color:gray;'>%7C</code>, which is the ASCII-encoded version of <em>|</em> (pipe).</div>
 <div><code style='color:gray;'>markers=color:blue<br>%7Clabel:S<br>%7c40.702147,-74.015794</code></div>
 <div><code style='color:gray;'>color:blue</code> defines the <strong>color</strong> of the marker.</div>
 <div><code style='color:gray;'>label:S</code> defines the <strong>label</strong> of the marker.</div>
@@ -350,17 +392,17 @@
 <div>Cartographic decisions have been made about what <em>data</em> to <em>render (show)</em> <strong>how</strong> on these basemaps.</div>
 <div data-bodyclass='quote'>"The term <em>basemap</em> is seen often in GIS and refers to a collection of GIS data and/or orthorectified imagery that form the <strong>background setting</strong> for a map.  The function of the basemap is to <em>provide background detail</em> necessary to <strong>orient the location</strong> of the map." - Caitlin Dempsey Morais on <a href="http://www.gislounge.com/basemaps-defined/">GIS Lounge</a></div>
 <div>A more <strong>flattering</strong> definition than we've allowed so far.</div>
-<div>In <strong>truth</strong>, basemaps have come a long way.</div>
-<div><img src="anatomy/basemap-datalayers-01.png"></div>
-<div><img src="anatomy/basemap-datalayers-02.png"></div>
-<div><img src="anatomy/basemap-datalayers-03.png"></div>
-<div><img src="anatomy/basemap-datalayers-04.png"></div>
-<div><img src="anatomy/basemap-datalayers-05.png"></div>
-<div><img src="anatomy/basemap-datalayers-06.png"></div>
+<div>In <strong>truth</strong>, basemaps have come <em>a long way</em>.</div>
+<div data-bodyclass='basemap1'></div>
+<div data-bodyclass='basemap2'></div>
+<div data-bodyclass='basemap3'></div>
+<div data-bodyclass='basemap4'></div>
+<div data-bodyclass='basemap5'></div>
+<div data-bodyclass='basemap6'></div>
 <div>What <strong>map elements</strong> do we expect in a <em>basemap</em>?</div>
 <div data-bodyclass='quote'>"<strong>Typical</strong> GIS data and imagery that make up the layers for a basemap: streets, parcels, boundaries (country, county, city boundaries), shaded relief of a digital elevation model, waterways, and aerial or satellite imagery.  Depending on the type of map, <em>any combination</em> of those layers can be used." - Caitlin Dempsey Morais on <a href="http://www.gislounge.com/basemaps-defined/">GIS Lounge</a></div>
 
-<div>Time for our <strong>first exercise</strong>!</div>
+<div>Time for our <strong>second exercise</strong>!</div>
 <div>We will make a map of <strong>your hometown</strong> with <em>Mapbox</em>.</div>
 <div>(If your hometown is <strong>San Francisco</strong>, pick a different one.)</div>
 
@@ -395,18 +437,16 @@
 <div>You'll notice that one of the <em>pieces of information</em> in the <strong>Project</strong> section was a <em>Map ID</em>.</div>
 <div data-bodyclass='mapbox7'></div>
 <div>The <em>Map ID</em> is used when making a <strong>web map from scratch</strong>. It allows you to use your map as <em>basemap tiles</em>.</div>
-<div>We will explore that more next week, but <em>recognize</em> that what you did today was create a <strong>basemap</strong>.</div>
 <div><strong>Good job!</strong> Wasn't that <em>fun</em>?</div>
-<div>SECOND BREAK</div>
-<div>Time for our <strong>second exercise</strong>!</div>
-<div>This exercise will be about making <em>thematic maps</em>.</div>
-<div data-bodyclass='quote'>"<strong>Thematic maps</strong> are data maps of a <em>specific subject</em> or for a <em>specific purpose</em>. Statistical thematic maps include a variety of different <strong>map types</strong> such as choropleth or shaded maps, dot maps, proportional symbol maps, and isarithmic maps." - <a href="https://www.census.gov/geo/maps-data/maps/thematic.html">U.S. Census Bureau</a></div>
-<div>Some <em>terms to define</em> first:</div>
+
+<div>BREAK</div>
+
+<div>Let's <em>define some terms</em> before we get to our <strong>third exercise</strong>:</div>
 <div>Zip file</div>
 <div><a href="http://en.wikipedia.org/wiki/Shapefile">Shapefile</a></div>
 <div>Let's <em>take a minute</em> and <strong>dive deep</strong> into shapefiles.</div>
 <div>(This info comes from the <a href="http://maptime.github.io/geodata">Introduction to Geodata</a> presentation from <a href="http://twitter.com/maptimeoak">MaptimeOAK</a>.)</div>
-<div><strong>Shapefile</strong> is actually a misnomer: the data format requires <em>three different files</em> to store its core data (plus some <strong>optional</strong> files).</div>
+<div><strong>Shapefile</strong> is actually a <em>misnomer</em>: the data format requires <em>three different files</em> to store its core data (plus some <strong>optional</strong> files).</div>
 <div>When you <strong>first encounter</strong> a shapefile, it's usually in a <em>folder</em>.</div>
 <div>A typical shapefile has <strong>four</strong>  files in that folder: a <em>dbf</em>, a <em>prj</em>, a <em>shp</em>, and a <em>shx</em>.</div>
 <div>The <strong>three mandatory</strong> files are the <em>dbf</em>, the <em>shp</em>, and the <em>shx</em>.</div>
@@ -419,21 +459,6 @@
 <div><em>Shapefiles</em> are <strong>not</strong> used in web maps.</div>
 <div><strong>However</strong>, as we'll see in the <em>exercise</em>, there are <strong>many</strong> web-mapping tools that can <em>convert</em> shapefiles to web-friendly formats.</div>
 
-<div><em>TANGENT TIME</em></div>
-<div><em>Notice</em> where the map is <strong>centered</strong>?</div>
-<div>It's centered on <em>Null Island</em>.</div>
-<div data-bodyclass='mapbox3'></div>
-<div>What is <strong>Null Island</strong>? <em>Null Island</em> is where <strong>bad data</strong> goes to <em>die</em>.</div>
-<div data-bodyclass='nullisland'></div>
-<div><a href="http://en.wikipedia.org/wiki/Null_Island">Null Island</a> is a <strong>common joking subject</strong> among cartographers.</div>
-<div data-bodyclass='ushahidi'></div>
-<div data-bodyclass='archipelago'><strong>The Null Island Archipelago</strong></div>
-<div data-bodyclass='quote'>"Although intended humorously, the fiction has a <em>serious purpose</em> and is used by mapping systems to <strong>trap errors</strong>." - <a href='http://en.wikipedia.org/wiki/Null_Island'>Wikipedia</a></div>
-<div><strong>How</strong> might <em>Null Island</em> help cartographers <strong>trap erorrs</strong>?</div>
-<div><a href='http://naturalearthdata.com'>Natural Earth Data</a> uses it as a <em>troubleshooting</em> tool. Your data should <strong>not</strong> end up on Null Island.</div>
-<div data-bodyclass='naturalearth'></div>
-<div>So while a <em>funny</em> joke to think and talk about, <strong>Null Island</strong> defintiely has its place in <em>digital</em> and <em>web</em> cartography.</div>
-
 <div>Geocoding</div>
 <div data-bodyclass='quote'>"Geocoding is the process of <strong>enriching a description</strong> of a location, most typically a postal address or place name, with <em>geographic coordinates</em> from spatial reference data such as building polygons, land parcels, street addresses, ZIP codes (postal codes) and so on." - <a href='http://en.wikipedia.org/wiki/Geocoding'>Wikipedia</a></div>
 <div>Geocoding is <strong>HARD</strong>.</div>
@@ -443,9 +468,25 @@
 <div data-bodyclass='gmaps'></div>
 <div>If you're trying to <strong>geocode</strong> addresses <em>one at a time</em>, or you have a <em>small amount</em> of addresses to geocode, you should be <strong>fine</strong> with existing tools.</div>
 <div>We'll see this here in a minute!</div>
-<div>(But <em>let me know</em> if you want to talk more about the <strong>struggles</strong> of geocoding.)</div>
-<div><em>Okay.</em> We're ready for our <strong>second exercise</strong>!</div>
-<div><em>Exercise 2:</em> Make a <em>web map</em> of <strong>Community Gardens</strong> using <a href='http://cartodb.com'>CartoDB</a>.</div>
+<div><em>TANGENT TIME</em></div>
+<div>Because <strong>geocoding is hard</strong> and <strong>doesn't work all the time</strong>, sometimes data ends up in the <em>middle of nowhere</em>.</div>
+<div>Well, <em>not</em> the middle of nowhere, exactly...</div>
+<div>It ends up on <em>Null Island</em>.</div>
+<div>What is <strong>Null Island</strong>? <em>Null Island</em> is where <strong>bad data</strong> goes to <em>die</em>.</div>
+<div>It is a <strong>fictional</strong> island that exists at <em>zero latitude</em> and <em>zero longitude</em>.</div>
+<div data-bodyclass='nullisland'></div>
+<div><a href="http://en.wikipedia.org/wiki/Null_Island">Null Island</a> is a <strong>common joking subject</strong> among cartographers.</div>
+<div data-bodyclass='ushahidi'></div>
+<div data-bodyclass='archipelago'><strong>The Null Island Archipelago</strong></div>
+<div data-bodyclass='quote'>"Although intended humorously, the fiction has a <em>serious purpose</em> and is used by mapping systems to <strong>trap errors</strong>." - <a href='http://en.wikipedia.org/wiki/Null_Island'>Wikipedia</a></div>
+<div><strong>How</strong> might <em>Null Island</em> help cartographers <strong>trap erorrs</strong>?</div>
+<div><a href='http://naturalearthdata.com'>Natural Earth Data</a> uses it as a <em>troubleshooting</em> tool. Your data should <strong>not</strong> end up on Null Island.</div>
+<div data-bodyclass='naturalearth'></div>
+<div>So while a <em>funny</em> joke to think and talk about, <strong>Null Island</strong> defintiely has its place in <em>digital</em> and <em>web</em> cartography.</div>
+<div><em>Okay.</em> We're ready for our <strong>third exercise</strong>!</div>
+<div>This exercise will be about making <em>thematic maps</em>.</div>
+<div data-bodyclass='quote'>"<strong>Thematic maps</strong> are data maps of a <em>specific subject</em> or for a <em>specific purpose</em>. Statistical thematic maps include a variety of different <strong>map types</strong> such as choropleth or shaded maps, dot maps, proportional symbol maps, and isarithmic maps." - <a href="https://www.census.gov/geo/maps-data/maps/thematic.html">U.S. Census Bureau</a></div>
+<div><em>Exercise 3:</em> Make a <em>web map</em> of <strong>Community Gardens</strong> using <a href='http://cartodb.com'>CartoDB</a>.</div>
 <div>Download some data on the <a href="https://data.sfgov.org/Public-Health/Community-Gardens-San-Francisco-CA/tkhq-qkum/div">locations of Community Gardens in San Francisco</a>.</div>
 <div>Note where you downloaded <strong>SanFranciscoCommunityGardens.zip</strong>.</div>
 <div>Create a <em>free</em> CartoDB account for yourself at <a href='http://cartodb.com/signup'>cartodb.com /signup</a>.</div>
@@ -453,14 +494,15 @@
 <div data-bodyclass='table'></div>
 <div>A word about <em>geocoding</em> or <em>georeferencing</em>.</div>
 <div data-bodyclass='georeference'></div>
-<div>Click <strong>Map View</strong> in the upper left corner to see the community garden <em>points on a map</em> of San Francisco.</div>
-<div>Modify the <em>basemap</em>.</div>
-<div>Customize the <strong>info windows</strong>.</div>
+<div>Once you've <em>loaded the data</em>, click <strong>Map View</strong> in the upper left corner to see the community garden <em>points on a map</em> of San Francisco.</div>
+<div>Let's change the <strong>basemap</strong> to the one from the <em>Mapbox exercise</em>. Click the <strong>Basemap</strong> button at top left.</div>
+<div data-bodyclass='basemap-cartodb'><br><br><br>Put in the <em>Map ID</em> from your map.</div>
+<div>With your <strong>new basemap</strong> you may need to <em>change the styling</em> of the community gardens. In the <strong>right column</strong>, click <em>wizards</em>.</div>
+<div>Customize away!</div>
+<div>Next, customize the <strong>info windows</strong> by clicking <em>infowindow</em> in the <strong>right column</strong>.</div>
 <div data-bodyclass='info'></div>
 <div data-bodyclass='infowindow'></div>
 <div>Save!</div>
-<div>Add a <strong>custom icon</strong>.</div>
-<div>Add a <em>custom basemap</em>.</div>
 <div>Share!</div>
 <div><strong>That's it for this week!</strong> Next week we'll talk about <em>web-mapping from Scratch</em>.</div>
 <div>We'll also be sure to <em>send you the slides</em> from today.</div>
