@@ -43,11 +43,14 @@ div {
 
 pre {
   font-family: 'Courier';
-  color: #000;
+  color: gray;
+  letter-spacing: 2px;
+  display: inline;
 }
 
 span {
-  background: #bbb;
+  background: #ddd;
+  display: inline;
 }
 
 div.center {

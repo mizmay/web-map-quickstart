@@ -1,125 +1,5 @@
-<!DOCTYPE html><html><head><title>Web-Mapping Quickstart: Session 1</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><style type='text/css'>
-body {
-  font-family: 'Helvetica';
-  letter-spacing:-3px;
-  background:#60fcb1;
-  background-size:100%;
-  color:#161e30;
-  margin:0;
-  padding:0;
-  font-weight:bold;
-}
-
-h1, h2, h3, p {
-  margin:0;
-}
-ul {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-li {
-  padding-left: 1em;
-  text-indent: -1em;
-}
-
-li:before {
-  content: "→";
-  padding-right: 5px;
-}
-em, a {
-  font-style:normal;
-  color:#e5c007;
-}
-
-a {
-  background: #34d0e7;
-  color:#000;
-  text-decoration:none;
-}
-
-img {
-  height:100%;
-}
-
-div {
-  cursor:pointer;
-  cursor:hand;
-  position:absolute;
-  top:0px;
-  left:0px;
-  padding:75px;
-  line-height:130%;
-}
-
-div.center {
-  text-align:center;
-}
-
-div.imageText {
-  text-shadow:0px 0px 5px rgba(0,0,0,0.2);
-}
-</style><script type='text/javascript'>
-window.onload = function() {
-    var s = document.getElementsByTagName('div'), cur = 0, ti;
-    if (!s) return;
-    function go(n) {
-        cur = n;
-        var i = 1e3, e = s[n], t;
-        for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
-        e.style.display = 'inline';
-        e.style.fontSize = i + 'px';
-        if (e.firstChild.nodeName === 'IMG') {
-            document.body.style.backgroundImage = 'url(' + e.firstChild.src + ')';
-            e.firstChild.style.display = 'none';
-            if ('classList' in e) e.classList.add('imageText');
-        } else {
-            document.body.style.backgroundImage = '';
-            document.body.style.backgroundColor = e.style.backgroundColor;
-        }
-        if (ti !== undefined) window.clearInterval(ti);
-        t = parseInt(e.getAttribute('time-to-next') || 0, 10);
-        if (t > 0) ti = window.setTimeout(fwd, (t * 1000));
-        while (
-            e.offsetWidth > window.innerWidth ||
-            e.offsetHeight > window.innerHeight) {
-            e.style.fontSize = (i -= 2) + 'px';
-            if (i < 0) break;
-        }
-        e.style.marginTop = ((window.innerHeight - e.offsetHeight) / 2) + 'px';
-        if (window.location.hash !== n) window.location.hash = n;
-        document.title = e.textContent || e.innerText;
-    }
-    document.onclick = function() { go(++cur % (s.length)); };
-    function fwd() { go(Math.min(s.length - 1, ++cur)); }
-    function rev() { go(Math.max(0, --cur)); }
-    document.onkeydown = function(e) {
-        if (e.which === 39) fwd();
-        if (e.which === 37) rev();
-    };
-    document.ontouchstart = function(e) {
-        var x0 = e.changedTouches[0].pageX;
-        document.ontouchend = function(e) {
-            var x1 = e.changedTouches[0].pageX;
-            if (x1 - x0 < 0) fwd();
-            if (x1 - x0 > 0) rev();
-        };
-    };
-    function parse_hash() {
-        return Math.max(Math.min(
-            s.length - 1,
-            parseInt(window.location.hash.substring(1), 10)), 0);
-    }
-    if (window.location.hash) cur = parse_hash() || cur;
-    window.onhashchange = function() {
-        var c = parse_hash();
-        if (c !== cur) go(c);
-    };
-
-    go(cur);
-};
-</script>
+<!DOCTYPE html><html><head><title>Web-Mapping Quickstart: Session 3</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link href='../../big.css' rel='stylesheet' type='text/css' />
 <style>
   .browser {
     background-image: url(./images/browser.png);
@@ -136,21 +16,98 @@ window.onload = function() {
     background-repeat: no-repeat;
     background-position: center 1px;
   }
+  .simplest {
+    background-image: url(./images/simplest.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .texteditor {
+    background-image: url(./images/texteditor.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .demo {
+    background-image: url(./images/demo.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .demo-fail {
+    background-image: url(./images/demo-fail.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .demo-success {
+    background-image: url(./images/demo-success.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .demo-css {
+    background-image: url(./images/demo_css.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .devtools {
+    background-image: url(./images/devtools.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .demo-sep {
+    background-image: url(./images/demo-sep.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .girlnames {
+    background-image: url(./images/girlnames.gif);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .mapbox-embed {
+    background-image: url(./images/mapbox.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 40%;
+  }
+  .cartodb-embed {
+    background-image: url(./images/cartodb.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 50%;
+  }
+  .mapbox-embed-code {
+    background-image: url(./images/mapbox-embed-code.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .slippy-map {
+    background-image: url(./images/slippy-map.gif);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+  }
+  .quote {
+    font-family: serif;
+    letter-spacing: 2px;
+  }
 </style>
+<script src='../../big.js'></script>
 </head><body>
 <div>Web Mapping <em>Quickstart</em></div>
-<div>Welcome Back</div>
-<div>Last week: <em>Session 1</em></div>
-<div>Web mapping <em>platforms</em> and <em>projects</em></div>
-<div>This week: <em>Session 2</em></div>
-<div>Web mapping from <em>scratch</em></div>
-<!-- inserting this here so we can decide what to use:
-
-<div>Some <strong>web mapping platforms</strong> we mentioned last time that meet this profile:</div>
-<div><a href="http://cartodb.com">CartoDB</a></div>
+<div>(Include announcement about Missing Maps event)</div>
+<div><strong>Last week</strong> was <em>Session 2:</em> Web Mapping Platforms and Projects</div>
+<div>(When I have better internet, I'll put some examples in here!)</div>
+<div>Today is <em>Session 3:</em> Web Mapping from Scratch</div>
+<div><strong>Follow along</strong> by opening <em>Chrome</em> and typing this:<br><br><pre>http://mizmay.github.io<br>/web-map-quickstart<br>/fall2014/session3</pre></div>
+<div>Wherever you see text like <a href='#'>this</a>, it's a <strong>link</strong>.</div>
+<div><em>So</em>. Let's talk about <strong>web mapping from scratch</strong>.</div>
+<div><strong>Last time</strong> we used several <em>web mapping frameworks</em> to make maps in the <strong>browser</strong>.</div>
+<div><a href="http://maps.google.com">Google Maps</a></div>
 <div><a href="http://mapbox.com">Mapbox</a></div>
-<div><a href="http://arcgis.com">ArcGIS Online</a></div>
-<div><em>Simplest</em> mapping platform: an <strong>internet browser</strong>.</div>
+<div><a href="http://cartodb.com">CartoDB</a></div>
+<div>[Another student map, for fun]</div>
+<div>What did you <em>like</em> about making maps with those tools? What did you <strong>dislike</strong> about it?</div>
+<div>Remember in <strong>Session 1</strong> when we talked about the <em>limitations</em> of using <strong>pre-fabricated tools</strong>?</div>
+<div data-bodyclass='quote'>"Cartographers limit themselves – because of a lack of software skills or a client’s desired final product – to using <strong>pre-fabricated tools</strong> for Web map design (e.g. Google Maps, Esri’s ArcGIS Online). By the time data-organization and design decisions are considered, the potential efficacy of the map’s communication is already <em>grossly constrained</em> by the <strong>limitations</strong> of the tool chosen." - <a href="https://twitter.com/iMuehlenhaus">Ian Muehlenhaus</a> in <a href="http://utpjournals.metapress.com/content/q765k1l7423732l6/?p=81fc8c6f7eb8460f9ec9aba4318ddb07">Going Viral: The Look of Online Persuasive Maps</a></div>
+<div>So what is the <strong>simplest way</strong> to <em>free ourselves</em> from these limitations and <strong>create web maps from scratch</strong>?</div>
+<div>The <em>browser</em>.</div>
 <div data-bodyclass='browser'></div>
 <div>A <em>modern</em> browser conforms to certain <strong>standards</strong> and <strong>conventions</strong> in how content is created.</div>
 <div>This allows any <em>modern</em> browser to be a <strong>web mapping platform</strong>.</div>
@@ -159,74 +116,99 @@ window.onload = function() {
 <div>Ten years ago, <strong>Flash</strong> was <em>it</em>.</div>
 <div><ul><li>Embedded reader</li><li><strong>Special coding language</strong></li><li><em>Complete creative control</em></li></ul></div>
 <div data-bodyclass='flashtweet'><br><br>Now, <strong>Flash</strong> is mainly the subject of <em>derisive jokes</em>.</div>
-<div>It requires a <em>plugin</em> (install, enable, update, security, crashing)</div>
+<div>It requires a <em>plugin</em> (which you have to <strong>install, enable, and update</strong>, has <strong>questionable security</strong>, and <strong>crashes frequently</strong>).</div>
 <div data-bodyclass='flashbad'></div>
 <div>It <strong>doesn’t integrate</strong> with other content on the page.</div>
 <div>It <em>doesn’t work</em> on <strong>smartphones</strong> and <strong>tablets</strong>.</div>
 <div>It's <em>often overkill</em>, with an <strong>easier</strong> way to achieve the <strong>same</strong> result.</div>
-<div>Namely, <em>HTML5</em> allows for <strong>much</strong> of Flash's functionality (animation, video, audio)</div>
+<div>Namely, <em>HTML5</em> (and, of course, <em>JavaScript</em>) allow for <strong>much</strong> of Flash's functionality (like animation, video, and audio).</div>
 <div>So now your browser is your <strong>first</strong>, <em>best</em> web mapping platform.</div>
-
--->
-
-
-
-<div>Why is it important to learn about web mapping from the browser up?</div>
-<div style="font-family: serif;letter-spacing:2px">"Cartographers limit themselves – because of a lack of software skills or a client’s desired final product – to using <em>pre-fabricated tools</em> for Web map design (e.g., Google Maps, Esri’s ArcGIS Online). By the time data-organization and design decisions are considered, the potential efficacy of the map’s communication is already <em>grossly constrained</em> by the <em>limitations of the tool chosen</em>." - <a href="https://twitter.com/iMuehlenhaus">Ian Muehlenhaus</a> in <a href="http://utpjournals.metapress.com/content/q765k1l7423732l6/?p=81fc8c6f7eb8460f9ec9aba4318ddb07">Going Viral: The Look of Online Persuasive Maps</a></div>
-<div>Before we start making web maps from scratch, some <em>ontology</em>:</div>
-<div>There are <em>print</em> maps...</div>
-<div><img src="paper_maps.jpg">(maps on paper)</div>
-<div>And there are <em>digital</em> maps... </div>
-<div><img src="anatomy/1-arcGIS.jpg">(maps on computers)</div>
-<div>And then there are <em>web</em> maps... </div>
-<div><img src="internetmaps.png"><br>(maps on the internet)</div>
-<div>Simple, right?</div>
+<div>And we can <em>utilize its awesomeness</em> fairly <strong>simply</strong>.</div>
+<div>Let's see that <em>in action</em>.</div>
 <div>The <em>simplest</em> web map:</div>
-<div><table><tr><td><img src="simplest.png"></td></tr></table></div>
-<div>We're gonna <em>make it</em>.</div>
-<div><table><tr><td>Open a text editor:</td></tr><tr><td><img src="texteditor.png"></td></tr></table></div>
-<div><table><tr><td>Save as demo.html</td></tr><tr><td><img src="demo.png"></td></tr></table></div>
-<div><table><tr><td><img src="demo_css.png"></td><td>Add Styling (CSS)</td></tr></table></div>
-<div>CSS: Cascading style sheets</div>
-<div><table><tr><td>Rules can be defined<ul><li>Interactively in the browser</li><li>In a specific tag</li><li>In a &#60;style&#62; tag in the &#60;head&#62;</li><li>In a separate file</li></ul></td><td><img src="demo_css.png"></td></tr></table></div>
-<div><img src="devtools.png"></div>
-<div><table><tr><td><img src="demo_sep.png"></td><td><img src="css_sep.png"></td></tr></table></div>
-<div>Presto! You made a <em>web map</em>!</div>
+<div data-bodyclass='simplest'></div>
+<div>We're gonna <strong>make it</strong>. Ready?</div>
+<div>Remember our <em>definitions</em> from <strong>Session 1</strong>: HTML is the <em>noun</em>, CSS is the <em>adjective</em>, JavaScript is the <em>verb</em>.</div>
+<div data-bodyclass='texteditor'><br><br><br>Step one: Open a text editor</div>
+<div data-bodyclass='demo'><br><br><br>Step two: save your file as <strong>demo.html</strong></div>
+<div>This is an <em>HTML document skeleton</em>:<br><br><pre><span style="display: block; padding: 10px;">&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br><br>&lt;head&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</pre></span></div>
+<div><strong>HTML documents</strong> have a <pre><span>head</span></pre> and a <pre><span>body</span></pre>.</div>
+<div>The <pre><span>head</span></pre> is for <em>metadata</em> and <em>resources</em>.</div>
+<div>The <pre><span>body</span></pre> is for the elements you <em>see on the page</em>.</div>
+<div>In the <pre><span>head</span></pre>, let's add a <pre><span>title</span></pre> for our page.</div>
+<div><pre><span style="display: block; padding: 10px;">&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br><br>&lt;head&gt;<br><em>&lt;title&gt;Amazing Map!!!&lt;/title&gt;</em><br>&lt;/head&gt;<br><br>&lt;body&gt;<br>&lt;/body&gt;<br><br>&lt;/html&gt;</pre></span></div>
+<div>That will show up in the <em>top</em> of your browser bar.</div>
+<div>We have to put an <strong>actual title</strong> and our <em>map</em> on the page. Those go in the <pre><span>body</span></pre>.</div>
+<div><pre><span style="display: block; padding: 10px;">&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br><br>&lt;head&gt;<br>&lt;title&gt;Amazing Map!!!&lt;/title&gt;<br>&lt;/head&gt;<br><br>&lt;body&gt;<br><em>&lt;h1&gt;Troy's House&lt;/h1&gt;<br>&lt;img src="1124BalboaEnhanced.png"&gt;</em><br>&lt;/body&gt;<br><br>&lt;/html&gt;</pre></span></div>
+<div><strong>Save</strong> the file, and then <strong>open</strong> it. You should see it in your <em>browser</em>.</div>
+<div data-bodyclass='demo-fail'></div>
+<div>So... that's pretty <em>ugly</em>. And the image is <strong>not displaying</strong>.</div>
+<div>How can we <em>fix</em> it?</div>
+<div>The <strong>first</strong>, <strong>quickest</strong> thing we can do is fix the <em>image</em>. Our <pre><span>img</span></pre> tag needs a proper <em>path</em> so the browser knows where to <strong>retrieve</strong> the image.</div>
+<div>The image lives <em>online</em> at PATH. Change the <pre><span>img</span></pre> tag to read:<br><br><pre><span>&lt;img src="PATH"&gt;</span></pre></div>
+<div>Now let's <em>reload</em> the page.</div>
+<div data-bodyclass='demo-success'></div>
+<div><strong>Great</strong>! But let's add some <em>styling</em> with <strong>CSS</strong>.</div>
+<div><em>CSS</em> stands for <em>Cascading Style Sheets</em>. Using CSS, we can set <strong>style rules</strong> for different <em>html elements</em>, like associating <strong>specific adjectives</strong> to go with <strong>specific nouns</strong>.</div>
+<div>We can do this several ways:</div>
+<div data-bodyclass='devtools'><br><br><br>Interactively in the browser</div>
+<div data-bodyclass='demo-css'><br><br><br>In a <pre><span>&lt;style&gt;</span></pre> tag in the <pre><span>&lt;head&gt;</span></pre> of our HTML document</div>
+<div data-bodyclass='demo-sep'><br><br><br>In a separate file that we reference in the <pre><span>&lt;head&gt;</span></pre></div>
+<div>Using the <strong>second technique</strong>, add some <em>styling</em> to the page.</div>
+<div><pre><span style="display: block; padding: 10px;">&lt;head&gt;<br>  &lt;title&gt;Amazing Map!!!&lt;/title&gt;<br><em>  &lt;style&gt;<br>    body {<br>      background: #60fcb1;<br>    }<br>    h1 {<br>      font-family="Trebuchet MS";<br>      text-align: center;<br>    }<br>    img {<br>      display: block;<br>      margin-left: auto;<br>      margin-right: auto;<br>    }<br>  &lt;/style&gt;</em><br>&lt;/head&gt;</pre></span></div>
+<div>Presto! You made a <strong>web map</strong>!</div>
 <div>But we associate a little more <em>functionality</em> with web maps...</div>
-<div>Starting with <em>interactivity</em> and <em>animation</em>.</div>
-<div>Making an <em>interactive</em> web map can also be <em>simple</em>: just <em>a little Javascript</em>.</div>
-<div>Example: the <em>onclick</em> function</div>
-<div><table><tr><td><img src="demo_js.png"></td><td>Add Javascript</td></tr></table></div>
+<div>Starting with <strong>interactivity</strong> and <strong>animation</strong>.</div>
+<div>Making an <em>interactive</em> web map can also be <strong>simple</strong>: just <em>a little Javascript</em>.</div>
+<div>Just like we added <strong>CSS</strong> by inserting <pre><span>&lt;style&gt;</span></pre> tags, we can add <strong>JavaScript</strong> by adding <pre><span>&lt;script&gt;</span></pre> tags!</div>
+<div>Example: the <em>onclick</em> function. This will <strong>change the map</strong> when it is <em>clicked on</em>.</div>
+<div>First, we add some <strong>JavaScript</strong> to the <pre><span>&lt;head&gt;</span></pre>:</div>
+<div><pre><span style="display: block; padding: 10px;">&lt;head&gt;<br>  &lt;title&gt;Amazing Map!!!&lt;/title&gt;<br>  &lt;style&gt;<br>    body {<br>      background: #60fcb1;<br>    }<br>    h1 {<br>      font-family="Trebuchet MS";<br>      text-align: center;<br>    }<br>    img {<br>      display: block;<br>      margin-left: auto;<br>      margin-right: auto;<br>    }<br>  &lt;/style&gt;<br><em>  &lt;script&gt;<br>    var clean="PATH TO 1124Balboa.png"<br>    var dirty="PATH TO 1124BalboaEnhanced.png"<br>    function onClick(element) {<br>      if (element.src == dirty) {<br>        element.src = clean;<br>      }<br>      else {<br>        element.src = dirty;<br>      }<br>    }<br>  &lt;/script&gt;</em><br>&lt;/head&gt;</pre></span></div>
+<div>Then we just have to make <strong>one small change</strong> in the <pre><span>&lt;body&gt;</span></pre>:</div>
+<div><pre><span style="display: block; padding: 10px;">&lt;body&gt;<br>  &lt;h1&gt;Troy's House&lt;/h1&gt;<br><em>  &lt;img src="PATH TO 1124BalboaEnhanced.png" onclick="onClick(this);"&gt;</em><br>&lt;/body&gt;<br><br>&lt;/html&gt;</pre></span></div>
+<div><strong>Reload</strong> the page and check it out!</div>
 <div><em>Cool</em>! We made a <a href="demo_done.html">simple interactive map</a>!</div>
 <div>An <em>animated</em> web map can also be <em>simple</em>: embed an <a href="https://www.google.com/search?q=how+to+make+an+animated+gif">animated GIF</em></a>.</div>
-<div><table><tr><td>Popular Girl Names</td></tr><tr><td><img src="girlnames.gif"></td></tr></table></div>
-<div><table><tr><td>You've got this:</td></tr><tr><td><img src="demo_gif.png"></td></tr></table></div>
-<div>We'll talk next time about <em>cartographic principles</em> and <em>web map design</em>, but the takeaway from what we've done so far should be that <em>web mapping</em> doesn't have to be <em>ugly</em> or <em>complicated</em>.</div>
-<div>"But wait," you're saying. "I thought the definition of a web map is a map that can <em>pan</em> and <em>zoom</em>!"</div>
-<div>Well then, you've <em>missed my point</em> so far, but <em>fine</em>.</div> 
+<div data-bodyclass='girlnames'><br><br><br>Popular Girl Names</div>
+<div>Now this should be a <strong>breeze</strong>!</div>
+<div><pre><span style="display: block; padding: 10px;">&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br><br>&lt;head&gt;<br>  &lt;title&gt;Popular Girl Names&lt;/title&gt;<br>&lt;/head&gt;<br><br>&lt;body&gt;<br><em>  &lt;h1&gt;Popular Girl Names&lt;/h1&gt;<br>  &lt;img src="PATH TO girlnames.gif"&gt;</em><br>&lt;/body&gt;<br><br>&lt;/html&gt;</pre></span></div>
+<div>We'll talk next time about <strong>cartographic principles</strong> and <em>web map design</em>, but the takeaway from what we've done so far should be that <strong>web mapping</strong> doesn't have to be <em>ugly</em> or <em>complicated</em>.</div>
+<div>"<em>But wait</em>," you're saying. "I thought the definition of a web map is a map that can <strong>pan</strong> and <strong>zoom</strong>!"</div>
+<div>Well then, you've <em>missed my point</em> so far, but <strong>fine</strong>.</div>
 <div>Remember the <em>CartoDB</em> and <em>Mapbox</em> Maps we made last week?</div>
-<div>Here's how to <em>embed</em> them in a web page:</div>
-<div><table><tr><td><img src="mapbox.png"></td><td><img src="cartodb.png"></td></tr></table></div>
-<div>When read by a browser, those pages look like this:<ul><li><a href="mapbox.html" target="_blank">Mapbox Example</a></li><li><a href="cartodb.html" target="_blank">CartoDB Example</a></li></ul></div>
-<div>Let's do it right now...</div>
-<div>'K and what are we <em>doing</em> exactly?</div>
-<div><table><tr><td><img src="mapbox.png"></td><td><img src="cartodb.png"></td></tr></table>(these URLs have a bunch of commands in them that are executed and your map is returned)</div>
-<div>This is accomplished through an <em>API</em>: Application Programming Interface.</div>
-<div style="font-family: serif;letter-spacing:2px">"An API specifies a set of <em>functions or routines</em> that accomplish a specific task or are allowed to interact with a specific software component."<br> - <a href="http://en.wikipedia.org/wiki/Application_programming_interface">en.wikipedia.org / wiki / Application_programming_interface</a></div>
-<div>Most commonly, you send API <em>specifications</em> and it sends you back <em>resources</em>.</div>
-<div>In the MapBox and CartoDB examples, the <em>resource</em> was a <em>map</em>.</div>
-<div>That's a <em>complicated resource</em> actually (and there is a lot going on under the hood) and our theme today is <em>web mapping from scratch</em>.</div>
-<div>...which is important because we don't want our <em>cartography</em> to be <em>limited</em> by the tool we choose.</div>
-<div><table><tr><td><img src="CartoDB_Map.png"></td></tr><tr><td>(In particular I hate how the point symbols overrun the place labels)</td></tr></table></div>
+<div><strong>Both</strong> provide you <em>pre-written code</em> that you can put in your <strong>HTML document</strong> to <em>embed</em> the map in your page.</div>
+<div data-bodyclass='mapbox-embed'></div>
+<div data-bodyclass='cartodb-embed'></div>
+<div>When read by a <strong>browser</strong>, these pages look something like <em>this</em>:<br><ul><li><a href='mapbox.html' target='_blank'>Mapbox example</a></li><br><li><a href='cartodb.html' target='_blank'>CartoDB example</a></li></ul></div>
+<div>Let's do it <strong>right now</strong> with the <em>Mapbox</em> maps we made <strong>last week</strong>.</div>
+<div>First, open a <em>new document</em>, save it as <strong>mapbox.html</strong>, and <em>structure</em> it like you did the <strong>other</strong> HTML documents you've made.</div>
+<div>Then head to <a href='http://mapbox.com'>Mapbox.com</a>, sign in, and find the <em>embed code</em> for your map.</div>
+<div data-bodyclass='mapbox-embed-code'></div>
+<div>Note that you can <strong>choose</strong> to keep <em>zoom and pan</em>, <em>zoom wheel</em>, <em>geocoder</em>, and a <em>link</em> to your map on the web.</div>
+<div><strong>Copy</strong> and <strong>paste</strong> the embed code into the <pre><span>&lt;body&gt;</span></pre>.</div>
+<div><pre><span style="display: block; padding: 10px;">&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br><br>&lt;head&gt;<br>  &lt;title&gt;My Hometown&lt;/title&gt;<br>&lt;/head&gt;<br><br>&lt;body&gt;<br>  &lt;h1&gt;My Hometown&lt;/h1&gt;<br><em>  &lt;iframe width='100%' height='500px' frameBorder='0'<br>    src='https://a.tiles.mapbox.com/v4/lyzidiamond.h9gfi6ak/<br>    attribution,zoompan,zoomwheel,geocoder,share.html?<br>    access_token=pk.eyJ1IjoibHl6aWRpYW1vbmQ<br>    iLCJhIjoiRkh4OW9layJ9.P2o48WlCqjhGmqoFJl3C_A'&gt;<br>  &lt;/iframe&gt;</em><br>&lt;/body&gt;<br><br>&lt;/html&gt;</pre></span></div>
+<div>So what is this <em>doing</em> exactly?</div>
+<div><table><tr><td><img src="./images/mapbox.png"></td><td><img src="./images/cartodb.png"></td></tr></table>(these URLs have a bunch of <strong>commands</strong> in them that are <strong>executed</strong> and your map is returned)</div>
+<div>This is accomplished through an <em>API</em>: <strong>Application Programming Interface</strong>.</div>
+<div data-bodyclass='quote'>"An API specifies a set of <em>functions</em> or <em>routines</em> that accomplish a <strong>specific task</strong> or are allowed to interact with a <strong>specific software component</strong>."<br> - <a href="http://en.wikipedia.org/wiki/Application_programming_interface">Wikipedia</a></div>
+<div>Most commonly, you send <em>specifications</em> to the API and it sends you back <strong>resources</strong>.</div>
+<div>In the MapBox and CartoDB examples, the <em>specifications</em> we sent identified <strong>our map</strong>, and the API sent it back as a <em>resource</em>.</div>
+<div>That's a <em>complicated resource</em> actually (and there is a lot going on under the hood) and our theme today is <strong>web mapping from scratch</strong>.</div>
+<div>Forgetting about <strong>APIs</strong> for a second, let's get into <em>how the map works</em>.</div>
+<div>This is <em>important</em> because we don't want our <strong>cartography</strong> to be <em>limited</em> by the <strong>tool</strong> we choose. We should know <em>how it all works</em>.</div>
 <div>So let's back up...</div>
-<div>Forget about <em>APIs</em> for a few minutes, let's just talk about <em>maps</em>.</div>
+<div>Forget about <em>APIs</em> for a few minutes. let's just talk about <strong>maps</strong.>.</div>
 <div><img src="anatomy/slippy-map.gif">In particular, <em>slippy maps</em>.</div>
-<div>That's an industry term for <em>maps that pan and zoom </em> and run on <em>tiles</em>.</div>
+<div>That's an industry term for <strong>maps that pan and zoom</strong> and run on <em>tiles</em>.</div>
 <div>A bit of <em>history</em> and <em>explanation</em>...</div>
-<div>Note: borrowing heavily from a fantastic presentation by <a href="http://stamen.com/studio/alan">Alan McConchie</a> and <a href="http://stamen.com/studio/beth">Beth Schechter</a>, <a href="http://maptime.github.io/anatomy-of-a-web-map/">Anatomy of a Web Map</a></div>
-<div>( <a href="http://stamen.com/studio/beth">Beth</a> and <a href="http://stamen.com/studio/alan">Alan</a>
-are the masterminds of <a href="http://www.meetup.com/Maptime-SF/">Maptime</a>, a weekly study group for people interested in web mapping... </div>
-<div>... which means <em>you</em> so yes, you should check it out)</div>
+<div>Note: borrowing heavily from a fantastic presentation by <a href="http://stamen.com/studio/alan">Alan McConchie</a> and <a href="http://stamen.com/studio/beth">Beth Schechter</a> called <a href="http://maptime.github.io/anatomy-of-a-web-map/">Anatomy of a Web Map</a>.</div>
+<div>It was made for <a href='http://meetup.com/maptime-sf'>MaptimeSF</a>, a local chapter of <a href='http://maptime.io'>Maptime</a>.</div>
+<div><strong>Maptime</strong> groups are <em>hands-on</em>, <em>beginner-focused</em> meetup groups for learning about <strong>web mapping</strong> and <strong>geospatial concepts</strong> and <strong>tools</strong>.</div>
+<div>(This is <em>up your alley</em>. <a href='http://twitter.com/maptimehq'>Check it out.</a>)</div>
+
+
+
+
 <div><img src="anatomy/2-Ridgefield-CT-Mapquest-out.jpg"><a href="" style="background:white">In 1996, Mapquest launched its web service.</a></div>
 <div>Directions for driving! Online! Wow!</div>
 <div>The problem: it was <em>slow</em> to load :(.</div>
