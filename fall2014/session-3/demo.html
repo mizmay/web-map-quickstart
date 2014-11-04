@@ -3,8 +3,8 @@
 <head>
 <title>Amazing map!!!</title>
 <script>
-  var dirty = "PATH";
-  var clean = "PATH";
+  var dirty = "./1124BalboaEnhanced.png";
+  var clean = "./1124Balboa.png";
   function onClick(element) {
     if (element.src == dirty) {
       alert("This is working");
@@ -16,6 +16,6 @@
 </head>
 <body>
 <h1>Troy's House</h1>
-<img src="1124BalboaEnhanced.png" onclick="onClick(this);">
+<img src="./1124BalboaEnhanced.png" onclick="document.getElementsByTagName('img').item().style.border='15px solid green';">
 </body>
 </html>

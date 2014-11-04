@@ -94,6 +94,13 @@
     background-position: center 1px;
     text-shadow: 0.1em 0.1em #000;
   }
+  .missingmaps {
+    background-image: url(./images/missingmaps.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    text-shadow: 0.1em 0.1em #000;
+    background-size:100%;
+  }
   .old-google {
     background-image: url(./images/3-old-google-maps-1.JPG);
     background-repeat: no-repeat;
@@ -144,43 +151,43 @@
   .sheffield-atlanta-map {
     background-image: url(./images/sheffield-atlanta-map.png);
     background-repeat: no-repeat;
-    background-position: center 1px;
+    background-position: center 10px;
     background-size: 100%;
   }
   .craig-wasco-map {
     background-image: url(./images/craig-wasco-map.png);
     background-repeat: no-repeat;
-    background-position: center 1px;
+    background-position: center 10px;
     background-size: 100%;
   }
   .conor-dublin-map {
     background-image: url(./images/conor-dublin-map.png);
     background-repeat: no-repeat;
-    background-position: center 1px;
+    background-position: center 10px;
     background-size: 100%;
   }
   .karen-garden-map {
     background-image: url(./images/karen-garden-map.png);
     background-repeat: no-repeat;
-    background-position: center 1px;
+    background-position: center 10px;
     background-size: 100%;
   }
   .suzanne-garden-map {
     background-image: url(./images/suzanne-garden-map.png);
     background-repeat: no-repeat;
-    background-position: center 1px;
+    background-position: center 10px;
     background-size: 100%;
   }
   .bill-garden-map {
     background-image: url(./images/bill-garden-map.png);
     background-repeat: no-repeat;
-    background-position: center 1px;
+    background-position: center 10px;
     background-size: 100%;
   }
   .chris-garden-map {
     background-image: url(./images/chris-garden-map.png);
     background-repeat: no-repeat;
-    background-position: center 1px;
+    background-position: center 10px;
     background-size: 100%;
   }
   .tile-gif {
@@ -204,8 +211,7 @@
   .distortion {
     background-image: url(./images/distortion.gif);
     background-repeat: no-repeat;
-    background-position: center 1px;
-    background-size: 100%;
+    background-position: center 20px;
     text-shadow: 0.1em 0.1em #000;
   }
   .zoomin {
@@ -334,6 +340,12 @@
     background-position: center 1px;
     background-size: 90%;
   }
+  .mapstagram {
+    background-image: url(./images/mapstagram.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 100%;
+  }
   .leaflet-toner-snapshot-giant {
     background-image: url(./images/leaflet-toner-snapshot-giant.png);
     background-repeat: no-repeat;
@@ -341,10 +353,31 @@
     text-shadow: 0.1em 0.1em #000;
   }
   .leaflet-html {
-    background-image: url(./images/leaflet-html.png);
+    background-image: url(./images/leaflet_html.png);
     background-repeat: no-repeat;
     background-position: center 1px;
     text-shadow: 0.1em 0.1em #000;
+  }
+  .view-source {
+    background-image: url(./images/view-source.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 100%;
+    text-shadow: 0.1em 0.1em #000;
+  }
+  .leaflet-source {
+    background-image: url(./images/leaflet-source.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 100%;
+    text-shadow: 0.1em 0.1em #000;
+  }
+  .anatomy {
+    background-image: url(./images/anatomy-of-a-web-map.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    text-shadow: 0.1em 0.1em #000;
+    background-color: white;
   }
   .quote {
     font-family: serif;
@@ -353,231 +386,228 @@
 </style>
 <script src='../../big.js'></script>
 </head><body>
-<!--<div>-->
-  <div>Web Mapping <em>Quickstart</em></div>
-  <div><strong>Before we start...</strong></div>
-  <div>There is a <em>cool event</em> coming up that you should <strong>totally</strong> attend!</div>
-  <div><strong>Missing Maps Project Launch</strong><br><ul><li>This Friday, Nov. 7</li><li>3pm-7pm</li><li>at Code for America, 155 9th St, SF</li><li><a href='https://www.eventbrite.com/e/missing-maps-project-launch-san-francisco-tickets-14027784481'>RSVP!</a></li></ul></div>
-  <div><strong>Last week</strong> was <em>Session 2:</em> Web Mapping Platforms and Projects</div>
-  <div data-bodyclass='sheffield-atlanta-map'></div>
-  <div data-bodyclass='karen-garden-map'></div>
-  <div data-bodyclass='craig-wasco-map'></div>
-  <div data-bodyclass='suzanne-garden-map'></div>
-  <div data-bodyclass='conor-dublin-map'></div>
-  <div data-bodyclass='bill-garden-map'></div>
-  <div>Nicely done!</div>
-  <div>Today is <em>Session 3:</em> Web Mapping from Scratch</div>
-  <div><strong>Follow along</strong> by opening <em>Chrome</em> and typing this:<br><br><pre>http://mizmay.github.io<br>/web-map-quickstart<br>/fall2014/session-3</pre></div>
-  <div>Wherever you see text like <a href='#'>this</a>, it's a <strong>link</strong>.</div>
-  <div><em>So</em>. Let's talk about <strong>web mapping from scratch</strong>.</div>
-  <div><strong>Last time</strong> we used several <em>web mapping frameworks</em> to make maps in the <strong>browser</strong>.</div>
-  <div><a href="http://maps.google.com">Google Maps</a></div>
-  <div><a href="http://mapbox.com">Mapbox</a></div>
-  <div><a href="http://cartodb.com">CartoDB</a></div>
-  <div data-bodyclass='chris-garden-map'></div>
-  <div>What did you <em>like</em> about making maps with those tools? What did you <strong>dislike</strong> about it?</div>
-  <div>Remember in <strong>Session 1</strong> when we talked about the <em>limitations</em> of using <strong>pre-fabricated tools</strong>?</div>
-  <div data-bodyclass='quote'>"Cartographers limit themselves – because of a lack of software skills or a client’s desired final product – to using <strong>pre-fabricated tools</strong> for Web map design (e.g. Google Maps, Esri’s ArcGIS Online). By the time data-organization and design decisions are considered, the potential efficacy of the map’s communication is already <em>grossly constrained</em> by the <strong>limitations</strong> of the tool chosen." - <a href="https://twitter.com/iMuehlenhaus">Ian Muehlenhaus</a> in <a href="http://utpjournals.metapress.com/content/q765k1l7423732l6/?p=81fc8c6f7eb8460f9ec9aba4318ddb07">Going Viral: The Look of Online Persuasive Maps</a></div>
-  <div>So what is the <strong>simplest way</strong> to <em>free ourselves</em> from these limitations and <strong>create web maps from scratch</strong>?</div>
-  <div>The <em>browser</em>.</div>
-  <div data-bodyclass='browser'></div>
-  <div>A <em>modern</em> browser conforms to certain <strong>standards</strong> and <strong>conventions</strong> in how content is created.</div>
-  <div>This allows any <em>modern</em> browser to be a <strong>web mapping platform</strong>.</div>
-  <div>A <strong>web mapping platform</strong> that <em>used</em> to be common, but is <em>not anymore</em>:</div>
-  <div><iframe width=1000px height=800px src="http://www.newseum.org/todaysfrontpages/flash/"></iframe></div>
-  <div>Ten years ago, <strong>Flash</strong> was <em>it</em>.</div>
-  <div><ul><li>Embedded reader</li><li><strong>Special coding language</strong></li><li><em>Complete creative control</em></li></ul></div>
-  <div data-bodyclass='flashtweet'><br><br>Now, <strong>Flash</strong> is mainly the subject of <em>derisive jokes</em>.</div>
-  <div>It requires a <em>plugin</em> (which you have to <strong>install, enable, and update</strong>, has <strong>questionable security</strong>, and <strong>crashes frequently</strong>).</div>
-  <div data-bodyclass='flashbad'></div>
-  <div>It <strong>doesn’t integrate</strong> with other content on the page.</div>
-  <div>It <em>doesn’t work</em> on <strong>smartphones</strong> and <strong>tablets</strong>.</div>
-  <div>It's <em>often overkill</em>, with an <strong>easier</strong> way to achieve the <strong>same</strong> result.</div>
-  <div>Namely, <em>HTML5</em> (and, of course, <em>JavaScript</em>) allow for <strong>much</strong> of Flash's functionality (like animation, video, and audio).</div>
-  <div>So now your browser is your <strong>first</strong>, <em>best</em> web mapping platform.</div>
-  <div>And we can <em>utilize its awesomeness</em> fairly <strong>simply</strong>.</div>
-  <div>Let's see that <em>in action</em>.</div>
-  <div>The <em>simplest</em> web map:</div>
-  <div data-bodyclass='simplest'></div>
-  <div>We're gonna <strong>make it</strong>. Ready?</div>
-  <div>Remember our <em>definitions</em> from <strong>Session 1</strong>: HTML is the <em>noun</em>, CSS is the <em>adjective</em>, JavaScript is the <em>verb</em>.</div>
-  <div data-bodyclass='texteditor'><br><br><br>Step one: Open a text editor</div>
-  <div data-bodyclass='demo'><br><br><br>Step two: save your file as <strong>demo.html</strong></div>
-  <div>This is an <em>HTML document skeleton</em>:<br><br><pre><span style="display: block; padding: 10px;">&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br><br>&lt;head&gt;<br>&lt;/head&gt;<br><br>&lt;body&gt;<br>&lt;/body&gt;<br><br>&lt;/html&gt;</pre></span></div>
-  <div><strong>HTML documents</strong> have a <pre><span>head</span></pre> and a <pre><span>body</span></pre>.</div>
-  <div>The <pre><span>head</span></pre> is for <em>metadata</em> and <em>resources</em>.</div>
-  <div>The <pre><span>body</span></pre> is for the elements you <em>see on the page</em>.</div>
-  <div>In the <pre><span>head</span></pre>, let's add a <pre><span>title</span></pre> for our page.</div>
-  <div><pre><span style="display: block; padding: 10px;">&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br><br>&lt;head&gt;<br><em>&lt;title&gt;Amazing Map!!!&lt;/title&gt;</em><br>&lt;/head&gt;<br><br>&lt;body&gt;<br>&lt;/body&gt;<br><br>&lt;/html&gt;</pre></span></div>
-  <div>That will show up in the <em>top</em> of your browser bar.</div>
-  <div>We have to put an <strong>actual title</strong> and our <em>map</em> on the page. Those go in the <pre><span>body</span></pre>.</div>
-  <div><pre><span style="display: block; padding: 10px;">&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br><br>&lt;head&gt;<br>&lt;title&gt;Amazing Map!!!&lt;/title&gt;<br>&lt;/head&gt;<br><br>&lt;body&gt;<br><em>&lt;h1&gt;Troy's House&lt;/h1&gt;<br>&lt;img src="1124BalboaEnhanced.png"&gt;</em><br>&lt;/body&gt;<br><br>&lt;/html&gt;</pre></span></div>
-  <div><strong>Save</strong> the file, and then <strong>open</strong> it. You should see it in your <em>browser</em>.</div>
-  <div data-bodyclass='demo-fail'></div>
-  <div>So... that's pretty <em>ugly</em>. And the image is <strong>not displaying</strong>.</div>
-  <div>How can we <em>fix</em> it?</div>
-  <div>The <strong>first</strong>, <strong>quickest</strong> thing we can do is fix the <em>image</em>. Our <pre><span>img</span></pre> tag needs a proper <em>path</em> so the browser knows where to <strong>retrieve</strong> the image.</div>
-  <div>The image lives <em>online</em> at <pre>http://mizmay.github.io<br>/web-map-quickstart<br>/1124BalboaEnhanced.png</pre>.<br>Change the <pre><span>img</span></pre> tag to read:<br><br><pre><span>&lt;img src="http://mizmay.github.io<br>/web-map-quickstart<br>/1124BalboaEnhanced.png"&gt;</span></pre></div>
-  <div>Now let's <em>reload</em> the page.</div>
-  <div data-bodyclass='demo-success'></div>
-  <div><strong>Great</strong>! But let's add some <em>styling</em> with <strong>CSS</strong>.</div>
-  <div><em>CSS</em> stands for <em>Cascading Style Sheets</em>. Using CSS, we can set <strong>style rules</strong> for different <em>html elements</em>, like associating <strong>specific adjectives</strong> to go with <strong>specific nouns</strong>.</div>
-  <div>We can do this several ways:</div>
-  <div data-bodyclass='devtools'><br><br><br>Interactively in the browser</div>
-  <div data-bodyclass='demo-css'><br><br><br>In a <pre><span>&lt;style&gt;</span></pre> tag in the <pre><span>&lt;head&gt;</span></pre> of our HTML document</div>
-  <div data-bodyclass='demo-sep'><br><br><br>In a separate file that we reference in the <pre><span>&lt;head&gt;</span></pre>.</div>
-  <div>Using the <strong>second technique</strong>, add some <em>styling</em> to the page.</div>
-  <div><pre><span style="display: block; padding: 10px;">&lt;head&gt;<br>  &lt;title&gt;Amazing Map!!!&lt;/title&gt;<br><em>  &lt;style&gt;<br>    body {<br>      background: #60fcb1;<br>    }<br>    h1 {<br>      font-family="Trebuchet MS";<br>      text-align: center;<br>    }<br>    img {<br>      display: block;<br>      margin-left: auto;<br>      margin-right: auto;<br>    }<br>  &lt;/style&gt;</em><br>&lt;/head&gt;</pre></span></div>
-  <div>Presto! You made a <strong>web map</strong>!</div>
-  <div>But we associate a little more <em>functionality</em> with web maps...</div>
-  <div>Starting with <strong>interactivity</strong> and <strong>animation</strong>.</div>
-  <div>Making an <em>interactive</em> web map can also be <strong>simple</strong>: just <em>a little JavaScript</em>.</div>
-  <div>Just like we added <strong>CSS</strong> by inserting <pre><span>&lt;style&gt;</span></pre> tags, we can add <strong>JavaScript</strong> by adding <pre><span>&lt;script&gt;</span></pre> tags!</div>
-  <div>Example: the <em>onclick</em> function. This will <strong>change the map</strong> when it is <em>clicked on</em>.</div>
-  <div>First, we add some <strong>JavaScript</strong> to the <pre><span>&lt;head&gt;</span></pre>:</div>
-  <div><pre><span style="display: block; padding: 10px;">&lt;head&gt;<br>  &lt;title&gt;Amazing Map!!!&lt;/title&gt;<br>  &lt;style&gt;<br>    body {<br>      background: #60fcb1;<br>    }<br>    h1 {<br>      font-family="Trebuchet MS";<br>      text-align: center;<br>    }<br>    img {<br>      display: block;<br>      margin-left: auto;<br>      margin-right: auto;<br>    }<br>  &lt;/style&gt;<br><em>  &lt;script&gt;<br>    var clean = "http://mizmay.github.io/web-map-quickstart/1124Balboa.png";<br>    var dirty = "http://mizmay.github.io/web-map-quickstart/1124BalboaEnhanced.png";<br>    function onClick(element) {<br>      if (element.src == dirty) {<br>        element.src = clean;<br>      }<br>      else {<br>        element.src = dirty;<br>      }<br>    }<br>  &lt;/script&gt;</em><br>&lt;/head&gt;</pre></span></div>
-  <div>Then we just have to make <strong>one small change</strong> in the <pre><span>&lt;body&gt;</span></pre>:</div>
-  <div><pre><span style="display: block; padding: 10px;">&lt;body&gt;<br>  &lt;h1&gt;Troy's House&lt;/h1&gt;<br><em>  &lt;img src="http://mizmay.github.io/web-map-quickstart/1124BalboaEnhanced.png"<br>    onclick="onClick(this);"&gt;</em><br>&lt;/body&gt;<br><br>&lt;/html&gt;</pre></span></div>
-  <div><strong>Reload</strong> the page and check it out!</div>
-  <div><em>Cool</em>! We made a <a href="demo_done.html">simple interactive map</a>!</div>
-  <div>An <em>animated</em> web map can also be <em>simple</em>: embed an <a href="https://www.google.com/search?q=how+to+make+an+animated+gif">animated GIF</em></a>.</div>
-  <div data-bodyclass='girlnames'><br><br><br>Popular Girl Names</div>
-  <div>Now this should be a <strong>breeze</strong>!</div>
-  <div><pre><span style="display: block; padding: 10px;">&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br><br>&lt;head&gt;<br>  &lt;title&gt;Popular Girl Names&lt;/title&gt;<br>&lt;/head&gt;<br><br>&lt;body&gt;<br><em>  &lt;h1&gt;Popular Girl Names&lt;/h1&gt;<br>  &lt;img src="http://mizmay.github.io/web-map-quickstart/girlnames.gif"&gt;</em><br>&lt;/body&gt;<br><br>&lt;/html&gt;</pre></span></div>
-  <div>We'll talk next time about <strong>cartographic principles</strong> and <em>web map design</em>, but the takeaway from what we've done so far should be that <strong>web mapping</strong> doesn't have to be <em>ugly</em> or <em>complicated</em>.</div>
-  <div>"<em>But wait</em>," you're saying. "I want my web map to <strong>pan</strong> and <strong>zoom</strong>!"</div>
-  <div>Remember the <em>CartoDB</em> and <em>Mapbox</em> Maps we made last week?</div>
-  <div><strong>Both</strong> provide you <em>pre-written code</em> that you can put in your <strong>HTML document</strong> to <em>embed</em> the map in your page.</div>
-  <div data-bodyclass='mapbox-embed'></div>
-  <div data-bodyclass='cartodb-embed'></div>
-  <div>When read by a <strong>browser</strong>, these pages look something like <em>this</em>:<br><ul><li><a href='mapbox.html' target='_blank'>Mapbox example</a></li><br><li><a href='cartodb.html' target='_blank'>CartoDB example</a></li></ul></div>
-  <div>Let's do it <strong>right now</strong> with the <em>Mapbox</em> maps we made <strong>last week</strong>.</div>
-  <div>First, open a <em>new document</em>, save it as <strong>mapbox.html</strong>, and <em>structure</em> it like you did the <strong>other</strong> HTML documents you've made.</div>
-  <div>Then head to <a href='http://mapbox.com'>Mapbox.com</a>, sign in, and find the <em>embed code</em> for your map.</div>
-  <div data-bodyclass='mapbox-embed-code'></div>
-  <div>Note that you can <strong>choose</strong> to keep <em>zoom and pan</em>, <em>zoom wheel</em>, <em>geocoder</em>, and a <em>link</em> to your map on the web.</div>
-  <div><strong>Copy</strong> and <strong>paste</strong> the embed code into the <pre><span>&lt;body&gt;</span></pre>.</div>
-  <div><pre><span style="display: block; padding: 10px;">&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br><br>&lt;head&gt;<br>  &lt;title&gt;My Hometown&lt;/title&gt;<br>&lt;/head&gt;<br><br>&lt;body&gt;<br>  &lt;h1&gt;My Hometown&lt;/h1&gt;<br><em>  &lt;iframe width='100%' height='500px' frameBorder='0'<br>    src='https://a.tiles.mapbox.com/v4/lyzidiamond.h9gfi6ak/<br>    attribution,zoompan,zoomwheel,geocoder,share.html?<br>    access_token=pk.eyJ1IjoibHl6aWRpYW1vbmQ<br>    iLCJhIjoiRkh4OW9layJ9.P2o48WlCqjhGmqoFJl3C_A'&gt;<br>  &lt;/iframe&gt;</em><br>&lt;/body&gt;<br><br>&lt;/html&gt;</pre></span></div>
-  <div>So what is this <em>doing</em> exactly?</div>
-  <div><table><tr><td><img src="./images/mapbox.png"></td><td><img src="./images/cartodb.png"></td></tr></table>(these URLs have a bunch of <strong>commands</strong> in them that are <strong>executed</strong> and your map is returned)</div>
-  <div>This is accomplished through an <em>API</em>: <strong>Application Programming Interface</strong>.</div>
-  <div data-bodyclass='quote'>"An API specifies a set of <em>functions</em> or <em>routines</em> that accomplish a <strong>specific task</strong> or are allowed to interact with a <strong>specific software component</strong>."<br> - <a href="http://en.wikipedia.org/wiki/Application_programming_interface">Wikipedia</a></div>
-  <div>Most commonly, you send <em>specifications</em> to the API and it sends you back <strong>resources</strong>.</div>
-  <div>In the <strong>Mapbox</strong> and <strong>CartoDB</strong> examples, the <em>specifications</em> we sent identified <strong>our map</strong>, and the API sent it back as a <em>resource</em>.</div>
-  <div>That's a <em>complicated resource</em> actually <strong>(and there is a lot going on under the hood)</strong> and our theme today is <em>web mapping from scratch</em>.</div>
-  <div>Forgetting about <strong>APIs</strong> for a second, let's get into <em>how the map works</em>.</div>
-  <div>This is <em>important</em> because we don't want our <strong>cartography</strong> to be <em>limited</em> by the <strong>tool</strong> we choose. We should know <em>how it all works</em>.</div>
-  <div>So let's back up...</div>
-  <div>Forget about <em>APIs</em> for a few minutes. let's just talk about <strong>maps</strong>.</div>
-  <div data-bodyclass='slippy-map'>In particular, <strong>slippy maps</strong>.</div>
-  <div>That's an industry term for maps that <strong>pan and zoom</strong> and run on <em>tiles</em>.</div>
-  <div>A bit of <em>history</em> and <em>explanation</em>...</div>
-  <div>Note: borrowing heavily from a <strong>fantastic</strong> presentation by <a href="http://stamen.com/studio/alan">Alan McConchie</a> and <a href="http://stamen.com/studio/beth">Beth Schechter</a> called <a href="http://maptime.github.io/anatomy-of-a-web-map/">Anatomy of a Web Map</a>.</div>
-  <div>It was made for <a href='http://meetup.com/maptime-sf'>MaptimeSF</a>, a local chapter of <a href='http://maptime.io'>Maptime</a>.</div>
-  <div><strong>Maptime</strong> groups are <em>hands-on</em>, <em>beginner-focused</em> meetup groups for learning about <strong>web mapping</strong> and <strong>geospatial concepts</strong> and <strong>tools</strong>.</div>
-  <div>(This is <em>up your alley</em>. <a href='http://twitter.com/maptimehq'>Check it out.</a>)</div>
-  <div data-bodyclass='mapquest'><br><br><br><em>In 1996, Mapquest launched its web service.</em></div>
-  <div>Directions for driving! <em>Online!</em> <strong>Wow!</strong></div>
-  <div>The problem: it was <strong>slow</strong> to load :(.</div>
-  <div>MapQuest required a <em>full page refresh</em> to scroll or zoom, and was always <strong>aligned to tile boundaries</strong>.</div>
-  <div>Then, in 2005, came <em>Google Maps</em>. This revolutionized <strong>everything</strong>.</div>
-  <div data-bodyclass='old-google'></div>
-  <div><em>But what was the revolution?</em><br>Was it the <strong>interface</strong>?<br>The <strong>red marker</strong>?<br>The <strong>weather widget</strong>?</div>
-  <div>No!</div>
-  <div>It was the <em>tile. <img src="./images/toner.jpg"></em></div>
-  <div>Way back when (<em>1999-2006</em>), most web maps were made using a protocol called <em>WMS</em> (<a href="http://en.wikipedia.org/wiki/Web_Map_Service">Web Map Service</a>), which is still <strong>widely in use</strong> today.</div>
-  <div data-bodyclass='snowpocalypse'>If you have a GIS background, WMS works kind of like you might expect: serving up the <em>slice of layered map cake</em> that fits your browser window, much the way GIS software can show you <strong>whatever layers you want</strong>, at <strong>whatever zoom you want</strong>.</div>
-  <div>The <strong>trouble</strong> is, the GIS software model is <em>too slow and clunky</em> for the web.</div>
-  <div>For this reason, <em>WMS</em> has largely been superceded by <strong>TMS</strong> (<a href="http://en.wikipedia.org/wiki/Tile_Map_Service">Tile Map Service</a>).</div>
-  <div>A <em>tile</em> is just a <a href="http://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a> <strong>image file</strong>.</div>
-  <div>GIS folks: what is an <em>image</em> file that we use for data?</div>
-  <div>That's right, a <em>raster</em>!</div>
-  <div>Whatever the <strong>zoom</strong>, whatever the <strong>map</strong>, tiles are <strong>always the same size</strong>: <em>256x256 pixels</em>.</div>
-  <div data-bodyclass="tile-loading">All these little tiles load <em>way faster</em> than one big map.</div>
-  <div>You just grab the <strong>ones you need to fit your screen</strong> plus a few extra along the <em>top</em>, <em>bottom</em>, <em>left</em>, and <em>right</em>.</div>
-  <div>Each <em>zoom level</em> has its own set of tiles!</div>
-
-  <div data-bodyclass='zoom0'><em>Zoom level 0: one tile for the world.</em></div>
-  <div>With each additional zoom level, the number of tiles increases <strong>exponentially</strong>.</div>
-  <div data-bodyclass='zoom1'><em>Zoom level 1: 4 tiles for the world.</em></div>
-  <div data-bodyclass='zoom2345'><em>Zoom level 2, 3, 4, 5</em></div>
-  <div data-bodyclass='zoom13'><em>Zoom level 13</em></div>
-  <div>Tiles are <em>rendered</em> in advance (usually) then stored in a <strong>cache</strong>.</div>
-  <div>Each map tile has a unique <em>address</em>!</div>
-  <div>For example: <a href="http://tile.openstreetmap.org/4/2/6.png" target="_blank">http://tile.openstreetmap.org/4/2/6.png</a></div>
-  <div>Remember before about <em>APIs</em>? Keep those in mind and now look at <strong>THIS</strong> URL:</div>
-  <div>http://<em>tile.openstreetmap.org</em>/4/2/6.png -- this is the name of the tile server.</div>
-  <div>http://tile.openstreetmap.org/<em>4</em>/2/6.png -- this is the z value, or the zoom level.</div>
-  <div>http://tile.openstreetmap.org/4/<em>2/6</em>.png -- This is the x/y value, or the place in the grid for that zoom where the tile lives.</div>
-  <div>One key <em>convention</em> that differs between <strong>TMS</strong> and <strong>WMS</strong> is <em>projection</em>.</div>
-  <div>Tiled maps <strong>almost always</strong> rely on <em>Web Mercator</em>.</div>
-  <div>That's nice because <em>interoperability</em>, which is an important concept in <strong>how the web should work</strong>.</div>
-
-  <div>It means whatever the map,<br>whatever the zoom, a tile will have the<br><strong>same boundaries</strong>.</div>
-  <div data-bodyclass='tile-gif'></div>
-  <div><strong>Mercator projection</strong> means that <em>latitude</em> and <em>longitude</em> lines make perfect right angles...</div>
-  <div>... and <em>Web Mercator</em> means that these right angles form <strong>perfect squares</strong>...</div>
-  <div>... which has <em>kinda worked</em> for people for a <strong>long time</strong>.<br>Maybe <em>too long</em>.</div>
-  <div data-bodyclass='mercator'></div>
-  <div data-bodyclass='distortion'>If you're a geographer you know that transforming the globe from an <strong>oblate spheroid</strong> to a <em>flat map</em> distorts the area of continents dramatically...</div>
-  <div data-bodyclass='mercator2'>...and much ink has been spilled over decades about the <a href="http://andywoodruff.com/blog/why-are-choropleth-mercator-maps-bad-because-we-said-so/">perceptual implications</a> of using <em>Mercator</em> as your default projection.</a></div>
-  <div>That's a talk for <em>another time</em>.</div>
-  <div><em>WMS</em> can, by convention, use <strong>any projection</strong>. For a while, this was an argument for <em>keeping it around</em>...</div>
-  <div>But we're <strong>not</strong> talking about <em>WMS</em> any more today.</div>
-  <div>Please note: <em>slippy maps</em> have largely evolved to support <strong>reference mapping</strong> and in particular <em>navigation</em>. For <strong>thematic mapping</strong> they can sometimes be overkill.</div>
-  <div data-bodyclass='zoomin'>No zoom needed!</div>
-  <div>More on that <strong>next time</strong>!</div>
-  <div>Make sense?</div>
-  <div><em>Great!</em></div>
-  <div>Let's go on some <strong>tangents</strong>.</div>
-  <div><em>Tangent #1:</em> Tiles are always rasters... <strong>except</strong> when they're not.</div>
-  <div data-bodyclass='vector-tiles'><em>What are they?</em><br><a href="http://bl.ocks.org/wboykinm/7393674" target="_blank">(unrelated demo)</a></div>
-  <div><strong>Raster tiles:</strong> prerendered images of your map data</div>
-  <div><a href="https://www.mapbox.com/blog/vector-tiles/">Vector tiles</a>: an <strong>alternative way</strong> of storing the data that makes raster tiles. They still <em>render to rasters</em> for display.</div>
-  <div><a href="https://www.mapbox.com/blog/vector-tiles/">Vector tiles</a>: your map data <em>sliced up in grid squares</em> & stored as points, lines and polygons until the very last second.</div>
-  <div>Vector tiles have some <strong>advantages</strong> over maintaining a cache of rasters.</div>
-  <div><em>Primarily:</em> Easier to <strong>change styles</strong> dynamically, on the fly.<br><em>Secondarily:</em> Storing data as vectors can <strong>save space</strong>. On the Internet, <em>space = time</em>.</div>
-
-  <div><em>Tangent #2:</em> Users <strong>can’t interact</strong> with features on a raster. BUT <a href="https://www.mapbox.com/developers/utfgrid/">UTFGrid</a> (a Mapbox invention) makes it possible.</div>
-  <div data-bodyclass='utf-grid'>UTFGrid is an <strong>invisible</strong> tile layer made up of <em>arbitrary characters</em> that <strong>index</strong> the shapes with their attributes.</a></div>
-  <div data-bodyclass='cartodb-map'><em>You</em> used UTFGrids last time in the <strong>community gardens</strong> map.</div>
-  <div><a href='http://tilemill.com'>Tilemill</a>, Mapbox's software for making <strong>raster map tiles</strong>, uses this invention to <em>add interactivity</em> right into the tiles.</div>
-
-  <div><em>Tangent #3:</em> <a href="http://d3js.org">D3</a> exists outside the world of tiles.</div>
-  <div>You <strong>can’t</strong> easily make road map in D3, <em>BUT</em> can do things that are clumsy in slippy maps. For example:</div>
-  <div data-bodyclass='d3-choropleth'>choropleth maps <a href="http://sta.mn/jyx">sta.mn/jyx</a></div>
-  <div data-bodyclass='d3-cartogram'>cartograms <a href="http://sta.mn/q99">sta.mn/q99</a></div>
-  <div data-bodyclass='projection-transitions'>different map projections (in the browser!) <a href="http://sta.mn/jfs">sta.mn/jfs</a></div>
-  <div data-bodyclass='d3-geo'>D3</div>
-  <div data-bodyclass='d3-racial-divide'>IS</div>
-  <div data-bodyclass='d3-topojson'>IN</div>
-  <div data-bodyclass='d3-drought'>SANE</div>
-  <div>Find <em>these examples</em> and <strong>more</strong> in Kai Chang's <a href="http://exposedata.com/talk/d3-geo/">d3.geo presentation</a>.</div>
-  <div>D3 is <strong>very powerful</strong>, but has a <em>steep learning curve</em>.</div>
-
-  <div><strong>Alright.</strong> Here's the part you've <em>all been waiting for</em>...</div>
-  <div>How to make a <strong>mashup</strong> without a <em>platform</em>.</div>
-  <div data-bodyclass='mashup'></div>
-  <div>The <em>basemap</em> is a <strong>slippy map</strong>.</div>
-  <div>The data can come from a <em>local file</em> or an <em>API</em>.</div>
-  <div><strong>Filetypes:</strong> sometimes you can use <em>shapefiles</em>, but <strong>KML</strong> is more common. More recently, <a href="http://github.com/lyzidiamond/learn-geojson" target="_blank">GeoJSON</a> is the jam.</div>
-  <div>We'll talk more about <strong>GeoJSON</strong> next week!</div>
-  <div data-bodyclass='api'></div>
-  <div>There are now lots of <em>APIs</em> that deliver <strong>data</strong>.</div>
-  <div>For example: <a href="https://developers.google.com/maps/documentation/javascript/">Google Maps API</a> / <a href="http://www.microsoft.com/maps/choose-your-bing-maps-API.aspx">Bing Maps API</a> / <a href="http://developer.here.com/web/guest/javascript-apis">Nokia HERE Maps API</a> / <a href="https://developers.arcgis.com/en/javascript/">ESRI ArcGIS API</a></div>
-  <div>And there are <em>Javascript libraries</em> that support the <strong>common functions</strong> we need to integrate map tiles and other data.</div>
-  <div>What does a <em>JavaScript mapping library</em> do?</div>
-  <div>It grabs the <em>tiles</em>, adds <em>content layers</em>, handles <em>interaction</em>, and <em>much more</em>.</div>
-  <div>Simplest to learn is <a href="http://leafletjs.com">Leaflet</a>, although there are others: <a href="http://openlayers.org">OpenLayers</a> / <a href="http://modestmaps.com">Modest Maps</a> / <a href="http://polymaps.org">Polymaps</a></div>
-<!--</div>-->
-
+<div>Web Mapping <em>Quickstart</em></div>
+<div><strong>Before we start...</strong></div>
+<div>There is a <em>cool event</em> coming up that you should <strong>totally</strong> attend!</div>
+<div data-bodyclass='missingmaps'><em>Missing Maps Project Launch</em><br><strong><ul><li>This Friday, Nov. 7</li><li>3pm-7pm</li><li>at Code for America, 155 9th St, SF</li><li><a href='https://www.eventbrite.com/e/missing-maps-project-launch-san-francisco-tickets-14027784481'>RSVP!</a></li></ul></strong></div>
+<div><strong>Last week</strong> was <em>Session 2:</em> Web Mapping Platforms and Projects</div>
+<div data-bodyclass='sheffield-atlanta-map'></div>
+<div data-bodyclass='karen-garden-map'></div>
+<div data-bodyclass='craig-wasco-map'></div>
+<div data-bodyclass='suzanne-garden-map'></div>
+<div data-bodyclass='conor-dublin-map'></div>
+<div data-bodyclass='bill-garden-map'></div>
+<div>Nicely done!</div>
+<div>Today is <em>Session 3:</em> Web Mapping from Scratch</div>
+<div><strong>Follow along</strong> by opening <em>Chrome</em> and typing this:<br><br><pre>http://mizmay.github.io<br>/web-map-quickstart<br>/fall2014/session-3</pre></div>
+<div>Wherever you see text like <a href='#'>this</a>, it's a <strong>link</strong>.</div>
+<div><em>So</em>. Let's talk about <strong>web mapping from scratch</strong>.</div>
+<div><strong>Last time</strong> we used several <em>web mapping frameworks</em> to make maps in the <strong>browser</strong>.</div>
+<div><a href="http://maps.google.com">Google Maps</a></div>
+<div><a href="http://mapbox.com">Mapbox</a></div>
+<div><a href="http://cartodb.com">CartoDB</a></div>
+<div data-bodyclass='chris-garden-map'></div>
+<div>What did you <em>like</em> about making maps with those tools? What did you <strong>dislike</strong> about it?</div>
+<div>Remember in <strong>Session 1</strong> when we talked about the <em>limitations</em> of using <strong>pre-fabricated tools</strong>?</div>
+<div data-bodyclass='quote'>"Cartographers limit themselves – because of a lack of software skills or a client’s desired final product – to using <strong>pre-fabricated tools</strong> for Web map design (e.g. Google Maps, Esri’s ArcGIS Online). By the time data-organization and design decisions are considered, the potential efficacy of the map’s communication is already <em>grossly constrained</em> by the <strong>limitations</strong> of the tool chosen." - <a href="https://twitter.com/iMuehlenhaus">Ian Muehlenhaus</a> in <a href="http://utpjournals.metapress.com/content/q765k1l7423732l6/?p=81fc8c6f7eb8460f9ec9aba4318ddb07">Going Viral: The Look of Online Persuasive Maps</a></div>
+<div>So what is the <strong>simplest way</strong> to <em>free ourselves</em> from these limitations and <strong>create web maps from scratch</strong>?</div>
+<div>The <em>browser</em>.</div>
+<div data-bodyclass='browser'></div>
+<div>A <em>modern</em> browser conforms to certain <strong>standards</strong> and <strong>conventions</strong> in how content is created.</div>
+<div>This allows any <em>modern</em> browser to be a <strong>web mapping platform</strong>.</div>
+<div>A <strong>web mapping platform</strong> that <em>used</em> to be common, but is <em>not anymore</em>:</div>
+<div><iframe width=1000px height=800px src="http://www.newseum.org/todaysfrontpages/flash/"></iframe></div>
+<div>Ten years ago, <strong>Flash</strong> was <em>it</em>.</div>
+<div><ul><li>Embedded reader</li><li><strong>Special coding language</strong></li><li><em>Complete creative control</em></li></ul></div>
+<div data-bodyclass='flashtweet'><br><br>Now, <strong>Flash</strong> is mainly the subject of <em>derisive jokes</em>.</div>
+<div>It requires a <em>plugin</em> (which you have to <strong>install, enable, and update</strong>, has <strong>questionable security</strong>, and <strong>crashes frequently</strong>).</div>
+<div data-bodyclass='flashbad'></div>
+<div>It <strong>doesn’t integrate</strong> with other content on the page.</div>
+<div>It <em>doesn’t work</em> on <strong>smartphones</strong> and <strong>tablets</strong>.</div>
+<div>It's <em>often overkill</em>, with an <strong>easier</strong> way to achieve the <strong>same</strong> result.</div>
+<div>Namely, <em>HTML5</em> (and, of course, <em>JavaScript</em>) allow for <strong>much</strong> of Flash's functionality (like animation, video, and audio).</div>
+<div>So now your browser is your <strong>first</strong>, <em>best</em> web mapping platform.</div>
+<div>And we can <em>utilize its awesomeness</em> fairly <strong>simply</strong>.</div>
+<div>Let's see that <em>in action</em>.</div>
+<div>The <em>simplest</em> web map:</div>
+<div data-bodyclass='simplest'></div>
+<div>We're gonna <strong>make it</strong>. Ready?</div>
+<div>Remember our <em>definitions</em> from <strong>Session 1</strong>: HTML is the <em>noun</em>, CSS is the <em>adjective</em>, JavaScript is the <em>verb</em>.</div>
+<div data-bodyclass='texteditor'><br><br><br>Step one: Open a <em>text editor</em>.</div>
+<div data-bodyclass='demo'><br><br>Step two: save your file as <strong>demo.html</strong>.</div>
+<div>This is an <em>HTML document skeleton</em>:<br><br><pre><span style="display: block; padding: 10px;">&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br><br>&lt;head&gt;<br>&lt;/head&gt;<br><br>&lt;body&gt;<br>&lt;/body&gt;<br><br>&lt;/html&gt;</pre></span></div>
+<div><strong>HTML documents</strong> have a <pre><span>head</span></pre> and a <pre><span>body</span></pre>.</div>
+<div>The <pre><span>head</span></pre> is for <em>metadata</em> and <em>resources</em>.</div>
+<div>The <pre><span>body</span></pre> is for the elements you <em>see on the page</em>.</div>
+<div>In the <pre><span>head</span></pre>, let's add a <pre><span>title</span></pre> for our page.</div>
+<div><pre><span style="display: block; padding: 10px;">&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br><br>&lt;head&gt;<br><em>&lt;title&gt;Amazing Map!!!&lt;/title&gt;</em><br>&lt;/head&gt;<br><br>&lt;body&gt;<br>&lt;/body&gt;<br><br>&lt;/html&gt;</pre></span></div>
+<div>That will show up in the <em>top</em> of your browser bar.</div>
+<div>We have to put an <strong>actual title</strong> and our <em>map</em> on the page. Those go in the <pre><span>body</span></pre>.</div>
+<div><pre><span style="display: block; padding: 10px;">&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br><br>&lt;head&gt;<br>&lt;title&gt;Amazing Map!!!&lt;/title&gt;<br>&lt;/head&gt;<br><br>&lt;body&gt;<br><em>&lt;h1&gt;Troy's House&lt;/h1&gt;<br>&lt;img src="1124BalboaEnhanced.png"&gt;</em><br>&lt;/body&gt;<br><br>&lt;/html&gt;</pre></span></div>
+<div><strong>Save</strong> the file, and then <strong>open</strong> it. You should see it in your <em>browser</em>.</div>
+<div data-bodyclass='demo-fail'></div>
+<div>So... that's pretty <em>ugly</em>. And the image is <strong>not displaying</strong>.</div>
+<div>How can we <em>fix</em> it?</div>
+<div>The <strong>first</strong>, <strong>quickest</strong> thing we can do is fix the <em>image</em>. Our <pre><span>img</span></pre> tag needs a proper <em>path</em> so the browser knows where to <strong>retrieve</strong> the image.</div>
+<div>The image lives <em>online</em> at <pre>http://mizmay.github.io<br>/web-map-quickstart<br>/1124BalboaEnhanced.png</pre>.<br>Change the <pre><span>img</span></pre> tag to read:<br><br><pre><span>&lt;img src="http://mizmay.github.io<br>/web-map-quickstart<br>/1124BalboaEnhanced.png"&gt;</span></pre></div>
+<div>Now let's <em>reload</em> the page.</div>
+<div data-bodyclass='demo-success'></div>
+<div><strong>Great</strong>! But let's add some <em>styling</em> with <strong>CSS</strong>.</div>
+<div><em>CSS</em> stands for <em>Cascading Style Sheets</em>. Using CSS, we can set <strong>style rules</strong> for different <em>HTML elements</em>, like associating <strong>specific adjectives</strong> to go with <strong>specific nouns</strong>.</div>
+<div>We can do this <em>several ways</em>:</div>
+<div data-bodyclass='devtools'><br><br><br><br><br>Interactively in the browser</div>
+<div data-bodyclass='demo-css'><br><br><br><br><br>In a <pre><span>&lt;style&gt;</span></pre> tag in the <pre><span>&lt;head&gt;</span></pre> of our HTML document</div>
+<div data-bodyclass='demo-sep'><br><br><br><br><br>In a separate file that we reference in the <pre><span>&lt;head&gt;</span></pre>.</div>
+<div>Using the <strong>second technique</strong>, add some <em>styling</em> to the page.</div>
+<div><pre><span style="display: block; padding: 10px;">&lt;head&gt;<br>  &lt;title&gt;Amazing Map!!!&lt;/title&gt;<br><em>  &lt;style&gt;<br>    body {<br>      background: #60fcb1;<br>    }<br>    h1 {<br>      font-family="Trebuchet MS";<br>      text-align: center;<br>    }<br>    img {<br>      display: block;<br>      margin-left: auto;<br>      margin-right: auto;<br>    }<br>  &lt;/style&gt;</em><br>&lt;/head&gt;</pre></span></div>
+<div>Presto! You made a <strong>web map</strong>!</div>
+<div>But we associate a little more <em>functionality</em> with web maps...</div>
+<div>Starting with <strong>interactivity</strong> and <strong>animation</strong>.</div>
+<div>Making an <em>interactive</em> web map can also be <strong>simple</strong>: just <em>a little JavaScript</em>.</div>
+<div>Example: the <em>onclick</em> function. This will <strong>change the map</strong> when it is <em>clicked on</em>.</div>
+<div>Change the <pre><span>&lt;img&gt;</span></pre> tag in the body to read:<br><br><pre><span style="display: block; padding: 10px;">&lt;img src="http://mizmay.github.io<br>/web-map-quickstart/1124BalboaEnhanced.png"<br><em>onclick="document.getElementsByTagName('img')<br>.item().style.border='15px solid green';"</em>&gt;</span></pre></div>
+<div><strong>Save</strong>, <strong>reload</strong> the page, and <strong>click</strong> on the image.</div>
+<div>... so it has a <em>border</em>. That's not that cool! Let's do something <strong>cooler</strong>!</div>
+<div><em>Okay.</em> But it'll require a <strong>little more JavaScript</strong>.</div>
+<div>Just like we added <strong>CSS</strong> by inserting <pre><span>&lt;style&gt;</span></pre> tags, we can add <strong>JavaScript</strong> by adding <pre><span>&lt;script&gt;</span></pre> tags!</div>
+<div>First, we add some <strong>JavaScript</strong> to the <pre><span>&lt;head&gt;</span></pre>:</div>
+<div><pre><span style="display: block; padding: 10px;">&lt;head&gt;<br>  &lt;title&gt;Amazing Map!!!&lt;/title&gt;<br>  &lt;style&gt;<br>    body {<br>      background: #60fcb1;<br>    }<br>    h1 {<br>      font-family="Trebuchet MS";<br>      text-align: center;<br>    }<br>    img {<br>      display: block;<br>      margin-left: auto;<br>      margin-right: auto;<br>    }<br>  &lt;/style&gt;<br><em>  &lt;script&gt;<br>    var clean = "http://mizmay.github.io/web-map-quickstart/1124Balboa.png";<br>    var dirty = "http://mizmay.github.io/web-map-quickstart/1124BalboaEnhanced.png";<br>    function onClick(element) {<br>      if (element.src == dirty) {<br>        element.src = clean;<br>      }<br>      else {<br>        element.src = dirty;<br>      }<br>    }<br>  &lt;/script&gt;</em><br>&lt;/head&gt;</pre></span></div>
+<div>Then we just have to make <strong>one small change</strong> in the <pre><span>&lt;body&gt;</span></pre>:</div>
+<div><pre><span style="display: block; padding: 10px;">&lt;body&gt;<br>  &lt;h1&gt;Troy's House&lt;/h1&gt;<br><em>  &lt;img src="http://mizmay.github.io<br>    /web-map-quickstart/1124BalboaEnhanced.png"<br>    onclick="onClick(this);"&gt;</em><br>&lt;/body&gt;<br><br>&lt;/html&gt;</pre></span></div>
+<div><strong>Reload</strong> the page and check it out!</div>
+<div><em>Cool</em>! We made a <a href="demo_done.html">simple interactive map</a>!</div>
+<div>An <em>animated</em> web map can also be <em>simple</em>: embed an <a href="https://www.google.com/search?q=how+to+make+an+animated+gif">animated GIF</em></a>.</div>
+<div data-bodyclass='girlnames'><br><br><br>Popular Girl Names</div>
+<div>Now this should be a <strong>breeze</strong>!</div>
+<div><pre><span style="display: block; padding: 10px;">&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br><br>&lt;head&gt;<br>  &lt;title&gt;Popular Girl Names&lt;/title&gt;<br>&lt;/head&gt;<br><br>&lt;body&gt;<br><em>  &lt;h1&gt;Popular Girl Names&lt;/h1&gt;<br>  &lt;img src="http://mizmay.github.io<br>    /web-map-quickstart/girlnames.gif"&gt;</em><br>&lt;/body&gt;<br><br>&lt;/html&gt;</pre></span></div>
+<div>We'll talk next time about <strong>cartographic principles</strong> and <em>web map design</em>, but the takeaway from what we've done so far should be that <strong>web mapping</strong> doesn't have to be <em>ugly</em> or <em>complicated</em>.</div>
+<div>"<em>But wait</em>," you're saying. "I thought the definition of a web map is a map that can <strong>pan</strong> and <strong>zoom</strong>!"</div>
+<div>Remember the <em>CartoDB</em> and <em>Mapbox</em> Maps we made last week?</div>
+<div><strong>Both</strong> provide you <em>pre-written code</em> that you can put in your <strong>HTML document</strong> to <em>embed</em> the map in your page.</div>
+<div data-bodyclass='mapbox-embed'></div>
+<div data-bodyclass='cartodb-embed'></div>
+<div>When read by a <strong>browser</strong>, these pages look something like <em>this</em>:<br><ul><li><a href='mapbox.html' target='_blank'>Mapbox example</a></li><br><li><a href='cartodb.html' target='_blank'>CartoDB example</a></li></ul></div>
+<div>Let's do it <strong>right now</strong> with the <em>Mapbox</em> maps we made <strong>last week</strong>.</div>
+<div>First, open a <em>new document</em>, save it as <strong>mapbox.html</strong>, and <em>structure</em> it like you did the <strong>other</strong> HTML documents you've made.</div>
+<div>Then head to <a href='http://mapbox.com'>Mapbox.com</a>, sign in, and find the <em>embed code</em> for your map.</div>
+<div data-bodyclass='mapbox-embed-code'></div>
+<div>Note that you can <strong>choose</strong> to keep <em>zoom and pan</em>, <em>zoom wheel</em>, <em>geocoder</em>, and a <em>link</em> to your map on the web.</div>
+<div><strong>Copy</strong> and <strong>paste</strong> the embed code into the <pre><span>&lt;body&gt;</span></pre>.</div>
+<div><pre><span style="display: block; padding: 10px;">&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br><br>&lt;head&gt;<br>  &lt;title&gt;My Hometown&lt;/title&gt;<br>&lt;/head&gt;<br><br>&lt;body&gt;<br>  &lt;h1&gt;My Hometown&lt;/h1&gt;<br><em>  &lt;iframe width='100%' height='500px' frameBorder='0'<br>    src='https://a.tiles.mapbox.com/v4/lyzidiamond.h9gfi6ak/<br>    attribution,zoompan,zoomwheel,geocoder,share.html?<br>    access_token=pk.eyJ1IjoibHl6aWRpYW1vbmQ<br>    iLCJhIjoiRkh4OW9layJ9.P2o48WlCqjhGmqoFJl3C_A'&gt;<br>  &lt;/iframe&gt;</em><br>&lt;/body&gt;<br><br>&lt;/html&gt;</pre></span></div>
+<div>So what is this <em>doing</em> exactly?</div>
+<div><table><tr><td><img src="./images/mapbox.png"></td><td><img src="./images/cartodb.png"></td></tr></table>(these URLs have a bunch of <strong>commands</strong> in them that are <strong>executed</strong> and your map is returned)</div>
+<div>This is accomplished through an <em>API</em>: <strong>Application Programming Interface</strong>.</div>
+<div>This should <strong>look familiar</strong>... it's what we did <em>last week</em> with the <strong>Google Maps Static API</strong>.</div>
+<div data-bodyclass='quote'>"An API specifies a set of <em>functions</em> or <em>routines</em> that accomplish a <strong>specific task</strong> or are allowed to interact with a <strong>specific software component</strong>."<br> - <a href="http://en.wikipedia.org/wiki/Application_programming_interface">Wikipedia</a></div>
+<div>Most commonly, you send <em>specifications</em> to the API and it sends you back <strong>resources</strong>.</div>
+<div>With the <strong>Google Maps Static API</strong>, we changed the <em>URL</em> to send <strong>specifications</strong> (center, zoom, etc.), which changed the <em>resource</em> (map) that the API sent back.</div>
+<div>In the <strong>Mapbox</strong> and <strong>CartoDB</strong> examples we're looking at now, the <em>specifications</em> we sent identified <strong>our map</strong>, and the API sent it back as a <em>resource</em>.</div>
+<div>There are now lots of <em>APIs</em> that deliver <strong>data</strong>.</div>
+<div data-bodyclass='api'></div>
+<div>For example: <a href="https://developers.google.com/maps/documentation/javascript/">Google Maps API</a> / <a href="http://www.microsoft.com/maps/choose-your-bing-maps-API.aspx">Bing Maps API</a> / <a href="http://developer.here.com/web/guest/javascript-apis">Nokia HERE Maps API</a> / <a href="https://developers.arcgis.com/en/javascript/">ESRI ArcGIS API</a></div>
+<div>And <em>non-spatial</em>: <a href='https://dev.twitter.com/'>Twitter API</a> / <a href='https://developers.facebook.com/'>Facebook API</a> / <a href='https://www.flickr.com/services/api/'>Flickr API</a> / <a href='http://instagram.com/developer/'>Instagram API</a></div>
+<div><strong>All</strong> of these APIs take <em>specifications</em> and send back <strong>resources</strong>.</div>
+<div>Those <strong>resources</strong> can include <em>geographic data</em>, like <strong>points</strong> showing <em>locations of Instagram photos</em>.</div>
+<div data-bodyclass='mapstagram'></div>
+<div>Those <strong>resources</strong> can also include <em>pre-defined pieces of code</em> that have <strong>certain capabilities</strong>.</div>
+<div>We'll see this <em>soon</em> when we make a map with a <strong>JavaScript library</strong>.</div>
+<div>In that case, we will send <em>specifications</em> defining a <strong>map object</strong> with <em>specific functions and features</em>, and the library will <strong>return</strong> that map object as a <em>resource</em>.</div>
+<div>A <strong>JavaScript library</strong> is just another <em>API</em>!</div>
+<div>But let's <strong>back up</strong> for a second.</div>
+<div>Forget about <em>APIs</em> for a few minutes. Let's just talk about <strong>maps</strong>.</div>
+<div data-bodyclass='slippy-map'>In particular, <strong>slippy maps</strong>.</div>
+<div>That's an industry term for maps that <strong>pan and zoom</strong> and run on <em>tiles</em>.</div>
+<div>(This is what <em>lives inside</em> the map object we're requesting, so it's <strong>important</strong> for us to understand <em>how it works</em> before we <strong>make one</strong>.)</div>
+<div>A bit of <em>history</em> and <em>explanation</em>...</div>
+<div>Note: borrowing heavily from a <strong>fantastic</strong> presentation by <a href="http://stamen.com/studio/alan">Alan McConchie</a> and <a href="http://stamen.com/studio/beth">Beth Schechter</a> called <a href="http://maptime.github.io/anatomy-of-a-web-map/">Anatomy of a Web Map</a>.</div>
+<div>It was made for <a href='http://meetup.com/maptime-sf'>MaptimeSF</a>, a local chapter of <a href='http://maptime.io'>Maptime</a>.</div>
+<div><strong>Maptime</strong> groups are <em>hands-on</em>, <em>beginner-focused</em> meetup groups for learning about <strong>web mapping</strong> and <strong>geospatial concepts</strong> and <strong>tools</strong>.</div>
+<div>(This is <em>up your alley</em>. <a href='http://twitter.com/maptimehq'>Check it out.</a>)</div>
+<div data-bodyclass='mapquest'><br><br><br><em>In 1996, Mapquest launched its web service.</em></div>
+<div>Directions for driving! <em>Online!</em> <strong>Wow!</strong></div>
+<div>The problem: it was <strong>slow</strong> to load :(.</div>
+<div>MapQuest required a <em>full page refresh</em> to scroll or zoom, and was always <strong>aligned to tile boundaries</strong>.</div>
+<div>Then, in 2005, came <em>Google Maps</em>. This revolutionized <strong>everything</strong>.</div>
+<div data-bodyclass='old-google'></div>
+<div><em>But what was the revolution?</em><br>Was it the <strong>interface</strong>?<br>The <strong>red marker</strong>?<br>The <strong>weather widget</strong>?</div>
+<div>No!</div>
+<div>It was the <em>tile. <img src="./images/toner.jpg"></em></div>
+<div>Way back when (<em>1999-2006</em>), most web maps were made using a protocol called <em>WMS</em> (<a href="http://en.wikipedia.org/wiki/Web_Map_Service">Web Map Service</a>), which is still <strong>widely in use</strong> today.</div>
+<div data-bodyclass='snowpocalypse'>If you have a GIS background, WMS works kind of like you might expect: serving up the <em>slice of layered map cake</em> that fits your browser window, much the way GIS software can show you <strong>whatever layers you want</strong>, at <strong>whatever zoom you want</strong>.</div>
+<div>The <strong>trouble</strong> is, the GIS software model is <em>too slow and clunky</em> for the web.</div>
+<div>For this reason, <em>WMS</em> has largely been superceded by <strong>TMS</strong> (<a href="http://en.wikipedia.org/wiki/Tile_Map_Service">Tile Map Service</a>).</div>
+<div>A <em>tile</em> is just a <a href="http://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a> <strong>image file</strong>.</div>
+<div>GIS folks: what is an <em>image</em> file that we use for data?</div>
+<div>That's right, a <em>raster</em>!</div>
+<div>Whatever the <strong>zoom</strong>, whatever the <strong>map</strong>, tiles are <strong>always the same size</strong>: <em>256x256 pixels</em>.</div>
+<div data-bodyclass="tile-loading">All these little tiles load <em>way faster</em> than one big map.</div>
+<div>You just grab the <strong>ones you need to fit your screen</strong> plus a few extra along the <em>top</em>, <em>bottom</em>, <em>left</em>, and <em>right</em>.</div>
+<div>Each <em>zoom level</em> has its own set of tiles!</div>
+<div data-bodyclass='zoom0'><em>Zoom level 0: one tile for the world.</em></div>
+<div>With each additional zoom level, the number of tiles increases <strong>exponentially</strong>.</div>
+<div data-bodyclass='zoom1'><em>Zoom level 1: 4 tiles for the world.</em></div>
+<div data-bodyclass='zoom2345'><br><br><br><em>Zoom level 2, 3, 4, 5</em></div>
+<div data-bodyclass='zoom13'><em>Zoom level 13</em></div>
+<div>Tiles are <em>rendered</em> in advance (usually) then stored in a <strong>cache</strong>.</div>
+<div>Each map tile has a unique <em>address</em>!</div>
+<div>For example: <a href="http://tile.openstreetmap.org/4/2/6.png" target="_blank">http://tile.openstreetmap.org/4/2/6.png</a></div>
+<div>Remember before about <em>APIs</em>? Keep those in mind and now look at <strong>THIS</strong> URL:</div>
+<div>http://<em>tile.openstreetmap.org</em>/4/2/6.png -- this is the name of the tile server.</div>
+<div>http://tile.openstreetmap.org/<em>4</em>/2/6.png -- this is the z value, or the zoom level.</div>
+<div>http://tile.openstreetmap.org/4/<em>2/6</em>.png -- This is the x/y value, or the place in the grid for that zoom where the tile lives.</div>
+<div>One key <em>convention</em> that differs between <strong>TMS</strong> and <strong>WMS</strong> is <em>projection</em>.</div>
+<div>Tiled maps <strong>almost always</strong> rely on <em>Web Mercator</em>.</div>
+<div>That's nice because <em>interoperability</em>, which is an important concept in <strong>how the web should work</strong>.</div>
+<div>It means whatever the map,<br>whatever the zoom, a tile will have the<br><strong>same boundaries</strong>.</div>
+<div data-bodyclass='tile-gif'></div>
+<div><strong>Mercator projection</strong> means that <em>latitude</em> and <em>longitude</em> lines make perfect right angles...</div>
+<div>... and <em>Web Mercator</em> means that these right angles form <strong>perfect squares</strong>...</div>
+<div>... which has <em>kinda worked</em> for people for a <strong>long time</strong>.<br>Maybe <em>too long</em>.</div>
+<div data-bodyclass='mercator'></div>
+<div>If you're a geographer you know that transforming the globe from an <strong>oblate spheroid</strong> to a <em>flat map</em> distorts the area of continents dramatically...</div>
+<div data-bodyclass='distortion'></div>
+<div data-bodyclass='mercator2'>...and much ink has been spilled over decades about the <a href="http://andywoodruff.com/blog/why-are-choropleth-mercator-maps-bad-because-we-said-so/">perceptual implications</a> of using <em>Mercator</em> as your default projection.</a></div>
+<div>That's a talk for <em>another time</em>.</div>
+<div><em>WMS</em> can, by convention, use <strong>any projection</strong>. For a while, this was an argument for <em>keeping it around</em>...</div>
+<div>But we're <strong>not</strong> talking about <em>WMS</em> any more today.</div>
+<div>Please note: <em>slippy maps</em> have largely evolved to support <strong>reference mapping</strong> and in particular <em>navigation</em>. For <strong>thematic mapping</strong> they can sometimes be overkill.</div>
+<div data-bodyclass='zoomin'>No zoom needed!</div>
+<div>More on that <strong>next time</strong>!</div>
+<div>Make sense?</div>
+<div><em>Great!</em></div>
+<div>Here's the part you've <em>all been waiting for</em>...</div>
+<div>How to make a <strong>web map</strong> without a <em>platform</em>.</div>
+<div data-bodyclass='mashup'></div>
+<div>The <em>basemap</em> will be a <strong>slippy map</strong>.</div>
+<div>In <strong>web maps</strong>, the data can come from a <em>local file</em> or an <em>API</em>.</div>
+<div><strong>Filetypes:</strong> sometimes you can use <em>shapefiles</em>, but <strong>KML</strong> is more common. More recently, <a href="http://github.com/lyzidiamond/learn-geojson" target="_blank">GeoJSON</a> is the jam.</div>
+<div>We'll talk more about <strong>GeoJSON</strong> next week!</div>
+<div>So what does the <em>JavaScript mapping library</em> do?</div>
+<div>It grabs the <em>tiles</em>, adds <em>content layers</em>, handles <em>interaction</em>, and <em>much more</em>.</div>
+<div>This is all based on your <strong>specifications</strong> defined in your <em>map object</em>.</div>
+<div>Simplest to learn is <a href="http://leafletjs.com">Leaflet</a>, although there are others: <a href="http://openlayers.org">OpenLayers</a> / <a href="http://modestmaps.com">Modest Maps</a> / <a href="http://polymaps.org">Polymaps</a></div>
 <div data-bodyclass='leaflet-toner-snapshot-giant'>Time to make a <strong>simple mashup</strong>!</div>
-<div>Back to your text editors...</div>
-<div><table><tr><td><img src="./images/leaflet_html.png"></table></tr></td></div>
-<div><a href="leaflet.html">Et voilà</a></div>
-<div>Ta Da! You now know enough to <a href="http://leafletjs.com/examples.html">try some tutorials on your own</a>.</div>
-<div>We'll go into this a bit more next time, but here's how it all fits together:</div>
-<div><img src="./images/anatomy/anatomy-of-a-web-map.png"></div>
-<div>A huge debt of gratitute to <a href="https://twitter.com/bethschechter">Beth Schechter</a>, <a href="https://twitter.com/lyzidiamond">Lyzi Diamond</a>, and <a href="https://twitter.com/awoodruff">many</a>, <a href="https://twitter.com/vtcraghead">many</a> others whose blog posts and presentations informed our learning today!</div>
+<div data-bodyclass='leaflet-html'></div>
+<div>Back to your <em>text editors</em>...</div>
+<div>Open your <strong>browser</strong> and head to:<br><br><pre>http://mizmay.github.io/fall2014/session-3/leaflet.html</pre></div>
+<div data-bodyclass='view-source'></div>
+<div data-bodyclass='leaflet-source'></div>
+<div><a href="./leaflet.html">Et voilà</a>!</div>
+<div>Ta da! You now know enough to <a href="http://leafletjs.com/examples.html">try some tutorials on your own</a>.</div>
+<div>Let's go on some <strong>tangents</strong>.</div>
+<div><em>Tangent #1:</em> Tiles are always rasters... <strong>except</strong> when they're not.</div>
+<div data-bodyclass='vector-tiles'><em>What are they?</em><br><a href="http://bl.ocks.org/wboykinm/7393674" target="_blank">(unrelated demo)</a></div>
+<div><strong>Raster tiles:</strong> prerendered images of your map data</div>
+<div><a href="https://www.mapbox.com/blog/vector-tiles/">Vector tiles</a>: an <strong>alternative way</strong> of storing the data that makes raster tiles. They still <em>render to rasters</em> for display.</div>
+<div><a href="https://www.mapbox.com/blog/vector-tiles/">Vector tiles</a>: your map data <em>sliced up in grid squares</em> & stored as points, lines and polygons until the very last second.</div>
+<div>Vector tiles have some <strong>advantages</strong> over maintaining a cache of rasters.</div>
+<div><em>Primarily:</em> Easier to <strong>change styles</strong> dynamically, on the fly.<br><em>Secondarily:</em> Storing data as vectors can <strong>save space</strong>. On the Internet, <em>space = time</em>.</div>
+<div><em>Tangent #2:</em> Users <strong>can’t interact</strong> with features on a raster. BUT <a href="https://www.mapbox.com/developers/utfgrid/">UTFGrid</a> (a Mapbox invention) makes it possible.</div>
+<div data-bodyclass='utf-grid'><br><br><br>UTFGrid is an <strong>invisible</strong> tile layer made up of <em>arbitrary characters</em> that <strong>index</strong> the shapes with their attributes.</a></div>
+<div data-bodyclass='cartodb-map'><br><br><br><em>You</em> used UTFGrids last time in the <strong>community gardens</strong> map.</div>
+<div><a href='http://tilemill.com'>Tilemill</a>, Mapbox's software for making <strong>raster map tiles</strong>, uses this invention to <em>add interactivity</em> right into the tiles.</div>
+<div>We'll go into this a bit more next time, but here's <strong>how it all fits together</strong>:</div>
+<div data-bodyclass='anatomy'></div>
+<div>A huge debt of gratitute to <a href="https://twitter.com/bethschechter">Beth Schechter</a>, <a href="https://twitter.com/mappingmashups">Alan McConchie</a>, and <a href="https://twitter.com/awoodruff">many</a>, <a href="https://twitter.com/vtcraghead">many</a> others whose blog posts and presentations informed our learning today!</div>
 <div>Presentation made with <a href="http://www.macwright.org/big/">big</a></div>
 </body></html>
