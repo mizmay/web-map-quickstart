@@ -95,7 +95,7 @@
     text-shadow: 0.1em 0.1em #000;
   }
   .old-google {
-    background-image: url(./images/3-old-google-maps-1.jpg);
+    background-image: url(./images/3-old-google-maps-1.JPG);
     background-repeat: no-repeat;
     background-position: center 30px;
   }
@@ -384,7 +384,7 @@
 <div data-bodyclass='bill-garden-map'></div>
 <div>Nicely done!</div>
 <div>Today is <em>Session 3:</em> Web Mapping from Scratch</div>
-<div><strong>Follow along</strong> by opening <em>Chrome</em> and typing this:<br><br><pre>http://mizmay.github.io<br>/web-map-quickstart<br>/fall2014/session3</pre></div>
+<div><strong>Follow along</strong> by opening <em>Chrome</em> and typing this:<br><br><pre>http://mizmay.github.io<br>/web-map-quickstart<br>/fall2014/session-3</pre></div>
 <div>Wherever you see text like <a href='#'>this</a>, it's a <strong>link</strong>.</div>
 <div><em>So</em>. Let's talk about <strong>web mapping from scratch</strong>.</div>
 <div><strong>Last time</strong> we used several <em>web mapping frameworks</em> to make maps in the <strong>browser</strong>.</div>
@@ -463,7 +463,6 @@
 <div><pre><span style="display: block; padding: 10px;">&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br><br>&lt;head&gt;<br>  &lt;title&gt;Popular Girl Names&lt;/title&gt;<br>&lt;/head&gt;<br><br>&lt;body&gt;<br><em>  &lt;h1&gt;Popular Girl Names&lt;/h1&gt;<br>  &lt;img src="http://mizmay.github.io/web-map-quickstart/girlnames.gif"&gt;</em><br>&lt;/body&gt;<br><br>&lt;/html&gt;</pre></span></div>
 <div>We'll talk next time about <strong>cartographic principles</strong> and <em>web map design</em>, but the takeaway from what we've done so far should be that <strong>web mapping</strong> doesn't have to be <em>ugly</em> or <em>complicated</em>.</div>
 <div>"<em>But wait</em>," you're saying. "I thought the definition of a web map is a map that can <strong>pan</strong> and <strong>zoom</strong>!"</div>
-<div>Well then, you've <em>missed my point</em> so far, but <strong>fine</strong>.</div>
 <div>Remember the <em>CartoDB</em> and <em>Mapbox</em> Maps we made last week?</div>
 <div><strong>Both</strong> provide you <em>pre-written code</em> that you can put in your <strong>HTML document</strong> to <em>embed</em> the map in your page.</div>
 <div data-bodyclass='mapbox-embed'></div>
@@ -514,7 +513,6 @@
 <div data-bodyclass="tile-loading">All these little tiles load <em>way faster</em> than one big map.</div>
 <div>You just grab the <strong>ones you need to fit your screen</strong> plus a few extra along the <em>top</em>, <em>bottom</em>, <em>left</em>, and <em>right</em>.</div>
 <div>Each <em>zoom level</em> has its own set of tiles!</div>
-
 <div data-bodyclass='zoom0'><em>Zoom level 0: one tile for the world.</em></div>
 <div>With each additional zoom level, the number of tiles increases <strong>exponentially</strong>.</div>
 <div data-bodyclass='zoom1'><em>Zoom level 1: 4 tiles for the world.</em></div>
@@ -560,39 +558,15 @@
 <div data-bodyclass='utf-grid'>UTFGrid is an <strong>invisible</strong> tile layer made up of <em>arbitrary characters</em> that <strong>index</strong> the shapes with their attributes.</a></div>
 <div data-bodyclass='cartodb-map'><em>You</em> used UTFGrids last time in the <strong>community gardens</strong> map.</div>
 <div><a href='http://tilemill.com'>Tilemill</a>, Mapbox's software for making <strong>raster map tiles</strong>, uses this invention to <em>add interactivity</em> right into the tiles.</div>
-
-<div><em>Tangent #3:</em> <a href="http://d3js.org">D3</a> exists outside the world of tiles.</div>
-<div>You <strong>can’t</strong> easily make road map in D3, <em>BUT</em> can do things that are clumsy in slippy maps. For example:</div>
-<div data-bodyclass='d3-choropleth'>choropleth maps <a href="http://sta.mn/jyx">sta.mn/jyx</a></div>
-<div data-bodyclass='d3-cartogram'>cartograms <a href="http://sta.mn/q99">sta.mn/q99</a></div>
-<div data-bodyclass='projection-transitions'>different map projections (in the browser!) <a href="http://sta.mn/jfs">sta.mn/jfs</a></div>
-<div data-bodyclass='d3-geo'>D3</div>
-<div data-bodyclass='d3-racial-divide'>IS</div>
-<div data-bodyclass='d3-topojson'>IN</div>
-<div data-bodyclass='d3-drought'>SANE</div>
-<div>Find <em>these examples</em> and <strong>more</strong> in Kai Chang's <a href="http://exposedata.com/talk/d3-geo/">d3.geo presentation</a>.</div>
-<div>D3 is <strong>very powerful</strong>, but has a <em>steep learning curve</em>.</div>
-
 <div><strong>Alright.</strong> Here's the part you've <em>all been waiting for</em>...</div>
-<div><strong>Stephanie rants about web cartography!!!</strong></div>
-<div><a href="http://en.wikipedia.org/wiki/Mashup_(web_application_hybrid)">Mashups</a>: A type of mapping specific to the web that has evolved based on <em>slippy maps</em>.</div>
-<div>A <strong>mashup</strong> combines a <em>basemap</em> with a <em>data layer</em>.</div>
+<div>How to make a <strong>mashup</strong> without a <em>platform</em>.</div>
 <div data-bodyclass='mashup'></div>
-<div>It's always a <strong>slippy map</strong>.</div>
+<div>The <em>basemap</em> is a <strong>slippy map</strong>.</div>
 <div>The data can come from a <em>local file</em> or an <em>API</em>.</div>
-<div data-bodyclass='cats'>It can make for <strong>really bad</strong> cartography.</a></div>
-<div>But <em>mashups</em> have come a <strong>long way</strong>!</div>
-<div>You'll recognize this: <em>basemap</em> + <strong>data</strong></div>
-<div data-bodyclass='basemap1'></div>
-<div data-bodyclass='basemap2'></div>
-<div data-bodyclass='basemap3'></div>
-<div data-bodyclass='basemap4'></div>
-<div data-bodyclass='basemap5'></div>
-<div data-bodyclass='basemap6'></div>
 <div><strong>Filetypes:</strong> sometimes you can use <em>shapefiles</em>, but <strong>KML</strong> is more common. More recently, <a href="http://github.com/lyzidiamond/learn-geojson" target="_blank">GeoJSON</a> is the jam.</div>
 <div>We'll talk more about <strong>GeoJSON</strong> next week!</div>
 <div data-bodyclass='api'></div>
-<div>There are now lots of <em>APIs</em> that support <strong>mashups</strong>.</div>
+<div>There are now lots of <em>APIs</em> that deliver <strong>data</strong>.</div>
 <div>For example: <a href="https://developers.google.com/maps/documentation/javascript/">Google Maps API</a> / <a href="http://www.microsoft.com/maps/choose-your-bing-maps-API.aspx">Bing Maps API</a> / <a href="http://developer.here.com/web/guest/javascript-apis">Nokia HERE Maps API</a> / <a href="https://developers.arcgis.com/en/javascript/">ESRI ArcGIS API</a></div>
 <div>And there are <em>Javascript libraries</em> that support the <strong>common functions</strong> we need to integrate map tiles and other data.</div>
 <div>What does a <em>JavaScript mapping library</em> do?</div>
