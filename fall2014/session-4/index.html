@@ -5,11 +5,15 @@
     background-image: url(./images/osmfail.png);
     background-repeat: no-repeat;
     background-position: center 1px;
+    background-size: 100%;
   }
   .leaflet-gj {
     background-image: url(./images/leaflet-gj.png);
     background-repeat: no-repeat;
     background-position: center 1px;
+    background-size: 100%;
+    text-shadow: 0.2em 0.2em #000;
+
   }
   .geojson {
     background-image: url(./images/geojson.png);
@@ -34,7 +38,8 @@
   .earthquakesgist {
     background-image: url(./images/earthquakesgist.png);
     background-repeat: no-repeat;
-    background-position: center 1px;
+    background-position: center 50px;
+    background-size: 100%;
   }
   .gistmap {
     background-image: url(./images/gistmap.png);
@@ -46,6 +51,27 @@
     background-repeat: no-repeat;
     background-position: center 1px;
   }
+  .editathon {
+    background-image: url(http://content.stamen.com/files/editathon_panorama.jpg);
+    background-repeat: no-repeat;
+    background-position: center 100px;
+    background-size: 100%;
+    text-shadow: 0.2em 0.2em #000;
+  }
+  .mapboxdata {
+    background-image: url(./images/mapboxdata.png);
+    background-repeat: no-repeat;
+    background-position: center 100px;
+    background-size: 100%;
+    text-shadow: 0.2em 0.2em #000;
+  }
+  .mapboxquakes {
+    background-image: url(./images/mapboxquakes.png);
+    background-repeat: no-repeat;
+    background-position: center 100px;
+    background-size: 100%;
+    text-shadow: 0.2em 0.2em #000;
+  }
 </style>
 <script src='../../big.js'></script>
 </head><body>
@@ -53,6 +79,10 @@
 <div>Web Mapping <em>Quickstart</em></div>
 <div>This is our <strong>last week together</strong>. <em>:(</em></div>
 <div>So let's go out with a <strong>bang</strong>!</div>
+<div>But <em>before we start</em>, here's some <em>info</em> on another <strong>event</strong> you should come to.</div>
+<div>This <strong>Saturday</strong> is the <em>OpenStreetMap-US Fall Editathon</em>!</div>
+<div>People <strong>all over the country</strong> will be editing OSM <em>at the same time</em> and you should <strong>join us</strong>!</div>
+<div data-bodyclass='editathon'><em>OSM Fall Editathon!</em><br><ul><li>Saturday, November 15th</li><li>12pm-6pm (drop by anytime)</li><li>Stamen Design, 2017 Mission Street, SF (16th & Mission)</li><li><a href='http://www.meetup.com/Bay-Area-OpenStreetMappers/events/213663192/'>More info and RSVP</a></li></ul></div>
 <div>Today is <em>Session 4:</em> Advanced Web Mapping</div>
 <div><strong>Follow along</strong> by opening <em>Chrome</em> and typing this:<br><br><pre>http://mizmay.github.io<br>/web-map-quickstart<br>/fall2014/session-4</pre></div>
 <div>Wherever you see text like <a href='#'>this</a>, it's a <strong>link</strong>.</div>
@@ -66,7 +96,7 @@
 <div data-bodyclass='osmfail'></div>
 <div>What makes data <em>geographic</em>?</div>
 <div>It is <strong>information</strong> that has a <strong>location</strong> tied to it.</div>
-<div>Geographic data can be <em>raster</em>(<strong>pixels</strong>) or <em>vector (<strong>points</strong>, <strong>lines</strong>, <strong>polygons</strong>) data.</div>
+<div>Geographic data can be <em>raster</em> (<strong>pixels</strong>) or <em>vector</em> (<strong>points</strong>, <strong>lines</strong>, <strong>polygons</strong>) data.</div>
 <div>Vectors first.</div>
 <div>Vector geo data has <em>three</em> things: <strong>geometry</strong>, a <strong>location</strong>, and <strong>attribute information</strong>.</div>
 <div>Most common: <em><a href='http://geojson.org'>GeoJSON</a></em>.</div>
@@ -93,12 +123,13 @@
 <div>See the <a href="http://geojson.org">specification</a> for a full list of geometry types.</div>
 <div><pre><span>"coordinates": [ -122.65, 45.51 ]</span></pre></div>
 <div>For <em>lines</em> or <em>polygons</em>, this will be a <strong>series of coordinate pairs</strong>.</div>
-<div>All together now: <pre><span>"geometry": <br>  { "type": "Point",<br>    "coordinates": <br>      [ - 122.65, 45.51 ]<br>  }</span></pre></div>
+<div>All together now: <pre><span style='display: block;'>"geometry": <br>  { "type": "Point",<br>    "coordinates": <br>      [ - 122.65, 45.51 ]<br>  }</span></pre></div>
 <div>Third: <pre><span>"properties"</span></pre></div>
 <div>Like <pre><span>"geometry"</span></pre><pre><span>"properties"</span></pre> also has an <em>object</em> as its value.</div>
 <div>Inside of that object, you can add whatever properties you want.</div>
-<div><pre><span>"properties":<br>  { <br>    "name": "Lyzi", <br>    "age": 25, <br>    "city": "Oakland, CA" <br>  }</span></pre></div>
+<div><pre><span style='display: block;'>"properties":<br>  { <br>    "name": "Lyzi", <br>    "age": 25, <br>    "city": "Oakland, CA" <br>  }</span></pre></div>
 <div>This gives us a <strong>GeoJSON object</strong>:</div>
+<div data-bodyclass='geojson'></div>
 <div>Most GeoJSON datasets you will come across have <em>more than one</em> feature in them.</div>
 <div>This is written as a <strong>FeatureCollection</strong> that contains all of the features.</div>
 <div data-bodyclass='featurecollection'></div>
@@ -109,7 +140,7 @@
 <div>How do we <strong>use</strong> a GeoJSON file?</div>
 <div>Let me count the ways...</div>
 <div>Let's first <em>download</em> a geojson file.</div>
-<div>Head over to <a href="http://bit.ly/earthquake-data">bit.ly /earthquake-data</a>.</div>
+<div>Head over to <a href="http://bit.ly/earthquake-data">bit.ly/earthquake-data</a>.</div>
 <div>Scroll down and right-click to save the GeoJSON for <strong>Past Day M2.5+ earthquakes</strong>.</div>
 <div data-bodyclass='earthquakedata'></div>
 <div>Once you have it downloaded, <em>open it</em> in a text editor. Or, you can just <em>click</em> on the link to see it in the browser.</div>
@@ -127,19 +158,24 @@
 <div>If you <em>click</em> on one of the map markers, you will see the information in <strong>properties</strong> for each earthquake.</div>
 <div data-bodyclass='earthquakeprops'></div>
 <div>This map, like some of the others we've seen, is <strong>embeddable</strong>. Head to <a href="http://bit.ly/github-maps">bit.ly/github-maps</a> to learn more about that.</div>
-
-
-<div>THIS IS WHERE THE UNEDITED MATERIAL STARTS</div>
-
-<div>Let's say we want a <em>little</em> more customization of our map. We can use <strong>Mapbox</strong>'s in-browser editor.</div>
-<div>Head over to <a href="http://mapbox.com/">mapbox.com</a>. If you have an account, log-in. If you don't, use this one: <pre><span>username: beginningmaps</span></pre><pre><span>password: maps4beginners</span></pre></div>
+<div>This is <em>super handy</em> if you have a <strong>GeoJSON file</strong> and want to make a <em>quick map</em>.</div>
+<div>But <em>as you can see</em>, there aren't any tools for <strong>customizing</strong> this map.</div>
+<div>If we want to <em>customize</em> it, we can do it with one of the <strong>in-browser tools</strong> we learned about <em>two weeks ago</em>.</div>
+<div>Open a <strong>new tab</strong> and head over to <a href="http://mapbox.com/">mapbox.com</a> and log in.</div>
 <div>Click <em>Projects</em> at the top, and then <em>Create Project</em>.</div>
-<div><img src="./images/mapboxdata.png" />Click <strong>Data</strong> at the top, then <strong>import</strong>.</div>
+<div data-bodyclass='mapboxdata'>Click <strong>Data</strong> at the top, then <strong>import</strong>.</div>
 <div>Select the <em>earthquakes GeoJSON file</em> you downloaded before.</div>
 <div>You now have the option of selecting what <strong>property</strong> you'd like to use for popups, how you'd like to <strong>style</strong> your markers, and so on.</div>
 <div><em>Make your selections</em> for each of the tabs and click <strong>Finish importing</strong>.</div>
-<div><img src="./images/mapboxquakes.png" /></div>
+<div data-bodyclass='mapboxquakes'></div>
 <div>You can also <strong>customize the basemap</strong> using the <em>Style</em> tab at the top, and share the map via the <em>Project</em> tab.</div>
+<div><strong>So cool!</strong> We made our own <em>custom map</em> with our <em>own data</em>!</div>
+<div><strong>"Big deal,"</strong> you're saying to yourself. <strong>"We did that with CartoDB two weeks ago!"</strong></div>
+<div>This is <em>true</em>, except that we used a <strong>shapefile</strong>, and this map uses <em>GeoJSON</em>.</div>
+<div><strong>Why</strong> is this important?</div>
+<div><em>GeoJSON</em> is just <strong>JavaScript</strong>, which means it's just <em>text</em>.</div>
+<div>That makes it <strong>super easy</strong> to edit!</div>
+<div>Head to <a href='http://geojson.io'>geojson.io</a>. This is a tool for <em>creating</em> and <em>editing</em> GeoJSON files.</div>
 
 
 
@@ -147,64 +183,6 @@
 
 <div>THIS IS WHERE THE OLD MATERIAL STARTS</div>
 
-<div>Welcome Back</div>
-<div>Two weeks ago: <em>Session 1</em></div>
-<div>Web mapping <em>platforms</em> and <em>projects</em></div>
-<div>Last week: <em>Session 2</em></div>
-<div>Web mapping from <em>scratch</em></div>
-<div>This week: <em>Session 3</em></div>
-<div>Advanced web mapping</div>
-<div><ul><li><em>Design</em> and <em>cartography</em> principles for the web</li><li>More on <em>styling</em> and <em>interaction</em> (html, CSS, Javascript, CartoCSS)</li><li>Tilemill</li></div>
-<div>In print cartography, there are dozens of map types:</div>
-<div>Reference Maps</div>
-<div><table><tr><td><img src="wayfinding.png"></td><td>Wayfinding</td></tr></table></div>
-<div><img src="wayfinding2.png"></div>
-<div><table><tr><td>Transit</td></tr><tr><td><img src="transit.png"></td></tr></table></div>
-<div><table><tr><td>Navigation</td></tr><tr><td><img src="navigation.png"></td></tr></table></div>
-<div><img src="bartmap.gif"></div>
-<div><table><tr><td>Topographic</td></tr><tr><td><img src="topographic.png"></td></tr></table></div>
-<div>Thematic Maps</div>
-<div><img src="TeamGB_medalists.png"></div>
-<div><img src="cartogram.jpg"></div>
-<div><img src="dotdensity.png"></div>
-<div><img src="dotmap.png"></div>
-<div>We are entering the <em>GOLDEN AGE</em> of web mapping:</div>
-<div>There are <em>libraries</em> and <em>APIs</em> and <em>tutorials</em> to help you translate these map types to the web.</div>
-<div>... (but only a subset of these are easy with out-of-the box tools)</div>
-<div><em>Historically</em> web mapping has evolved without much <em>cartographic theory</em>...</div>
-<div>There was <em>Google</em> and then there were <em>mashups</em></div>
-<div><table><tr><td><img src="mashup.jpg"></td><td><a href="http://www.programmableweb.com/news/5-years-ago-today-web-mashup-was-born/2010/04/08">HousingMaps.com</a>, by Paul Rademacher, 2005</tr></table></div>
-<div>... which led to an <em>explosion</em> in special thematic maps</div>
-<div><img src="../session-2/cats.png"></div>
-<div>... and also this question in the minds of many cartographers:</div>
-<div><table><tr><td><img src="wings.gif"></td><td><img src="hummingbird.jpg"></td><td><img src="butterfly.jpg"></td></tr><tr colspan=3>Are web maps and print maps <em>homologous</em> or <em>analagous</em>?</table></div>
-<div><ul><li><a href="http://en.wikipedia.org/wiki/Dot_distribution_map#One-to-one" target="_blank">one-to-one dot maps</a></li><li><a href="http://en.wikipedia.org/wiki/Choropleth_map" target="_blank">choropleth</a> or <a href="http://wiki.gis.com/wiki/index.php/Chorochromatic_Maps" target="_blank">chorochromatic</a> maps</li><li>'<a href="http://xkcd.com/1138/" target="_blank">heatmaps</a>'</li></ul></div>
-<div><img src="webdotmap.png"></div>
-<div><img src="poly.png"></div>
-<div><img src="heatmap.png"></div>
-<div>I am not fond of heat maps.</div>
-<div>The term '<em>heatmap</em>' is imprecise. Isopleth? Point density? Interpolation?</div>
-<div><img src="interpolation.png"></div>
-<div>On the web it usually means <em>kernel density</em> and usually just shows <a href="http://xkcd.com/1138/" target="_blank">population density</a></div>
-<div><img src="heatmap_xkcd.png"></div>
-<div>Where the points are sparse or coincident, <em>kernel density</em> generates a meaningless blur:</div>
-<div><table><tr><td><img src="hmblur2.png"></td></tr><tr><td><img src="hmblur.png"></td></tr></table></div>
-<div>Common Js libraries that generate 'heatmaps' dynamically use zoom level as a proxy for kernel size, which <em>makes no sense</em> analytically.</div>
-<div><img src="kerneldensity.png"></div>
-<div>The default color scheme is horrid (nicknames: "<em>Tacky Angry Rainbow</em>" and "<em>Angry Fruit Salad</em>").</div>
-<div><figure><img src='tackyangryrainbow.png' alt='Tacky Angry Rainbow' /><figcaption>Tacky Angry Rainbow</figcaption></figure></div>
-<div><figure><img src='arbitraryheatmap.png' alt='Angry Fruit Salad' /><figcaption>Angry Fruit Salad</figcaption></figure></div>
-<div>They arise from demand from people who don't know what they are doing, but know they want to show a lot of points on a map.</div>
-<div>Alternative: clustering</div>
-<div><img src="googlegeo.png"></div>
-<div>Entirely different although it looks similar: <a href="http://support.esri.com/en/knowledgebase/GISDictionary/term/dot%20density%20map">dot density maps</a></div>
-<div><iframe src="http://demographics.coopercenter.org/DotMap/index.html" width="1200" height="800" frameborder="0" scrolling="no"></iframe></div>
-<div>Someone clever putting a lot of points on maps quite artfully: <a href="https://www.flickr.com/photos/walkingsf/sets/">Eric Fischer</a></div>
-<div><table><tr><td><img src="enf_nyc.jpg"></td></tr></table></div>
-<div><table><tr><td><img src="enf_london.jpg"></td></tr></table></div>
-<div><table><tr><td><img src="enf_sf.jpg"></td></tr></table></div>
-<div>In general all of these examples follow certain <em>slippy map</em> and <em>mashup</em> paradigms, which we talked about last time.</div>
-<div><img src="../session-2/anatomy/anatomy-of-a-web-map.png"></div>
 <div>The <em>hottest</em> other option right now is <em>D3</em>.</div>
 <div>D3 is a <em>Javascript library</em> built for data visualization.</div>
 <div>In all the best and worst ways:</div>
@@ -215,45 +193,17 @@
 <div>If you want to learn D3, <a href="https://twitter.com/alignedleft">Scott Murray</a> who <a href="http://www.usfca.edu/Faculty/Scott_Murray/">teaches at USF</a> has some <a href="http://alignedleft.com/tutorials/d3">great resources</a>.</div>
 <div>I also like <a href="https://www.dashingd3js.com/">DashingD3js.com</a></div>
 <div>...there are other mapping libraries out there that can handle different projections, distortions, and animations... plus <a href="http://gis.stackexchange.com/questions/8032/how-do-various-javascript-mapping-libraries-compare">whatever else you want to do</a>.</div>
-<div>We should still strive for sound <em>cartography</em> in <em>mashups</em>.</div>
-<div>A few high level concepts from cartography, which is a <em>visual</em> enterprise:</div>
-<div>1. Visual variables</div>
-<div><table><tr><td><img src="visual_variables.png"></td></tr></table></div>
-<div><table><tr><td><img src="visual_variables2.png"></td></tr></table></div>
-<div>2. Visual hierarchy</div>
-<div><table><tr><td><img src="82_congo_elements_plopped.gif"></td><td>BAD<br>←<br><br>GOOD <br>→ </td><td><img src="83_congo_portrait.gif"></td></tr></table></div>
-<div>3. Visual argument</div>
-<div><table><tr><td><img src="visual_argument.png"></td></tr></table></div>
-<div>An important concept for web cartography is "<em>screen real-estate</em>"</div>
-<div><table><tr><td><img src="phonemap.jpg"></td></tr></table></div>
-<div><ul><li>Space is scarce</li><li>Mobile vs. desktop</li><li>Fluid vs. compartmentalized layout</li></div>
-<div>Slippy map is a way around all of this but.... for some maps it is overkill & potentially a cop-out.</div>
-<div><iframe src="http://leafletjs.com/examples/choropleth-example.html" width="1200" height="800" frameborder="0" scrolling="no"></iframe></div>
-<div>The main thing the web brings to cartography is <em>interactivity</em>, which can take many forms.</div>
-<div>In web design and development, people make entire careers out of designing for interactivity. The field is called <em>UI/UX</em>, which is shorthand for <em>user interface and user experience</em>.</div>
-<div>It means you think through how people who visit your site will interact with it, and you design the <em>interface</em> to guide the user toward the <em>experience</em> you want them to have.</div>
-<div>UI/UX is a really important component of web mapping.</div>
-<div>Project managers creating government web portals for geospatial data, I am talking to you.</div>
-<div>For this reason, while it makes sense in print cartography to talk about <em>map readers</em>, in web cartography we talk about <em>map users</em>.</div>
 <div>In our first session, we saw some forms of interactivity that are <em>standard</em> in out of the box tools.</div>
 <div>Panning & Zooming</div>
 <div><table><tr><td><img src="panzoom.png"></td></tr></table></div>
 <div>Info Boxes</div>
-<div><table><tr><td><img src="infobox.png"></td></tr></table></div>
 <div>Tooltips</div>
-<div><iframe src="http://www.greenpeace.org/international/Global/international/code/2012/marine-reserves-map/index.html" width="1200" height="800" frameborder="0" scrolling="no"></iframe></div>
 <div>Highlighting</div>
-<div><iframe src="http://cf.datawrapper.de/YI8Ha/22/" frameborder="0" allowtransparency="true" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen width="800" height="600"></iframe></div>
 <div>Charts</div>
-<div><table><tr><td><img src="chart.png"></td></tr></table></div>
 <div>Embedded images/video</div>
-<div><table><tr><td><img src="embed.png"></td></tr></table></div>
 <div>Geocode box</div>
-<div><table><tr><td><img src="geocode.png"></td></tr></table></div>
 <div>"Zoom to my location" button</div>
-<div><table><tr><td><img src="gotolocation.png"></td></tr></table></div>
 <div>Animation</div>
-<div><iframe src="http://cartodb.github.com/oldweather_wwi/" width="1000" height="800" frameborder="0" scrolling="no"></iframe></div>
 <div>All these <em>whizz-bangs</em> are neato!</div>
 <div>Let's play with a web map: In Chrome go to: <a href="http://leafletjs.com/examples/mobile.html">leafletjs.com/examples/mobile.html</a></div>
 <div>Click on Menu > Tools > View Source & copy/paste all the text you see into a text editor.</div>
