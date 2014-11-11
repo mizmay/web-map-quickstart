@@ -72,6 +72,70 @@
     background-size: 100%;
     text-shadow: 0.2em 0.2em #000;
   }
+  .geojsonio1 {
+    background-image: url(./images/geojsonio1.png);
+    background-repeat: no-repeat;
+    background-position: center 100px;
+    background-size: 100%;
+    text-shadow: 0.2em 0.2em #000;
+  }
+  .drawmarker {
+    background-image: url(./images/drawmarker.png);
+    background-repeat: no-repeat;
+    background-position: center 100px;
+    background-size: 100%;
+    text-shadow: 0.2em 0.2em #000;
+  }
+  .gj-save {
+    background-image: url(./images/gj-save.png);
+    background-repeat: no-repeat;
+    background-position: center 100px;
+    background-size: 100%;
+    text-shadow: 0.2em 0.2em #000;
+  }
+  .wired-internet {
+    background-image: url(http://www.wired.com/wp-content/uploads/blogs/opinion/wp-content/uploads/2014/01/internet-freedom.jpg);
+    background-repeat: no-repeat;
+    background-position: center 100px;
+    background-size: 100%;
+    text-shadow: 0.2em 0.2em #000;
+  }
+  .facebook {
+    background-image: url(./images/facebook.png);
+    background-repeat: no-repeat;
+    background-position: center 100px;
+    background-size: 100%;
+    text-shadow: 0.2em 0.2em #000;
+  }
+  .status {
+    background-image: url(./images/status.png);
+    background-repeat: no-repeat;
+    background-position: center 100px;
+    background-size: 100%;
+    text-shadow: 0.2em 0.2em #000;
+  }
+  .404 {
+    background-image: url(http://httpstatusdogs.com/wp-content/uploads/2011/12/404.jpg);
+    background-repeat: no-repeat;
+    background-position: center 100px;
+    background-size: 100%;
+    text-shadow: 0.2em 0.2em #000;
+  }
+  .200 {
+    background-image: url(http://httpstatusdogs.com/wp-content/uploads/200.jpg);
+    background-repeat: no-repeat;
+    background-position: center 100px;
+    background-size: 100%;
+    text-shadow: 0.2em 0.2em #000;
+  }
+  .500 {
+    background-image: url(http://httpstatusdogs.com/wp-content/uploads/500.jpg);
+    background-repeat: no-repeat;
+    background-position: center 100px;
+    background-size: 100%;
+    text-shadow: 0.2em 0.2em #000;
+  }
+
 </style>
 <script src='../../big.js'></script>
 </head><body>
@@ -176,6 +240,58 @@
 <div><em>GeoJSON</em> is just <strong>JavaScript</strong>, which means it's just <em>text</em>.</div>
 <div>That makes it <strong>super easy</strong> to edit!</div>
 <div>Head to <a href='http://geojson.io'>geojson.io</a>. This is a tool for <em>creating</em> and <em>editing</em> GeoJSON files.</div>
+<div data-bodyclass='geojsonio1'></div>
+<div>In the <strong>top left</strong>, click <em>Open</em> and then click <em>File</em>.</div>
+<div>Select the <strong>earthquakes.json</strong> file we downloaded earlier.</div>
+<div>Let's pretend there's <em>another earthquake</em> we need to add to the dataset.</div>
+<div data-bodyclass='drawmarker'></div>
+<div data-bodyclass='gj-save'>When you're done, click <strong>Save</strong> and then click <strong>GeoJSON</strong>. Your download should start!</div>
+<div>Note the <em>other</em> options in the list:<br><br><ul><li>GitHub</li><li>Gist</li><li>TopoJSON</li><li>CSV</li><li>KML</li><li>Shapefile</li></ul></div>
+<div>If <strong>nothing else</strong>, this should give you an <em>idea</em> of the importance of <strong>data conversion</strong> in web mapping (and just geo).</div>
+<div>Some data types <em>do well</em> on the web, and some do <strong>not</strong>.</div>
+<div><em>GeoJSON</em> does well. <strong>Shapefiles</strong> do not.</div>
+<div>(Except if you're using <em>ArcGIS Online</em>. CartoDB <strong>takes</strong> shapefiles but <em>converts them</em> before mapping.)</div>
+<div>Let's <em>pause</em> for a second and talk about <strong>the Internet</strong>.</div>
+<div>(Preemptive thanks to the many sources used to write up this section.)</div>
+<div>What is the Internet?</div>
+<div data-bodyclass='wired-internet'>The Internet is a bunch of connected computers communicating with each other.</div>
+<div>Each computer has a <em>unique address</em>, called an <strong>IP address</strong>.</div>
+<div>When you type a <strong>URL</strong> into your <strong>browser</strong> and press <strong>Enter</strong>, you're sending a <em>message</em> to another computer (that also has a <em>unique address</em>) and asking for a <strong>web page</strong>.</div>
+<div>In order for that message to be sent, a couple things need to happen.</div>
+<div>First, your computer's operating system needs to translate the URL you typed into an IP address. It usually does that by querying a DNS (Domain Name System) using UDP (User Datagram Protocol).</div>
+<div>Protocols are standards for communication between computers.</div>
+<div>To quote my friend Jason, DNS "is like a phone book to figure out the address of another computer, the server, from the name in the URL."</div>
+<div>Once your computer figures out the IP address, your browser tries to make a connection with the web server at that address using TCP (Transmission Control Protocol).</div>
+<div>After they connect, your browser can actually send the message, saying, "Sup bro, gimme that webpage." It sends the message using yet another protocol: HTTP (Hyper Text Transfer Protocol).</div>
+<div>Protocols are standards for communication between computers. With computers, we have to be very specific.</div>
+<div>There are several types of requests a browser can make. The two that are most important to know about are GET and POST.</div>
+<div>Let's say you want to go to Facebook. You go to your browser and type <pre>facebook.com</pre> into the URL bar.</div>
+<div>Your browser uses DNS over UDP to find the IP address of facebook.com, opens up a connection using TCP, then uses HTTP to send a request to the web server asking for the Facebook web page.</div>
+<div>The request sent comes with a few items:<br><ol><li>The type of request. In this case, it's a GET request.</li><li>The URI (Uniform Resource Identifier) of the webpage being requested (a URL is also a URI).</li><li>The version of HTTP being used (1.0 or 1.1).</li></ol></div>
+<div>Once the web server interprets the request, it finds the requested web page and sends it back to your browser.</div>
+<div data-bodyclass='facebook'>This is what you see!</div>
+<div data-bodyclass='status'>Now let's say you decide to post a status update. You do so, and press Post.</div>
+<div>The communication that happens here is quite similar:</div>
+<div><ol><li>Your browser uses DNS over UDP to find the IP address of the web server that is going to handle your request.</li><li>Your browser opens up a connection to that web server over TCP.</li><li>Once the connection is made, your browser uses HTTP to send a request to the web server.</li></ol></div>
+<div>HOWEVER</div>
+<div>We are sending some information with our request this time. We want to post a status.</div>
+<div>This time, we are making a POST request and sending some information along with it.</div>
+<div>Just like an HTML page has a head and a body, so does an HTTP request.</div>
+<div>The content of our status update (the information we're sending) goes into the body of the request.</div>
+<div>The web server takes that update and makes sure it ends up on our profile page.</div>
+<div>We've spent a bit of time talking about the requests, but what about the responses from the web server?</div>
+<div>Those also have some required components.</div>
+<div>Most notably, a response includes an HTTP Status Code.</div>
+<div>You probably know at least one of them:</div>
+<div data-bodyclass='404'></div>
+<div>A successful page retrieval triggers a 200 status code.</div>
+<div data-bodyclass='200'></div>
+<div>The third most common response is 500, which means the server had a problem filling the request.</div>
+<div data-bodyclass='500'></div>
+
+
+
+
 
 
 
