@@ -180,9 +180,57 @@
     text-shadow: 0.2em 0.2em #000;
   }
   .catnews-body {
-    background-image: url(./images/getjson.png);
+    background-image: url(./images/catnews-body.png);
     background-repeat: no-repeat;
     background-position: center 100px;
+    background-size: 100%;
+    text-shadow: 0.2em 0.2em #000;
+  }
+  .cat-icon {
+    background-image: url(./images/cat-icon.png);
+    background-repeat: no-repeat;
+    background-position: center 100px;
+    text-shadow: 0.2em 0.2em #000;
+  }
+  .leaflet-gj-spec {
+    background-image: url(./images/leaflet-gj-spec.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 100%;
+    text-shadow: 0.2em 0.2em #000;
+  }
+  .catnews-js {
+    background-image: url(./images/catnews-js.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 100%;
+    text-shadow: 0.2em 0.2em #000;
+  }
+  .catnews-github {
+    background-image: url(./images/catnews-github.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 100%;
+    text-shadow: 0.2em 0.2em #000;
+  }
+  .catnews-instructions {
+    background-image: url(./images/catnews-instructions.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 60%;
+    text-shadow: 0.2em 0.2em #000;
+  }
+  .new-pr {
+    background-image: url(./images/new-pr.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 100%;
+    text-shadow: 0.2em 0.2em #000;
+  }
+  .new-pr2 {
+    background-image: url(./images/new-pr2.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
     background-size: 100%;
     text-shadow: 0.2em 0.2em #000;
   }
@@ -373,80 +421,53 @@
 <div>Head to <pre>lyzidiamond.com/catnews</pre>. This is a map for aggregating <em>news about cats</em>.</div>
 <div data-bodyclass='catnews'></div>
 <div><strong>View the source</strong> for this page, and note how it's <em>different</em> from our other example: namely, all the <strong>JavaScript</strong> is in an <em>external file</em>.</div>
-<div>Towards the <strong>bottom</strong> of the page, you'll see a script link titled catnews.js. Click on that link.</div>
-<div data-bodyclass='catnews-body'></div>
-<div>What exactly is going on here?</div>
-<div>This map uses Mapbox.js, which is an extension of Leaflet.js. The important parts of what we're talking about are no different between the two libraries.</div>
-<div data-bodyclass='map-init'>First we initialize a map and set some options.</div>
-<div data-bodyclass='cat-icon'>Then we define a variable <pre>cat</pre> as a Leaflet icon that's a little cat face. That's how we create a custom map marker.</div>
-<div data-bodyclass='oneachfeature'>Then we define a function called <pre>onEachFeature</pre>. This function contains actions that should be executed for each feature on the map, and is used when creating Leaflet GeoJSON objects.</div>
-<div>This script uses it to add a popup to each feature.</div>
-<div data-bodyclass='getjson'>And finally, this is how we magically add our catnews.json file to the map.</div>
-<div>In order to make this magic work, we need to use another library called jQuery.</div>
-<div>jQuery is a JavaScript library that can make developing way easier, as it takes some of the complicated parts of the language and synthesizes them into easy-to-use pieces.</div>
-<div>In our case, we're using a jQuery method called getJSON. This method goes to a web address, retrieves JSON data, and then executes some other function with the data once it's retrieved.</div>
-<div>The cool and magical thing about it is that it is asynchronous. While the getJSON method is waiting for the data, the page can keep loading!</div>
-<div>Then, when the data is finally retrieved, the method knows to execute the other function, known as a callback function.</div>
-<div data-bodyclass='getjson'>What data is the getJSON method getting?</div>
-<div>catnews.geojson, which is point locations of news articles about cats.</div>
-<div data-bodyclass='getjson'>What is our callback function doing?</div>
-
-<div>NOT SURE THIS WILL BE INCLUDED</div>
-<div>Just to bring it all back full circle...</div>
-<div>Notice the location of the catnews.geojson file. It's located in the same domain as our webpage.</div>
-<div>(That is to say, they are both hosted on lyzidiamond.com).</div>
-<div>But if the data was living on another domain, we'd have a problem.</div>
-<div>Earlier, we discussed how browsers make HTTP requests to web servers to retrieve content. If this content is a web page, that's totally cool.</div>
-<div>But the internet has rules about what kinds of data can be transported and how they can be transported.</div>
-<div>One important one is the same-origin policy.</div>
-<div>This is a safety measure that prevents scripts in webpages from requesting information from a different domain.</div>
-<div>Great for keeping out bad scripts, but annoying for us map-makers!</div>
-<div>When you get data from an API to put on your map, it's most likely coming from a different domain.</div>
-<div>Fortunately, people have found a way around this. It's called JSONP.</div>
-
-
-
-
-
-
-<div>THIS IS WHERE THE OLD MATERIAL STARTS</div>
-
-<div>The <em>hottest</em> other option right now is <em>D3</em>.</div>
-<div>D3 is a <em>Javascript library</em> built for data visualization.</div>
-<div>In all the best and worst ways:</div>
-<div><img src="../session-2/anatomy/d3-examples/geo.png">D3</div>
-<div><img src="../session-2/anatomy/d3-examples/racial-divide.png">IS</div>
-<div><img src="../session-2/anatomy/d3-examples/topojson.png">IN</div>
-<div><img src="../session-2/anatomy/d3-examples/drought.png">SANE</div>
-<div>If you want to learn D3, <a href="https://twitter.com/alignedleft">Scott Murray</a> who <a href="http://www.usfca.edu/Faculty/Scott_Murray/">teaches at USF</a> has some <a href="http://alignedleft.com/tutorials/d3">great resources</a>.</div>
-<div>I also like <a href="https://www.dashingd3js.com/">DashingD3js.com</a></div>
-<div>...there are other mapping libraries out there that can handle different projections, distortions, and animations... plus <a href="http://gis.stackexchange.com/questions/8032/how-do-various-javascript-mapping-libraries-compare">whatever else you want to do</a>.</div>
-<div>In our first session, we saw some forms of interactivity that are <em>standard</em> in out of the box tools.</div>
-<div>Panning & Zooming</div>
-<div><table><tr><td><img src="panzoom.png"></td></tr></table></div>
-<div>Info Boxes</div>
-<div>Tooltips</div>
-<div>Highlighting</div>
-<div>Charts</div>
-<div>Embedded images/video</div>
-<div>Geocode box</div>
-<div>"Zoom to my location" button</div>
-<div>Animation</div>
-<div>All these <em>whizz-bangs</em> are neato!</div>
-<div>Let's play with a web map: In Chrome go to: <a href="http://leafletjs.com/examples/mobile.html">leafletjs.com/examples/mobile.html</a></div>
-<div>Click on Menu > Tools > View Source & copy/paste all the text you see into a text editor.</div>
-<div>File > Save As > mobile.html <br>(remember where you save it!)</div>
-<div>This tutorial uses a function from the Leaflet library to zoom to your approximate location.</div>
-<div>To make it work, you probably need a <em>web server</em> running.</div>
-<div>If you are on a mac or a Windows or Linux machine with Python installed and globally available, type: <br><em>python -m SimpleHTTPServer</em></div>
-<div><table><tr><td><img src="simplehttpserver.png"></table></tr></td></div>
-<div>Type "<em>localhost:8000</em>" into an new browser window & navigate to where you saved mobile.html</div>
-<div>We'll go through it chunk by chunk.</div>
-<div>Can you figure out how to switch the basemap to the Stamen toner tiles we used last week?</div>
-<div>CartoCSS</div>
-<div>For example:</div>
-<div><img src="cartocss.png"></div>
-<div>CartoCSS is based on CSS. Some things to understand:<ul><li>Just like with CSS, rules are applied in order. Later ones overwrite earlier ones.</li><li>There are <em>#selectors</em> which are like layers.</li><li>You can display your data as <em>points</em> or <em>lines</em> or <em>text</em> depending on what <em>symbolizer</em> you use.</li></ul></div>
-<div>Thanks everyone! See you on the interwebs: <em>@mizmay</em>....</div>
+<div>Towards the <strong>bottom</strong> of the page, you'll see a <em>script link</em> titled <strong>catnews.js</strong>. <em>Click</em> on that link.</div>
+<div data-bodyclass='catnews-body'><br><br>What exactly is going on here?</div>
+<div>This map uses <em>Mapbox.js</em>, which is an extension of <em>Leaflet.js</em>. The <strong>important parts</strong> of what we're talking about are <strong>no different</strong> between the two libraries.</div>
+<div data-bodyclass='map-init'><br><br>First, we <em>initialize</em> a map and set some <strong>options</strong>.</div>
+<div data-bodyclass='cat-icon'><br><br><br>Then we define <strong>a variable</strong> <pre>cat</pre> as a <em>Leaflet icon</em> that's a little cat face. That's how we create a <strong>custom map marker</strong>.</div>
+<div data-bodyclass='oneachfeature'><br><br><br><br>Next, we <strong>define a function</strong> called <pre>onEachFeature()</pre>. This function contains <em>actions</em> that should be <em>executed for each feature on the map</em>, and is used when <strong>creating Leaflet GeoJSON objects</strong>.</div>
+<div>This script uses <pre>onEachFeature()</pre> to <em>add a popup</em> to each feature.</div>
+<div data-bodyclass='oneachfeature'></div>
+<div data-bodyclass='catnews-popups'></div>
+<div data-bodyclass='getjson'><br><br><br><br>And finally, this is how we <strong>magically</strong> add our <em>catnews.json</em> file to the map.</div>
+<div>In order to make <strong>this magic</strong> work, we need to use another library called <em>jQuery</em>.</div>
+<div><em>jQuery</em> is a <strong>JavaScript library</strong> that can make developing <em>way easier</em>. It takes some of the <strong>complicated</strong> parts of the language and <em>synthesizes</em> them into <strong>easy-to-use</strong> pieces.</div>
+<div>In our case, we're using a <em>jQuery</em> method called <pre>getJSON()</pre>. This method <strong>goes to a web address</strong>, <em>retrieves JSON data</em>, and then <strong>executes some other function</strong> with the data once it's <em>retrieved</em>.</div>
+<div>The <strong>cool</strong> and <strong>magical</strong> thing about it is that it is <em>asynchronous</em>. While the getJSON method is <strong>waiting</strong> for the data, the page can <em>keep loading</em>!</div>
+<div>This is called <strong>AJAX</strong>, and it's <em>very common</em> in JavaScript.</div>
+<div>Then, when the data is <strong>finally retrieved</strong>, the method <em>knows</em> to execute the other function, called a <strong>callback function</strong>.</div>
+<div data-bodyclass='getjson'><br><br><br><br>What data is the <pre>getJSON()</pre> method getting?</div>
+<div><em>catnews.geojson</em>, which is <strong>points</strong> showing <em>locations</em> of <strong>news articles</strong> about <em>cats</em>.</div>
+<div data-bodyclass='getjson'><br><br><br><br>What is our <strong>callback function</strong> doing?</div>
+<div data-bodyclass='getjson'><br><br><br><br>First, let's note that it takes a <em>parameter</em> called <strong>data</strong>. That's the <strong>data</strong> that is <em>returned</em> from our <strong>AJAX request</strong>.</div>
+<div data-bodyclass='getjson'><br><br><br><br>Then it creates a <em>variable</em> called <pre>locations</pre> and <strong>assigns</strong> to that variable a <em>Leaflet GeoJSON object</em>.</div>
+<div data-bodyclass='leaflet-gj-spec'></div>
+<div>The first option that <pre>L.geoJson()</pre> takes is the <strong>GeoJSON data itself</strong>. For us that is represented as <em>data</em>.</div>
+<div>Then we give it some <strong>options</strong>.</div>
+<div data-bodyclass='getjson'><br><br><br><br><pre>pointToLayer</pre> to use <em>custom markers</em> and <pre>onEachFeature</pre> to add <strong>popups</strong>.</div>
+<div>The <em>last</em> thing our <strong>callback function</strong> does is <em>add</em> <pre>locations</pre> to the map.</div>
+<div>All together now...</div>
+<div data-bodyclass='catnews-js'></div>
+<div data-bodyclass='catnews'>Hooray! Catnews!</div>
+<div>Lastly, let's <em>add some data to CatNews</em> and learn about <strong>GitHub</strong>.</div>
+<div>First, go to <pre>github.com</pre> and <strong>sign up</strong>. <em>It's free</em>.</div>
+<div>Once you're logged in, go to <pre>github.com<br>/lyzidiamond<br>/catnews</pre>.</div>
+<div data-bodyclass='catnews-github'>In the <em>top right corner</em>, click where it says <strong>Fork</strong>.</div>
+<div><em>Congratulations</em>, you just <strong>forked</strong> your first <em>repo</em>!</div>
+<div>Basically, you made a <strong>copy</strong> of the repository and <em>pasted</em> it to your account.</div>
+<div>From here, go find a <em>news article about cats</em> and <strong>follow the instructions</strong> in the <em>README</em>. Use the <strong>"I'm not using Chrome"</strong> instructions. <em>Stop</em> when you get to <strong>Step 9</strong>.</div>
+<div data-bodyclass='catnews-instructions'></div>
+<div>Let's walk through <strong>making a pull request</strong>. With a <em>pull request</em>, you will be <strong>contributing your changes</strong> back to <em>my repository</em>.</div>
+<div>Go back to <strong>your fork</strong> of CatNews. It should be at <pre>github.com/[your username]/catnews</pre>. In the <em>right column</em>, click <strong>Pull Requests</strong>.</div>
+<div data-bodyclass='new-pr'><br><br>Then click the green <em>New Pull Request</em> button. On the next screen, click the green <em>Create pull request</em> button.</div>
+<div data-bodyclass='new-pr2'><br><br><strong>Type in</strong> a message describing the <em>changes you made</em> and <strong>submit</strong> your <em>pull request</em>.</div>
+<div>The <em>pull request</em> then goes to <strong>me</strong> to approve. Once I <em>approve</em> it, your changes will show up <strong>on the map</strong>!</div>
+<div><em>Check back in a couple days</em> to see them.</div>
+<div>There are <strong>zillions of projects</strong> on <em>GitHub</em> you can contribute to. Even <strong>fixing typos</strong> can be useful!</div>
+<div>So, there is <em>so much</em> we didn't cover in this class. We just <strong>scratched the surface</strong> of web mapping.</div>
+<div><em>We hope</em> we gave you an <strong>adequate tool set</strong> to <em>continue learning</em> on your own.</div>
+<div>Don't hesitate to <strong>reach out</strong> to us if you need <em>help</em>!</div>
+<div>Thanks everyone! See you on the interwebs: <em>@mizmay</em> & <em>@lyzidiamond</em>.</div>
 <div>Presentation made with <a href="http://www.macwright.org/big/">big</a></div>
 </body></html>
